@@ -22,8 +22,6 @@ function Init() {
       localStorage.setItem("modalExist", "true");
     }
 
-
-
     setTimeout(()=>{
       if(scene.current && scenec.current && scener.current){
         const parallax = new Parallax(scene.current);
