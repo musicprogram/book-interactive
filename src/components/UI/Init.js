@@ -28,10 +28,11 @@ function Init() {
 
   return (
     <div>
-      <div className="container-fluid mt-5 mb-5">
-        <h1 className="text-title color-main text-center h-100 font-weight-bold text-shadow">
-          Book Interactive
-        </h1>
+      <h1 className="text-title color-main text-center font-weight-bold text-shadow">
+        Book Interactive
+      </h1>
+      <div className="container-fluid mb-5">
+
         <div className="row mr-1 ml-1">
           <div className="col-md-4" >
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-l my-card" ref={scene}>
