@@ -104,6 +104,12 @@ body{
   font-size:7vw;
 }
 
+.text-title-modal{
+  font-family: 'Lobster', cursive;
+  border-color: #61dafb;
+  font-size:6vw;
+}
+
 .color-main{
   color: #fc7323;
 }
