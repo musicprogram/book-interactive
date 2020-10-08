@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Parallax from 'parallax-js'
-import {Modal, Image} from 'react-bootstrap'
+import {Modal, Image, ListGroup} from 'react-bootstrap'
 
 import imgFirst from '../../assets/img/Drawing.svg'
 import imgSecond from '../../assets/img/Support team.svg'
@@ -11,6 +11,7 @@ function Init() {
   const scene = useRef();
   const scenec = useRef();
   const scener = useRef();
+  const sceneImgModal = useRef();
 
   const [show, setShow] = useState(true);
 
@@ -27,8 +28,11 @@ function Init() {
         const parallax = new Parallax(scene.current);
         const parallaxc = new Parallax(scenec.current);
         const parallaxr = new Parallax(scener.current);
-        debugger
         //console.log(parallax);
+      }
+
+      if(sceneImgModal.current){
+        const parallaxt = new Parallax(sceneImgModal.current);
       }
     }, 1000)
     //inputScene.current
@@ -73,8 +77,12 @@ function Init() {
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
       >
+        <Modal.Header closeButton>
+        </Modal.Header>
+        <div ref={sceneImgModal}>
+          <Image src={team} roundedCircle data-depth="0.5"/>
+        </div>
 
-        <Image src={team} roundedCircle/>
 
 
         <Modal.Body>
@@ -84,12 +92,15 @@ function Init() {
           <p>
             Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
             commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-            ipsam atque a dolores quisquam quisquam adipisci possimus
-            laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod
-            accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia
-            reiciendis porro quo magni incidunt dolore amet atque facilis ipsum
-            deleniti rem!
+            ipsam atque.
           </p>
+
+          <ListGroup variant="flush">
+            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+          </ListGroup>
         </Modal.Body>
       </Modal>
 
