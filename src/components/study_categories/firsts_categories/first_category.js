@@ -3,7 +3,10 @@ import {Container, Card, Col, Row} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-import {speechText} from '../../../GlobalState'
+import {speechText, currentStep} from '../../../GlobalState'
+import {
+  useRecoilState
+} from 'recoil';
 
 import img from '../../../assets/degradacion.jpg';
 
@@ -14,16 +17,15 @@ import sound from '../../../assets/img/sound.gif'
 import talkOne from '../../../assets/img/firts_category/talkOne.svg'
 import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
 
-function FirstCategory() {
+function FirstCategory(props) {
 
   const [imgTalk, setImgTalk] = useState(talkOne);
   const [imgPlayFirst, setImgPlayFirst] = useState(logoPlay);
   const [imgPlaySecond, setImgPlaySecond] = useState(logoPlay);
   const [voices, setVoices] = useState(null);
   const [synth, setSynth] = useState(window.speechSynthesis);
+  const [step, setStep] = useRecoilState(currentStep);
 
-  useEffect(()=>{
-  },[])
 
   const handleMessage =()=>{
     //console.log(speechSynthesis.getVoices())
@@ -186,6 +188,31 @@ function FirstCategory() {
         </div>
 
       </Container>
+
+      <h2>Step {props.currentStep}</h2>
+      <p>Total Steps: {props.totalSteps}</p>
+      <p>Is Active: {props.isActive}</p>
+      <p><button onClick={()=>{
+        props.previousStep()
+        setStep(props.currentStep - 1);
+        localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
+      }}>Previous Step</button></p>
+      <p><button onClick={()=>{
+        props.nextStep()
+        setStep(props.currentStep + 1)
+        localStorage.setItem("stepFormOne", `${props.currentStep + 1}`)
+      }}>Next Step</button></p>
+      <p><button onClick={()=>{
+        props.firstStep()
+        setStep( 1)
+        localStorage.setItem("stepFormOne", `${1}`)
+      }}>First Step</button></p>
+      <p><button onClick={()=>{
+        props.lastStep();
+        setStep(parseInt(props.totalSteps));
+        //console.log(parseInt(props.totalSteps))
+        localStorage.setItem("stepFormOne", `${props.totalSteps}`)
+      }}>Last Step</button></p>
     </Fragment>
 
   );

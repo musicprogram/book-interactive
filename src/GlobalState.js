@@ -22,3 +22,8 @@ export const categoryNavigation = atom({
   key: 'categoryNavigation', // unique ID
   default: 0, // default value
 });
+
+export const currentStep = atom({
+  key: 'currentStep', // unique ID
+  default: 1, // default value
+});

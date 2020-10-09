@@ -6,8 +6,8 @@ import {
 import {categoryNavigation} from '../GlobalState'
 
 import Init from "./UI/Init";
-import FirstCategory from "./study_categories/firsts_categories/first_category";
 import NavMain from "./UI/NavMain";
+import OneCategory from "./study_categories/OneCategory";
 
 function Dashboard() {
   const category = useRecoilValue(categoryNavigation);
@@ -22,7 +22,7 @@ function Dashboard() {
           )
         }
         {
-          category === 1 && <FirstCategory/>
+          category === 1 && <OneCategory/>
         }
       </div>
   );
