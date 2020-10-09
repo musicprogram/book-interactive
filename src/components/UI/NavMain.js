@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Navbar, Nav} from 'react-bootstrap';
 
 import {
@@ -8,12 +8,20 @@ import {
 import {categoryNavigation} from '../../GlobalState'
 
 function NavMain() {
+  const [isExpanded, setIsExpanded] = useState(false);
   const [category, setCategory] = useRecoilState(categoryNavigation);
 
   return (
 
 
-    <Navbar expand="sm" className="background-nav" variant="light">
+    <Navbar
+      expand="sm"
+      className="background-nav"
+      variant="light"
+      collapseOnSelect
+      expanded={isExpanded}
+      onToggle={()=> setIsExpanded(!isExpanded)}
+    >
       <Navbar.Brand  className="brand-text" onClick={()=> setCategory(0)}>
           Book Interactive
       </Navbar.Brand>
