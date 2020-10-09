@@ -15,7 +15,7 @@ function OneCategory() {
     let stepFormOne = localStorage.getItem("stepFormOne");
     if(parseInt(stepFormOne)){
       setStep(parseInt(stepFormOne));
-      console.log(parseInt(stepFormOne));
+      //console.log(parseInt(stepFormOne));
     }
   },[])
 
