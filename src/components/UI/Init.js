@@ -2,6 +2,12 @@ import React, {useEffect, useRef, useState} from 'react';
 import Parallax from 'parallax-js'
 import {Modal, Image, ListGroup} from 'react-bootstrap'
 
+import {
+  useRecoilState
+} from 'recoil';
+
+import {categoryNavigation} from '../../GlobalState'
+
 import imgFirst from '../../assets/img/Drawing.svg'
 import imgSecond from '../../assets/img/Support team.svg'
 import imgThird from '../../assets/img/Design.svg'
@@ -14,6 +20,9 @@ function Init() {
   const sceneImgModal = useRef();
 
   const [show, setShow] = useState(true);
+
+  const [category, setCategory] = useRecoilState(categoryNavigation);
+
 
   useEffect(()=>{
     const modalExist = localStorage.getItem("modalExist");
@@ -48,19 +57,31 @@ function Init() {
       <div className="container-fluid mb-5">
 
         <div className="row mr-1 ml-1">
-          <div className="col-md-4" >
+          <div
+            className="col-md-4"
+            onClick={()=> setCategory(1)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-l my-card" ref={scene}>
-              <img src={imgFirst} alt="" data-depth="0.5"/>
+              <img
+                src={imgFirst}
+                data-depth="0.5"/>
             </div>
           </div>
-          <div className="col-md-4">
+          <div
+            className="col-md-4"
+            onClick={()=> setCategory(2)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-c my-card"  ref={scenec}>
-              <img src={imgSecond} alt="" data-depth="0.5"/>
+              <img
+                src={imgSecond}
+                data-depth="0.5"/>
             </div>
           </div>
-          <div className="col-md-4">
+          <div
+            className="col-md-4"
+            onClick={()=> setCategory(3)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-r my-card" ref={scener}>
-              <img src={imgThird} alt="" data-depth="0.5"/>
+              <img
+                src={imgThird}
+                data-depth="0.5"/>
             </div>
           </div>
         </div>

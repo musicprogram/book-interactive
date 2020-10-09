@@ -1,14 +1,21 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Init from "./components/UI/Init";
-import FirstCategory from "./components/study_categories/firsts_categories/first_category";
+import {
+  RecoilRoot
+} from 'recoil';
+
+
+import Dashboard from "./components/Dashboard";
 
 function App() {
+
   return (
-    <div>
-      <FirstCategory/>
-    </div>
+    <RecoilRoot>
+      <div>
+        <Dashboard/>
+      </div>
+    </RecoilRoot>
   );
 }
 

@@ -104,6 +104,11 @@ body{
   font-size:7vw;
 }
 
+.text-brand{
+  font-family: 'Lobster', cursive;
+  border-color: #61dafb;
+}
+
 .text-title-category{
   font-family: 'Shadows Into Light', cursive;
   font-size:4vw;
