@@ -104,6 +104,18 @@ body{
   font-size:7vw;
 }
 
+.text-title-category{
+  font-family: 'Shadows Into Light', cursive;
+  font-size:4vw;
+  font-weight: bold;
+}
+
+.text-title-classic{
+  font-family: 'Shadows Into Light', cursive;
+  border-color: #61dafb;
+
+}
+
 .text-title-modal{
   font-family: 'Lobster', cursive;
   border-color: #61dafb;
@@ -120,4 +132,342 @@ body{
 
 .text-hand{
   font-family: 'Shadows Into Light', cursive;
+}
+
+
+/**
+ * Notebook Paper pattern
+ */
+.notebook-paper {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #fff;
+  background-image: linear-gradient(transparent 15px, rgba(0,0,255,0.3) 15px, transparent 16px);
+  background-size: 100% 18px;
+}
+.notebook-paper > p {
+  border-left: 1px solid rgba(255, 153, 102, 0.3);
+  margin-left: 78px;
+  padding-left: 10px;
+}
+
+.card-custom{
+  border: 0;
+}
+
+.card-msg{
+  border-radius: 40px 10px 40px 10px;
+  background-color: rgba(0, 4, 0, 0.1);
+  background: rgba(0, 4, 0, 0.1);
+}
+
+.first-name::first-letter {
+  font-size: 200%;
+  color: #fc7323;
+}
+
+
+figure.zoom {
+  background-position: 50% 50%;
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+figure.zoom img:hover {
+  opacity: 0;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.52);
+  -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.52);
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.52);
+}
+figure.zoom img {
+  transition: opacity 0.5s;
+  display: block;
+  width: 100%;
+}
+
+.svg-talk{
+  width: 150px;
+  height: 150px;
+}
+
+
+
+
+/* CSS talk bubble */
+.talk-bubble {
+  margin: 40px;
+  display: inline-block;
+  position: relative;
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border-radius: 7px 7px 7px 7px;
+  cursor: pointer;
+}
+
+.talk-bubble:hover{
+  -webkit-box-shadow: 9px 8px 2px -5px rgba(0,0,0,0.08);
+  -moz-box-shadow: 9px 8px 2px -5px rgba(0,0,0,0.08);
+  box-shadow: 9px 8px 2px -5px rgba(0,0,0,0.08);
+}
+
+.border{
+  border: 8px solid #666;
+}
+.round{
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+
+}
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: white transparent transparent transparent;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: 30px;
+  bottom: auto;
+  border: 20px solid;
+  border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 38px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: white white transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -8px;
+  right: auto;
+  top: auto;
+  bottom: -40px;
+  border: 32px solid;
+  border-color: transparent transparent transparent #666;
+}
+.tri-right.btm-left:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  right: auto;
+  top: auto;
+  bottom: -20px;
+  border: 22px solid;
+  border-color: transparent transparent transparent white;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left-in:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  right: auto;
+  top: auto;
+  bottom: -40px;
+  border: 20px solid;
+  border-color: #666 transparent transparent #666;
+}
+.tri-right.btm-left-in:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 38px;
+  right: auto;
+  top: auto;
+  bottom: -20px;
+  border: 12px solid;
+  border-color: white transparent transparent white;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 30px;
+  bottom: -40px;
+  border: 20px solid;
+  border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 38px;
+  bottom: -20px;
+  border: 12px solid;
+  border-color: white white transparent transparent;
+}
+/*
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -8px;
+  bottom: -40px;
+  border: 20px solid;
+  border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: 0px;
+  bottom: -20px;
+  border: 12px solid;
+  border-color: white white transparent transparent;
+}
+
+/* Right triangle, right side slightly down*/
+.tri-right.border.right-in:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -40px;
+  top: 30px;
+  bottom: auto;
+  border: 20px solid;
+  border-color: #666 transparent transparent #666;
+}
+.tri-right.right-in:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -20px;
+  top: 38px;
+  bottom: auto;
+  border: 12px solid;
+  border-color: white transparent transparent white;
+}
+
+/* Right triangle placed top right flush. */
+.tri-right.border.right-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -40px;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+.tri-right.right-top:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -20px;
+  top: 0px;
+  bottom: auto;
+  border: 20px solid;
+  border-color: white transparent transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+
+.text-classic{
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+
+}
+
+.play-button{
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.text-title-span{
+  font-family: 'Lobster', cursive;
+
 }
