@@ -11,20 +11,22 @@ function NavMain() {
   const [category, setCategory] = useRecoilState(categoryNavigation);
 
   return (
-    <Navbar bg="light" variant="light">
-      <Navbar.Brand href="#" onClick={()=> setCategory(0)}>
-        <h1 className="text-brand color-main font-weight-bold text-shadow">
+
+
+    <Navbar expand="sm" className="background-nav" variant="light">
+      <Navbar.Brand  className="brand-text" onClick={()=> setCategory(0)}>
           Book Interactive
-        </h1>
       </Navbar.Brand>
-      <Nav.Link href="#" className="my-nav-kink" onClick={()=> setCategory(1)}>First</Nav.Link>
-      <div className="mx-auto order-0">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
+          <Nav.Link href="#" className="my-nav-kink" onClick={()=> setCategory(1)}>First</Nav.Link>
           <Nav.Link href="#" className="my-nav-kink"  onClick={()=> setCategory(2)}>Second</Nav.Link>
+          <Nav.Link href="#" className="my-nav-kink"  onClick={()=> setCategory(3)}>Third</Nav.Link>
         </Nav>
-      </div>
-      <Nav.Link href="#" className="my-nav-kink"  onClick={()=> setCategory(3)}>Third</Nav.Link>
+      </Navbar.Collapse>
     </Navbar>
+
   );
 }
 

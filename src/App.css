@@ -71,11 +71,10 @@ body{
 }
 
 .my-nav-kink {
-  color: #fc7323;
+  color: white;
 }
 
 .my-nav-kink:hover {
-  color: #fc7323;
   font-weight: bold;
 }
 .my-card{
@@ -104,9 +103,10 @@ body{
   font-size:7vw;
 }
 
-.text-brand{
+.brand-text{
   font-family: 'Lobster', cursive;
   border-color: #61dafb;
+  cursor: pointer;
 }
 
 .text-title-category{
@@ -475,4 +475,21 @@ figure.zoom img {
 .text-title-span{
   font-family: 'Lobster', cursive;
 
+}
+
+@media screen and (max-width: 800px) {
+  .svg-talk {
+    margin-top: 15px;
+    margin-bottom: -38px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.background-nav{
+  background-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
 }

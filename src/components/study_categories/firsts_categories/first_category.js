@@ -89,18 +89,18 @@ function FirstCategory() {
               </Zoom>
             </div>
             <Row>
-              <div className="col-md-2">
-                <div className="div-button">
+              <div className="col-2">
+                <div className="div-button ">
                   <object
-                    className="svg-talk div-button"
+                    className="svg-talk"
                     type="image/svg+xml"
                     data={imgTalk}>
                   </object>
                 </div>
               </div>
-              <div className="col-md-10">
+              <div className="col-10">
 
-                <div className="talk-bubble tri-right left-in mr-2" onClick={handleMessage}>
+                <div className="talk-bubble tri-right left-in" onClick={handleMessage}>
                   <div className="talktext text-center">
                     <p className="lead">
 
