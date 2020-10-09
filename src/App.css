@@ -493,3 +493,7 @@ figure.zoom img {
   -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
 }
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: #fc7323;
+}
