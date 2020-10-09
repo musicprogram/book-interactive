@@ -121,7 +121,7 @@ function FirstCategory() {
             <hr/>
             <Row>
 
-              <div className="col-md-6">
+              <div className="col-md-6 mb-2">
 
                 <Card border="light" style={{ borderRadius: '20px' }}>
                   <Card.Header className="text-classic h3">Primera</Card.Header>
