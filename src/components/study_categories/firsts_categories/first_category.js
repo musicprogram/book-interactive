@@ -23,23 +23,14 @@ function FirstCategory() {
   const [synth, setSynth] = useState(window.speechSynthesis);
 
   useEffect(()=>{
-    if(speechSynthesis !== undefined){
-      speechSynthesis.onvoiceschanged = PopulateVoices();
-    }
   },[])
 
-  const PopulateVoices = ()=>{
-    setVoices(speechSynthesis.getVoices());
-    //console.log(speechSynthesis.getVoices())
-
-  }
-
-
   const handleMessage =()=>{
+    //console.log(speechSynthesis.getVoices())
     stopSynth();
     const textValue = 'Degradation in the white textiles getting a creamy tone';
     let selectedVoiceName = "Samantha";
-    speechText(textValue, selectedVoiceName, voices, synth);
+    speechText(textValue, selectedVoiceName, synth);
 
     setImgTalk(talkSecond);
     setTimeout(()=>{
@@ -58,7 +49,7 @@ function FirstCategory() {
     stopSynth();
     const textValue = 'symmetry in the garment with slight or medium visualization. Asymmetry with slight';
     let selectedVoiceName = "Samantha";
-    speechText(textValue, selectedVoiceName, voices, synth);
+    speechText(textValue, selectedVoiceName, synth);
 
     setTimeout(()=>{
       setImgPlayFirst(logoPlay);
@@ -70,7 +61,7 @@ function FirstCategory() {
     stopSynth();
     const textValue = 'Asymmetry in the garment with strong visualization';
     let selectedVoiceName = "Samantha";
-    speechText(textValue, selectedVoiceName, voices, synth);
+    speechText(textValue, selectedVoiceName, synth);
 
     setTimeout(()=>{
       setImgPlaySecond(logoPlay);
