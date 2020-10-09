@@ -16,7 +16,7 @@ function NavMain() {
 
     <Navbar
       expand="sm"
-      className="background-nav"
+      className="background-nav mb-2"
       variant="light"
       collapseOnSelect
       expanded={isExpanded}
