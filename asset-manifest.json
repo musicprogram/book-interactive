@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/book-interactive/static/css/main.56a55336.chunk.css",
-    "main.js": "/book-interactive/static/js/main.4692969e.chunk.js",
-    "main.js.map": "/book-interactive/static/js/main.4692969e.chunk.js.map",
+    "main.js": "/book-interactive/static/js/main.a6b1b00a.chunk.js",
+    "main.js.map": "/book-interactive/static/js/main.a6b1b00a.chunk.js.map",
     "runtime-main.js": "/book-interactive/static/js/runtime-main.88a36cc3.js",
     "runtime-main.js.map": "/book-interactive/static/js/runtime-main.88a36cc3.js.map",
-    "static/css/2.e87418d1.chunk.css": "/book-interactive/static/css/2.e87418d1.chunk.css",
-    "static/js/2.aca1c1ca.chunk.js": "/book-interactive/static/js/2.aca1c1ca.chunk.js",
-    "static/js/2.aca1c1ca.chunk.js.map": "/book-interactive/static/js/2.aca1c1ca.chunk.js.map",
+    "static/css/2.b565b473.chunk.css": "/book-interactive/static/css/2.b565b473.chunk.css",
+    "static/js/2.713a6195.chunk.js": "/book-interactive/static/js/2.713a6195.chunk.js",
+    "static/js/2.713a6195.chunk.js.map": "/book-interactive/static/js/2.713a6195.chunk.js.map",
     "index.html": "/book-interactive/index.html",
-    "precache-manifest.4d66dd04b9d5eb82ab3eb99772372619.js": "/book-interactive/precache-manifest.4d66dd04b9d5eb82ab3eb99772372619.js",
+    "precache-manifest.23e59e31375970412536dc5ec40de9f5.js": "/book-interactive/precache-manifest.23e59e31375970412536dc5ec40de9f5.js",
     "service-worker.js": "/book-interactive/service-worker.js",
-    "static/css/2.e87418d1.chunk.css.map": "/book-interactive/static/css/2.e87418d1.chunk.css.map",
+    "static/css/2.b565b473.chunk.css.map": "/book-interactive/static/css/2.b565b473.chunk.css.map",
     "static/css/main.56a55336.chunk.css.map": "/book-interactive/static/css/main.56a55336.chunk.css.map",
-    "static/js/2.aca1c1ca.chunk.js.LICENSE.txt": "/book-interactive/static/js/2.aca1c1ca.chunk.js.LICENSE.txt",
+    "static/js/2.713a6195.chunk.js.LICENSE.txt": "/book-interactive/static/js/2.713a6195.chunk.js.LICENSE.txt",
     "static/media/Design.svg": "/book-interactive/static/media/Design.ab180487.svg",
     "static/media/Drawing.svg": "/book-interactive/static/media/Drawing.d29dd310.svg",
     "static/media/Support team.svg": "/book-interactive/static/media/Support team.f9252a3b.svg",
@@ -24,9 +24,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.88a36cc3.js",
-    "static/css/2.e87418d1.chunk.css",
-    "static/js/2.aca1c1ca.chunk.js",
+    "static/css/2.b565b473.chunk.css",
+    "static/js/2.713a6195.chunk.js",
     "static/css/main.56a55336.chunk.css",
-    "static/js/main.4692969e.chunk.js"
+    "static/js/main.a6b1b00a.chunk.js"
   ]
 }
