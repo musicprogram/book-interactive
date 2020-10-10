@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "708d7da4f51e023bbe325177c8d1e949",
+    "revision": "2bdaf2b133e1247e5710b671ddf99608",
     "url": "/book-interactive/index.html"
   },
   {
-    "revision": "84cf6e8e274159e6a267",
+    "revision": "6e2b9e01c49ab4164eb1",
     "url": "/book-interactive/static/css/2.b565b473.chunk.css"
   },
   {
-    "revision": "8a5cacb70028f107c951",
-    "url": "/book-interactive/static/css/main.56a55336.chunk.css"
+    "revision": "1f2246eb1cf6e03c3d1e",
+    "url": "/book-interactive/static/css/main.f5e91a9d.chunk.css"
   },
   {
-    "revision": "84cf6e8e274159e6a267",
-    "url": "/book-interactive/static/js/2.713a6195.chunk.js"
+    "revision": "6e2b9e01c49ab4164eb1",
+    "url": "/book-interactive/static/js/2.764cf7aa.chunk.js"
   },
   {
     "revision": "a41506294c22016896304dee19257fed",
-    "url": "/book-interactive/static/js/2.713a6195.chunk.js.LICENSE.txt"
+    "url": "/book-interactive/static/js/2.764cf7aa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a5cacb70028f107c951",
-    "url": "/book-interactive/static/js/main.0516fa75.chunk.js"
+    "revision": "1f2246eb1cf6e03c3d1e",
+    "url": "/book-interactive/static/js/main.63a9bb4a.chunk.js"
   },
   {
     "revision": "5f2d70484b53199a3552",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "aedbc5d5cdfd396dc6c68d6989db03d0",
     "url": "/book-interactive/static/media/Team.aedbc5d5.svg"
+  },
+  {
+    "revision": "e611722e3bdf8f5b615c9adc07cf7b51",
+    "url": "/book-interactive/static/media/loading.e611722e.svg"
   },
   {
     "revision": "fc61099188c4ae2024000c62bf484778",
