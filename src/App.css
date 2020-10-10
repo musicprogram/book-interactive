@@ -128,7 +128,7 @@ body{
 }
 
 .color-main{
-  color: #fc7323;
+  color: #fc7323 !important;
 }
 
 .text-shadow{
@@ -496,4 +496,19 @@ figure.zoom img {
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
   color: #fc7323;
+}
+
+.img-category{
+  width: 300px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: black;
+  text-decoration: none;
+  background-color: #ffffff;
+}
+
+.loading-img{
+  width: 500px;
+  height: 500px;
 }

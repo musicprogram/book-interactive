@@ -1,9 +1,9 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Container, Card, Col, Row} from 'react-bootstrap'
+import {Container, Card, Row} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-import {speechText, currentStep} from '../../../GlobalState'
+import {speechText, currentStep, synthGlobal} from '../../../GlobalState'
 import {
   useRecoilState
 } from 'recoil';
@@ -23,16 +23,18 @@ function FirstCategory(props) {
   const [imgPlayFirst, setImgPlayFirst] = useState(logoPlay);
   const [imgPlaySecond, setImgPlaySecond] = useState(logoPlay);
   const [voices, setVoices] = useState(null);
-  const [synth, setSynth] = useState(window.speechSynthesis);
+  const [synth, setSynth] = useRecoilState(synthGlobal);
   const [step, setStep] = useRecoilState(currentStep);
 
+  useEffect(()=>{
+    //console.log(props.category)
+  })
 
   const handleMessage =()=>{
     //console.log(speechSynthesis.getVoices())
     stopSynth();
-    const textValue = 'Degradation in the white textiles getting a creamy tone';
     let selectedVoiceName = "Samantha";
-    speechText(textValue, selectedVoiceName, synth);
+    speechText(props.category.descriptionIn, selectedVoiceName, synth);
 
     setImgTalk(talkSecond);
     setTimeout(()=>{
@@ -49,9 +51,8 @@ function FirstCategory(props) {
   const handlePlayFirst =() =>{
     setImgPlayFirst(sound)
     stopSynth();
-    const textValue = 'symmetry in the garment with slight or medium visualization. Asymmetry with slight';
     let selectedVoiceName = "Samantha";
-    speechText(textValue, selectedVoiceName, synth);
+    speechText(props.category.firstIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
       setImgPlayFirst(logoPlay);
@@ -75,8 +76,7 @@ function FirstCategory(props) {
       <Container>
 
         <p className="text-title-category text-center font-weight-bold">
-          AMARILLAMIENTO <span className="color-main text-title-span">YELLOWING</span>
-          {props.currentStep}
+          {props.category.titleEs} <span className="color-main text-title-span">{props.category.titleIn}</span>
         </p>
 
 
@@ -86,7 +86,7 @@ function FirstCategory(props) {
               <Zoom>
                 <img
                   alt="that wanaka tree"
-                  src={img}
+                  src={props.category.img}
                   className="img-category"
                 />
               </Zoom>
@@ -107,12 +107,12 @@ function FirstCategory(props) {
                   <div className="talktext text-center">
                     <p className="lead">
 
-                      Degradación que se presenta en los géneros textiles del color blanco hacia el tono cremoso.
+                      {props.category.descriptionEs}
 
                     </p>
                     <br/>
                     <p className="lead">
-                      Degradation in the white textiles getting a creamy tone.
+                      {props.category.descriptionIn}
                     </p>
                   </div>
                 </div>
@@ -130,18 +130,11 @@ function FirstCategory(props) {
                   <Card.Header className="text-classic h3">Primera</Card.Header>
                   <Card.Body>
                     <Card.Title>
-                      Simetría en la prenda con
-                      visualización leve o
-                      media.
-
-                      Asimetría en la prenda
-                      con visualización leve.
+                      {props.category.firstEs}
 
                     </Card.Title>
                     <Card.Text className="color-main font-weight-bold">
-                      symmetry in the garment with
-                      slight or medium visualization.
-                      Asymmetry with slight
+                      {props.category.firstIn}
                     </Card.Text>
                     <img src={imgPlayFirst} className="play-button" onClick={handlePlayFirst}/>
                   </Card.Body>
@@ -190,33 +183,33 @@ function FirstCategory(props) {
                   <button type="button" className="btn btn-secondary" onClick={()=>{
                     props.firstStep()
                     setStep( 1)
-                    localStorage.setItem("stepFormOne", `${1}`)
+                    localStorage.setItem("stepFormOne", `${1}`);
+                    stopSynth();
                   }}> {'<<'} </button>
                   <button type="button" className="btn btn-secondary" onClick={()=>{
                     props.previousStep()
                     setStep(props.currentStep - 1);
                     localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
+                    stopSynth();
                   }}> {'<'}</button>
                   <button type="button" className="btn btn-secondary" onClick={()=>{
                     props.nextStep()
                     setStep(props.currentStep + 1)
-                    localStorage.setItem("stepFormOne", `${props.currentStep + 1}`)
+                    localStorage.setItem("stepFormOne", `${props.currentStep + 1}`);
+                    stopSynth();
                   }}> {'>'}</button>
                   <button type="button" className="btn btn-secondary" onClick={()=>{
                     props.lastStep();
                     setStep(parseInt(props.totalSteps));
                     //console.log(parseInt(props.totalSteps))
-                    localStorage.setItem("stepFormOne", `${props.totalSteps}`)
+                    localStorage.setItem("stepFormOne", `${props.totalSteps}`);
+                    stopSynth();
                   }}>{'>>'}</button>
                 </div>
               </div>
             </div>
           </Card.Body>
         </div>
-
-
-
-
 
       </Container>
 

@@ -1,35 +1,29 @@
 import React, {Fragment, useEffect} from 'react';
-import { Container } from 'react-bootstrap';
 import StepWizard from 'react-step-wizard';
 
-import {currentStep} from '../../GlobalState'
+import {currentStep, firstCategory} from '../../GlobalState'
 import {
-  useRecoilState
+  useRecoilState, useRecoilValue
 } from 'recoil';
 
 import FirstCategory from "./firsts_categories/first_category";
 function OneCategory() {
   const [step, setStep] = useRecoilState(currentStep);
+  const firsCategoriesData = useRecoilValue(firstCategory);
 
   useEffect(()=>{
-    let stepFormOne = localStorage.getItem("stepFormOne");
-    if(parseInt(stepFormOne)){
-      setStep(parseInt(stepFormOne));
-      //console.log(parseInt(stepFormOne));
-    }
-  },[])
+  },[step])
 
   return (
     <Fragment>
-      <StepWizard initialStep={parseInt(localStorage.getItem("stepFormOne")) ? (
-        parseInt(localStorage.getItem("stepFormOne"))
-      ) : (
-        step
-      )}>
-        <FirstCategory/>
-        <FirstCategory/>
-        <FirstCategory/>
-        <FirstCategory/>
+      <StepWizard initialStep={step}>
+        {
+          firsCategoriesData.map((category, i)=>{
+            return(
+              <FirstCategory category={category} key={i}/>
+            )
+          })
+        }
       </StepWizard>
     </Fragment>
   );
