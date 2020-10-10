@@ -76,6 +76,7 @@ function FirstCategory(props) {
 
         <p className="text-title-category text-center font-weight-bold">
           AMARILLAMIENTO <span className="color-main text-title-span">YELLOWING</span>
+          {props.currentStep}
         </p>
 
 
@@ -183,36 +184,42 @@ function FirstCategory(props) {
               </div>
             </Row>
 
-
+            <div className="d-flex justify-content-center">
+              <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div className="btn-group mr-2" role="group" aria-label="First group">
+                  <button type="button" className="btn btn-secondary" onClick={()=>{
+                    props.firstStep()
+                    setStep( 1)
+                    localStorage.setItem("stepFormOne", `${1}`)
+                  }}> {'<<'} </button>
+                  <button type="button" className="btn btn-secondary" onClick={()=>{
+                    props.previousStep()
+                    setStep(props.currentStep - 1);
+                    localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
+                  }}> {'<'}</button>
+                  <button type="button" className="btn btn-secondary" onClick={()=>{
+                    props.nextStep()
+                    setStep(props.currentStep + 1)
+                    localStorage.setItem("stepFormOne", `${props.currentStep + 1}`)
+                  }}> {'>'}</button>
+                  <button type="button" className="btn btn-secondary" onClick={()=>{
+                    props.lastStep();
+                    setStep(parseInt(props.totalSteps));
+                    //console.log(parseInt(props.totalSteps))
+                    localStorage.setItem("stepFormOne", `${props.totalSteps}`)
+                  }}>{'>>'}</button>
+                </div>
+              </div>
+            </div>
           </Card.Body>
         </div>
 
+
+
+
+
       </Container>
 
-      <h2>Step {props.currentStep}</h2>
-      <p>Total Steps: {props.totalSteps}</p>
-      <p>Is Active: {props.isActive}</p>
-      <p><button onClick={()=>{
-        props.previousStep()
-        setStep(props.currentStep - 1);
-        localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
-      }}>Previous Step</button></p>
-      <p><button onClick={()=>{
-        props.nextStep()
-        setStep(props.currentStep + 1)
-        localStorage.setItem("stepFormOne", `${props.currentStep + 1}`)
-      }}>Next Step</button></p>
-      <p><button onClick={()=>{
-        props.firstStep()
-        setStep( 1)
-        localStorage.setItem("stepFormOne", `${1}`)
-      }}>First Step</button></p>
-      <p><button onClick={()=>{
-        props.lastStep();
-        setStep(parseInt(props.totalSteps));
-        //console.log(parseInt(props.totalSteps))
-        localStorage.setItem("stepFormOne", `${props.totalSteps}`)
-      }}>Last Step</button></p>
     </Fragment>
 
   );
