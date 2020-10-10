@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import teacher from '../../assets/img/Notes.png'
 
 import {
   useRecoilState, useRecoilValue
@@ -49,11 +50,11 @@ function NavMain() {
       onToggle={()=> setIsExpanded(!isExpanded)}
     >
 
-      <Navbar.Brand  className="brand-text" onClick={()=> {
+      <Navbar.Brand  className="brand-text color-main" onClick={()=> {
         setCategory(0);
         stopSynth()
       }}>
-          Book Interactive
+        <img src={teacher} className="img-logo"/>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

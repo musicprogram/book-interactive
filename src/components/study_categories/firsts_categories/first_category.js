@@ -75,9 +75,9 @@ function FirstCategory(props) {
     <Fragment>
       <Container>
 
-        <p className="text-title-category text-center font-weight-bold">
-          {props.category.titleEs} <span className="color-main text-title-span">{props.category.titleIn}</span>
-        </p>
+        <h1 className="color-main text-center text-capitalize font-weight-bold">
+          {props.category.titleEs} <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
+        </h1>
 
 
         <div className="card-custom card-msg mt-2 mr-1 ml-1">
@@ -120,7 +120,11 @@ function FirstCategory(props) {
 
               </div>
             </Row>
-            <h1 className="text-center font-weight-bold text-title-classic text-shadow">CLASIFICACIÓN</h1>
+            <h2 className="color-main text-center">
+              <span className="font-weight-bold text-classic ">
+               -- CLASIFICACIÓN --
+              </span>
+            </h2>
             <hr/>
             <Row>
 
