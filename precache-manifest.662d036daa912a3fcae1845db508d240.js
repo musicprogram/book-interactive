@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c26641608d719b516f7b6f6152072b7a",
+    "revision": "57c8649d0aeaf55fcb2c6979039c78e9",
     "url": "/book-interactive/index.html"
   },
   {
-    "revision": "385dabdda248e8a4a774",
+    "revision": "94dabd2b12f7ee468b28",
     "url": "/book-interactive/static/css/2.b565b473.chunk.css"
   },
   {
-    "revision": "10045b282f635e45c42a",
-    "url": "/book-interactive/static/css/main.595873ee.chunk.css"
+    "revision": "1775f95462b72da05165",
+    "url": "/book-interactive/static/css/main.e46d0622.chunk.css"
   },
   {
-    "revision": "385dabdda248e8a4a774",
-    "url": "/book-interactive/static/js/2.e7c567ea.chunk.js"
+    "revision": "94dabd2b12f7ee468b28",
+    "url": "/book-interactive/static/js/2.70b31601.chunk.js"
   },
   {
     "revision": "a41506294c22016896304dee19257fed",
-    "url": "/book-interactive/static/js/2.e7c567ea.chunk.js.LICENSE.txt"
+    "url": "/book-interactive/static/js/2.70b31601.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "10045b282f635e45c42a",
-    "url": "/book-interactive/static/js/main.c1024cda.chunk.js"
+    "revision": "1775f95462b72da05165",
+    "url": "/book-interactive/static/js/main.fbe8ecdd.chunk.js"
   },
   {
     "revision": "5f2d70484b53199a3552",
@@ -44,8 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/book-interactive/static/media/Team.aedbc5d5.svg"
   },
   {
-    "revision": "466822add2d0ccee6a3d8b7ba8ee9404",
-    "url": "/book-interactive/static/media/left-banner.466822ad.svg"
+    "revision": "20425cef8dad1135fc70bf74059ab60e",
+    "url": "/book-interactive/static/media/Work  abroad.20425cef.svg"
+  },
+  {
+    "revision": "2d11dac8792ff66829172d958d655756",
+    "url": "/book-interactive/static/media/banner-1.2d11dac8.png"
+  },
+  {
+    "revision": "5542443d3cf40783b3e54629d4bc1841",
+    "url": "/book-interactive/static/media/click.5542443d.gif"
   },
   {
     "revision": "e611722e3bdf8f5b615c9adc07cf7b51",
