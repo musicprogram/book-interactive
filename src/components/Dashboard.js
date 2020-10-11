@@ -44,7 +44,6 @@ function Dashboard() {
               "backgroundRepeat": "no-repeat",
               "backgroundSize": "cover",
               "backgroundPosition": "center center"
-
             }}>
               <div className="d-flex justify-content-center" >
                 <Image src={loading} roundedCircle className="loading-img"/>
