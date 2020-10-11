@@ -1,5 +1,5 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Container, Card, Row} from 'react-bootstrap'
+import {Container, Card, Row, Image} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
@@ -13,6 +13,10 @@ import img from '../../../assets/degradacion.jpg';
 import logoPlay from '../../../assets/img/logo-play.png'
 
 import sound from '../../../assets/img/sound.gif'
+
+import banner from '../../../assets/img/banner-1.png'
+
+import click from '../../../assets/img/click.gif'
 
 import talkOne from '../../../assets/img/firts_category/talkOne.svg'
 import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
@@ -75,8 +79,9 @@ function FirstCategory(props) {
     <Fragment>
       <Container>
 
-        <h1 className="color-main text-center text-capitalize font-weight-bold">
-          {props.category.titleEs} <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
+        <h1 className="color-main text-center text-capitalize">
+          <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
+          <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
         </h1>
 
 
@@ -87,11 +92,12 @@ function FirstCategory(props) {
                 <img
                   alt="that wanaka tree"
                   src={props.category.img}
-                  className="img-category"
+                  className="img-category rounded"
                 />
               </Zoom>
             </div>
-            <Row>
+            <Image className="img-banner-1 img-fluid" src={banner}/>
+            <Row className="bg-transparent-black rounded">
               <div className="col-2">
                 <div className="div-button ">
                   <object
@@ -103,7 +109,7 @@ function FirstCategory(props) {
               </div>
               <div className="col-10">
 
-                <div className="talk-bubble tri-right left-in" onClick={handleMessage}>
+                <div className="talk-bubble tri-right left-in wave hvr-grow letter-hover" onClick={handleMessage}>
                   <div className="talktext text-center">
                     <p className="lead">
 
@@ -112,13 +118,18 @@ function FirstCategory(props) {
                     </p>
                     <br/>
                     <p className="lead">
-                      {props.category.descriptionIn}
+                      <span>{props.category.descriptionIn}</span>
                     </p>
                   </div>
+                  <img src={click} className="click-animated"/>
                 </div>
 
 
+
               </div>
+
+
+
             </Row>
             <h2 className="color-main text-center">
               <span className="font-weight-bold text-classic ">
@@ -137,10 +148,32 @@ function FirstCategory(props) {
                       {props.category.firstEs}
 
                     </Card.Title>
-                    <Card.Text className="color-main font-weight-bold">
-                      {props.category.firstIn}
-                    </Card.Text>
-                    <img src={imgPlayFirst} className="play-button" onClick={handlePlayFirst}/>
+
+                    <Row>
+                      <div className="col-2">
+                        <div>
+                          <object
+                            className="face-talk"
+                            type="image/svg+xml"
+                            data={talkSecond}>
+                          </object>
+                          <span> <img src={imgPlayFirst} className="play-button" /></span>
+                        </div>
+
+
+                      </div>
+
+                      <div className="col-10">
+                        <div className="bg-bubble hvr-bubble-left hvr-grow-shadow" onClick={handlePlayFirst}>
+                          <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
+                            {props.category.firstIn} <span> <img src={click} className="click-animated"/></span>
+                          </Card.Text>
+                        </div>
+
+                      </div>
+                    </Row>
+
+
                   </Card.Body>
                 </Card>
 

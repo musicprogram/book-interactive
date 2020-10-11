@@ -1,7 +1,6 @@
 import React, {Fragment, useEffect} from 'react';
 import {firstCategoryData} from '../data/data'
 import {Image, Spinner, Row, Col} from 'react-bootstrap';
-import leftBanner from '../assets/img/left-banner.svg'
 import {
   useRecoilValue, useRecoilState
 } from 'recoil';

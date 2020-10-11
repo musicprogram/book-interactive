@@ -125,6 +125,13 @@ body{
 .color-main{
   color: #fc7323 !important;
 }
+.color-main-background{
+  background-color: #fc7323;
+}
+
+.bg-transparent-black{
+  background-color: #f7f7f7;
+}
 
 .text-shadow{
   text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
@@ -156,9 +163,9 @@ body{
 }
 
 .card-msg{
-  border-radius: 40px 10px 40px 10px;
-  background-color: rgba(0, 4, 0, 0.1);
-  background: rgba(0, 4, 0, 0.1);
+  border-radius: 40px 40px 40px 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -191,6 +198,7 @@ figure.zoom img {
 .svg-talk{
   width: 150px;
   height: 150px;
+  margin-top: 5px;
 }
 
 
@@ -461,18 +469,32 @@ figure.zoom img {
 }
 
 .play-button{
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  cursor: pointer;
 }
 
 .text-title-span{
   background-color: #fc7323;
   color: white;
+  border-radius: 8px;
+  padding-left: 9px;
+  padding-right: 9px;
+
 }
+
+.text-title-span-title{
+  background-color: white;
+  color:  #fc7323;
+  border-radius: 8px;
+  padding-left: 9px;
+  padding-right: 9px;
+
+}
+
+
 
 @media screen and (max-width: 800px) {
   .svg-talk {
@@ -517,4 +539,33 @@ figure.zoom img {
 .img-logo{
   width: 25px;
   height: 25px;
+}
+
+.img-banner-1{
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.letter-hover:hover{
+  color: #fc7323;
+}
+
+.bg-bubble{
+  background-color: #E1E1E1;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+.face-talk{
+  width: 50px;
+}
+
+.click-animated{
+  width: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
