@@ -184,31 +184,47 @@ function FirstCategory(props) {
             <div className="d-flex justify-content-center">
               <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                 <div className="btn-group mr-2" role="group" aria-label="First group">
-                  <button type="button" className="btn btn-secondary" onClick={()=>{
-                    props.firstStep()
-                    setStep( 1)
-                    localStorage.setItem("stepFormOne", `${1}`);
-                    stopSynth();
-                  }}> {'<<'} </button>
-                  <button type="button" className="btn btn-secondary" onClick={()=>{
-                    props.previousStep()
-                    setStep(props.currentStep - 1);
-                    localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
-                    stopSynth();
-                  }}> {'<'}</button>
-                  <button type="button" className="btn btn-secondary" onClick={()=>{
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    disabled={props.currentStep === 1}
+                    onClick={()=>{
+                      props.firstStep()
+                      setStep( 1)
+                      localStorage.setItem("stepFormOne", `${1}`);
+                      stopSynth();
+                    }}> {'<<'} </button>
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    disabled={props.currentStep === 1}
+                    onClick={()=>{
+                      props.previousStep()
+                      setStep(props.currentStep - 1);
+                      localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
+                      stopSynth();
+                    }}> {'<'}</button>
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    disabled={props.currentStep === props.totalSteps}
+                    onClick={()=>{
                     props.nextStep()
                     setStep(props.currentStep + 1)
                     localStorage.setItem("stepFormOne", `${props.currentStep + 1}`);
                     stopSynth();
                   }}> {'>'}</button>
-                  <button type="button" className="btn btn-secondary" onClick={()=>{
-                    props.lastStep();
-                    setStep(parseInt(props.totalSteps));
-                    //console.log(parseInt(props.totalSteps))
-                    localStorage.setItem("stepFormOne", `${props.totalSteps}`);
-                    stopSynth();
-                  }}>{'>>'}</button>
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    disabled={props.currentStep === props.totalSteps}
+                    onClick={()=>{
+                      props.lastStep();
+                      setStep(parseInt(props.totalSteps));
+                      //console.log(parseInt(props.totalSteps))
+                      localStorage.setItem("stepFormOne", `${props.totalSteps}`);
+                      stopSynth();
+                    }}>{'>>'}</button>
                 </div>
               </div>
             </div>

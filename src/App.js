@@ -12,9 +12,7 @@ function App() {
 
   return (
     <RecoilRoot>
-      <div>
         <Dashboard/>
-      </div>
     </RecoilRoot>
   );
 }

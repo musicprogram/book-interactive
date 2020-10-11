@@ -1,7 +1,7 @@
 import React, {Fragment, useEffect} from 'react';
 import {firstCategoryData} from '../data/data'
 import {Image, Spinner, Row, Col} from 'react-bootstrap';
-
+import leftBanner from '../assets/img/left-banner.svg'
 import {
   useRecoilValue, useRecoilState
 } from 'recoil';
@@ -23,7 +23,7 @@ function Dashboard() {
   },[])
 
   return (
-      <div>
+      <Fragment>
 
         {
           category === 0 ? (
@@ -37,7 +37,7 @@ function Dashboard() {
         }
         {
           category === -1 && (
-            <Fragment>
+            <div>
               <div className="d-flex justify-content-center" >
                 <Image src={loading} roundedCircle className="loading-img"/>
               </div>
@@ -46,11 +46,11 @@ function Dashboard() {
                 <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
                 <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
               </div>
-            </Fragment>
+            </div>
 
           )
         }
-      </div>
+      </Fragment>
   );
 }
 
