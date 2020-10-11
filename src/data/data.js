@@ -7,8 +7,8 @@ export const firstCategoryData = [
     "descriptionIn": "Degradation in the white textiles getting a creamy tone.",
     "firstEs":"En telas o encaje no tiene tolerancia.\n" +
       "En copas de espuma, simetría con visualización leve o media.\n",
-    "firstIn": "En telas o encaje no tiene tolerancia.\n" +
-      "En copas de espuma, simetría con visualización leve o media.\n",
+    "firstIn": "In fabrics or lace it has no tolerance.\n" +
+      "In foam cups, symmetry with slight or medium visualization.\n",
     "secondEs": "Degradación con alteración del color.\n",
     "secondIn" : "Degradation with color alteration.\n",
     "classified": false

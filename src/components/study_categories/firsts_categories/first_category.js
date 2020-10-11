@@ -24,25 +24,29 @@ import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
 function FirstCategory(props) {
 
   const [imgTalk, setImgTalk] = useState(talkOne);
-  const [imgPlayFirst, setImgPlayFirst] = useState(logoPlay);
+  const [imgPlayFirst, setImgPlayFirst] = useState(false);
   const [imgPlaySecond, setImgPlaySecond] = useState(logoPlay);
+  const [animatedSound, setAnimatedSound] = useState(false);
   const [voices, setVoices] = useState(null);
   const [synth, setSynth] = useRecoilState(synthGlobal);
   const [step, setStep] = useRecoilState(currentStep);
+
 
   useEffect(()=>{
     //console.log(props.category)
   })
 
   const handleMessage =()=>{
+
     //console.log(speechSynthesis.getVoices())
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.descriptionIn, selectedVoiceName, synth);
-
+    setAnimatedSound(true);
     setImgTalk(talkSecond);
     setTimeout(()=>{
       setImgTalk(talkOne);
+      setAnimatedSound(false);
     },5000)
   }
 
@@ -53,25 +57,24 @@ function FirstCategory(props) {
   }
 
   const handlePlayFirst =() =>{
-    setImgPlayFirst(sound)
+    setImgPlayFirst(true)
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.firstIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
-      setImgPlayFirst(logoPlay);
+      setImgPlayFirst(false);
     }, 5000)
   }
 
   const handlePlaySecond =() =>{
-    setImgPlaySecond(sound)
+    setImgPlayFirst(true)
     stopSynth();
-    const textValue = 'Asymmetry in the garment with strong visualization';
     let selectedVoiceName = "Samantha";
-    speechText(textValue, selectedVoiceName, synth);
+    speechText(props.category.secondIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
-      setImgPlaySecond(logoPlay);
+      setImgPlayFirst(false);
     }, 5000)
   }
 
@@ -106,6 +109,10 @@ function FirstCategory(props) {
                     data={imgTalk}>
                   </object>
                 </div>
+                {
+                  animatedSound && <span> <img src={sound} className="play-button" /></span>
+                }
+
               </div>
               <div className="col-10">
 
@@ -124,79 +131,84 @@ function FirstCategory(props) {
                   <img src={click} className="click-animated"/>
                 </div>
 
-
-
               </div>
 
-
-
             </Row>
-            <h2 className="color-main text-center">
+            <h2 className="color-main text-center mt-3">
               <span className="font-weight-bold text-classic ">
                -- CLASIFICACIÓN --
               </span>
             </h2>
             <hr/>
+
             <Row>
 
-              <div className="col-md-6 mb-2">
+              <div className="mt-4">
 
-                <Card border="light" style={{ borderRadius: '20px' }}>
-                  <Card.Header className="text-classic h3">Primera</Card.Header>
-                  <Card.Body>
-                    <Card.Title>
-                      {props.category.firstEs}
+                <Row>
+                  <div className="col-6">
 
-                    </Card.Title>
+                    <Card border="light" style={{ borderRadius: '20px' }}>
+                      <Card.Header className="text-classic h3">Primera</Card.Header>
+                      <Card.Body>
+                        <Card.Title>
+                          {props.category.firstEs}
 
-                    <Row>
-                      <div className="col-2">
-                        <div>
-                          <object
-                            className="face-talk"
-                            type="image/svg+xml"
-                            data={talkSecond}>
-                          </object>
-                          <span> <img src={imgPlayFirst} className="play-button" /></span>
-                        </div>
+                        </Card.Title>
 
+                      </Card.Body>
+                    </Card>
 
+                  </div>
+                  <div className="col-6">
+
+                    <Card border="light" style={{ borderRadius: '20px' }}>
+                      <Card.Header className="text-classic h3">Segundo</Card.Header>
+                      <Card.Body>
+                        <Card.Title>
+                          {props.category.secondEs}
+
+                        </Card.Title>
+
+                      </Card.Body>
+                    </Card>
+
+                  </div>
+                </Row>
+
+                <Row className="mt-3 mr-2 ml-2 mb-3">
+                  <div className="col-5">
+                    <div className="bg-bubble hvr-bubble-right hvr-grow-shadow" onClick={handlePlayFirst}>
+                      <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
+                        {props.category.firstIn} <span> <img src={click} className="click-animated"/></span>
+                      </Card.Text>
+                    </div>
+
+                  </div>
+                  <div className="col-2">
+                      <object
+                        className="face-talk"
+                        type="image/svg+xml"
+                        data={talkSecond}>
+                      </object>
+                      <span className={`${imgPlayFirst ? '' : 'show-no'}`}> <img src={sound} className="play-button mt-1" /></span>
+
+                  </div>
+
+                    <div className="col-5">
+                      <div className="bg-bubble hvr-bubble-left hvr-grow-shadow" onClick={handlePlaySecond}>
+                        <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
+                          {props.category.secondIn} <span> <img src={click} className="click-animated"/></span>
+                        </Card.Text>
                       </div>
 
-                      <div className="col-10">
-                        <div className="bg-bubble hvr-bubble-left hvr-grow-shadow" onClick={handlePlayFirst}>
-                          <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
-                            {props.category.firstIn} <span> <img src={click} className="click-animated"/></span>
-                          </Card.Text>
-                        </div>
-
-                      </div>
-                    </Row>
+                    </div>
 
 
-                  </Card.Body>
-                </Card>
+                </Row>
 
               </div>
-              <div className="col-md-6">
 
-                <Card border="light" style={{ borderRadius: '20px' }}>
-                  <Card.Header className="text-classic h3">Segunda</Card.Header>
-                  <Card.Body>
-                    <Card.Title>
-                      Asimetría en la prenda con
-                      visualización fuerte.
-
-                    </Card.Title>
-                    <Card.Text className="color-main font-weight-bold">
-                      Asymmetry in the garment with
-                      strong visualization
-                    </Card.Text>
-                    <img src={imgPlaySecond} className="play-button" onClick={handlePlaySecond}/>
-                  </Card.Body>
-                </Card>
-
-              </div>
 
             </Row>
 
@@ -265,6 +277,8 @@ function FirstCategory(props) {
         </div>
 
       </Container>
+
+
 
     </Fragment>
 

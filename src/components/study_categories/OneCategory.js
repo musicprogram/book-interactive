@@ -7,7 +7,7 @@ import {
 } from 'recoil';
 
 import FirstCategory from "./firsts_categories/first_category";
-import leftBanner from "../../assets/img/Work  abroad.svg";
+import leftBanner from "../../assets/img/girl.svg";
 function OneCategory() {
   const [step, setStep] = useRecoilState(currentStep);
   const firsCategoriesData = useRecoilValue(firstCategory);
