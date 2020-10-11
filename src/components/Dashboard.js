@@ -12,6 +12,7 @@ import NavMain from "./UI/NavMain";
 import OneCategory from "./study_categories/OneCategory";
 
 import loading from '../assets/img/loading.svg'
+import leftBanner from "../assets/img/Creativity.svg";
 
 function Dashboard() {
   const category = useRecoilValue(categoryNavigation);
@@ -36,7 +37,15 @@ function Dashboard() {
         }
         {
           category === -1 && (
-            <div>
+            <div style={{
+              "height": `1200px`,
+              "backgroundColor": "white",
+              "backgroundAttachment": "fixed",
+              "backgroundRepeat": "no-repeat",
+              "backgroundSize": "cover",
+              "backgroundPosition": "center center"
+
+            }}>
               <div className="d-flex justify-content-center" >
                 <Image src={loading} roundedCircle className="loading-img"/>
               </div>

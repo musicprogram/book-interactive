@@ -80,7 +80,7 @@ function FirstCategory(props) {
 
   return (
     <Fragment>
-      <Container>
+      <>
 
         <h1 className="color-main text-center text-capitalize">
           <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
@@ -89,103 +89,104 @@ function FirstCategory(props) {
 
 
         <div className="card-custom card-msg mt-2 mr-1 ml-1">
-          <Card.Body>
-            <div className="d-flex justify-content-center">
-              <Zoom>
-                <img
-                  alt="that wanaka tree"
-                  src={props.category.img}
-                  className="img-category rounded"
-                />
-              </Zoom>
-            </div>
-            <Image className="img-banner-1 img-fluid" src={banner}/>
-            <Row className="bg-transparent-black rounded">
-              <div className="col-2">
-                <div className="div-button ">
-                  <object
-                    className="svg-talk"
-                    type="image/svg+xml"
-                    data={imgTalk}>
-                  </object>
-                </div>
-                {
-                  animatedSound && <span> <img src={sound} className="play-button" /></span>
-                }
-
+          <div className="container">
+            <Card.Body>
+              <div className="d-flex justify-content-center">
+                <Zoom>
+                  <img
+                    alt="that wanaka tree"
+                    src={props.category.img}
+                    className="img-category rounded"
+                  />
+                </Zoom>
               </div>
-              <div className="col-10">
-
-                <div className="talk-bubble tri-right left-in wave hvr-grow letter-hover" onClick={handleMessage}>
-                  <div className="talktext text-center">
-                    <p className="lead">
-
-                      {props.category.descriptionEs}
-
-                    </p>
-                    <br/>
-                    <p className="lead">
-                      <span>{props.category.descriptionIn}</span>
-                    </p>
+              <Image className="img-banner-1 img-fluid" src={banner}/>
+              <Row className="bg-transparent-black rounded">
+                <div className="col-2">
+                  <div className="div-button ">
+                    <object
+                      className="svg-talk"
+                      type="image/svg+xml"
+                      data={imgTalk}>
+                    </object>
                   </div>
-                  <img src={click} className="click-animated"/>
+                  {
+                    animatedSound && <span> <img src={sound} className="play-button" /></span>
+                  }
+
+                </div>
+                <div className="col-10">
+
+                  <div className="talk-bubble tri-right left-in wave hvr-grow letter-hover" onClick={handleMessage}>
+                    <div className="talktext text-center">
+                      <p className="lead">
+
+                        {props.category.descriptionEs}
+
+                      </p>
+                      <br/>
+                      <p className="lead">
+                        <span>{props.category.descriptionIn}</span>
+                      </p>
+                    </div>
+                    <img src={click} className="click-animated"/>
+                  </div>
+
                 </div>
 
-              </div>
-
-            </Row>
-            <h2 className="color-main text-center mt-3">
+              </Row>
+              <h2 className="color-main text-center mt-3">
               <span className="font-weight-bold text-classic ">
                -- CLASIFICACIÓN --
               </span>
-            </h2>
-            <hr/>
+              </h2>
+              <hr/>
 
-            <Row>
+              <Row>
 
-              <div className="mt-4">
+                <div className="mt-4">
 
-                <Row>
-                  <div className="col-6">
+                  <Row>
+                    <div className="col-6">
 
-                    <Card border="light" style={{ borderRadius: '20px' }}>
-                      <Card.Header className="text-classic h3">Primera</Card.Header>
-                      <Card.Body>
-                        <Card.Title>
-                          {props.category.firstEs}
+                      <Card border="light" style={{ borderRadius: '20px' }}>
+                        <Card.Header className="text-classic h3">Primera</Card.Header>
+                        <Card.Body>
+                          <Card.Title>
+                            {props.category.firstEs}
 
-                        </Card.Title>
+                          </Card.Title>
 
-                      </Card.Body>
-                    </Card>
+                        </Card.Body>
+                      </Card>
 
-                  </div>
-                  <div className="col-6">
-
-                    <Card border="light" style={{ borderRadius: '20px' }}>
-                      <Card.Header className="text-classic h3">Segundo</Card.Header>
-                      <Card.Body>
-                        <Card.Title>
-                          {props.category.secondEs}
-
-                        </Card.Title>
-
-                      </Card.Body>
-                    </Card>
-
-                  </div>
-                </Row>
-
-                <Row className="mt-3 mr-2 ml-2 mb-3">
-                  <div className="col-5">
-                    <div className="bg-bubble hvr-bubble-right hvr-grow-shadow" onClick={handlePlayFirst}>
-                      <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
-                        {props.category.firstIn} <span> <img src={click} className="click-animated"/></span>
-                      </Card.Text>
                     </div>
+                    <div className="col-6">
 
-                  </div>
-                  <div className="col-2">
+                      <Card border="light" style={{ borderRadius: '20px' }}>
+                        <Card.Header className="text-classic h3">Segundo</Card.Header>
+                        <Card.Body>
+                          <Card.Title>
+                            {props.category.secondEs}
+
+                          </Card.Title>
+
+                        </Card.Body>
+                      </Card>
+
+                    </div>
+                  </Row>
+
+                  <Row className="mt-3 mr-2 ml-2 mb-3">
+                    <div className="col-5">
+                      <div className="bg-bubble hvr-bubble-right hvr-grow-shadow" onClick={handlePlayFirst}>
+                        <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
+                          {props.category.firstIn} <span> <img src={click} className="click-animated"/></span>
+                        </Card.Text>
+                      </div>
+
+                    </div>
+                    <div className="col-2">
                       <object
                         className="face-talk"
                         type="image/svg+xml"
@@ -193,7 +194,7 @@ function FirstCategory(props) {
                       </object>
                       <span className={`${imgPlayFirst ? '' : 'show-no'}`}> <img src={sound} className="play-button mt-1" /></span>
 
-                  </div>
+                    </div>
 
                     <div className="col-5">
                       <div className="bg-bubble hvr-bubble-left hvr-grow-shadow" onClick={handlePlaySecond}>
@@ -205,78 +206,79 @@ function FirstCategory(props) {
                     </div>
 
 
-                </Row>
+                  </Row>
 
-              </div>
-
-
-            </Row>
-
-            <Row>
-              <div className="col-md-12">
+                </div>
 
 
-                <p className="ml-2 mt-3 text-classic ">
-                  NO CLASIFICA/
-                  NOT CLASSIFIED
-                </p>
+              </Row>
+
+              <Row>
+                <div className="col-md-12">
+
+
+                  <p className="ml-2 mt-3 text-classic ">
+                    NO CLASIFICA/
+                    NOT CLASSIFIED
+                  </p>
 
 
 
-              </div>
-            </Row>
+                </div>
+              </Row>
 
-            <div className="d-flex justify-content-center">
-              <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                <div className="btn-group mr-2" role="group" aria-label="First group">
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    disabled={props.currentStep === 1}
-                    onClick={()=>{
-                      props.firstStep()
-                      setStep( 1)
-                      localStorage.setItem("stepFormOne", `${1}`);
-                      stopSynth();
-                    }}> {'<<'} </button>
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    disabled={props.currentStep === 1}
-                    onClick={()=>{
-                      props.previousStep()
-                      setStep(props.currentStep - 1);
-                      localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
-                      stopSynth();
-                    }}> {'<'}</button>
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    disabled={props.currentStep === props.totalSteps}
-                    onClick={()=>{
-                    props.nextStep()
-                    setStep(props.currentStep + 1)
-                    localStorage.setItem("stepFormOne", `${props.currentStep + 1}`);
-                    stopSynth();
-                  }}> {'>'}</button>
-                  <button
-                    type="button"
-                    className="btn btn-secondary"
-                    disabled={props.currentStep === props.totalSteps}
-                    onClick={()=>{
-                      props.lastStep();
-                      setStep(parseInt(props.totalSteps));
-                      //console.log(parseInt(props.totalSteps))
-                      localStorage.setItem("stepFormOne", `${props.totalSteps}`);
-                      stopSynth();
-                    }}>{'>>'}</button>
+              <div className="d-flex justify-content-center">
+                <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                  <div className="btn-group mr-2" role="group" aria-label="First group">
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === 1}
+                      onClick={()=>{
+                        props.firstStep()
+                        setStep( 1)
+                        localStorage.setItem("stepFormOne", `${1}`);
+                        stopSynth();
+                      }}> {'<<'} </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === 1}
+                      onClick={()=>{
+                        props.previousStep()
+                        setStep(props.currentStep - 1);
+                        localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
+                        stopSynth();
+                      }}> {'<'}</button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === props.totalSteps}
+                      onClick={()=>{
+                        props.nextStep()
+                        setStep(props.currentStep + 1)
+                        localStorage.setItem("stepFormOne", `${props.currentStep + 1}`);
+                        stopSynth();
+                      }}> {'>'}</button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === props.totalSteps}
+                      onClick={()=>{
+                        props.lastStep();
+                        setStep(parseInt(props.totalSteps));
+                        //console.log(parseInt(props.totalSteps))
+                        localStorage.setItem("stepFormOne", `${props.totalSteps}`);
+                        stopSynth();
+                      }}>{'>>'}</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Card.Body>
+            </Card.Body>
+          </div>
         </div>
 
-      </Container>
+      </>
 
 
 
