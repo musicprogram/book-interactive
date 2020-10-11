@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9af9dbbdb4a1b6dbd73b440209e1eb7",
+    "revision": "6fb1bb4733930cbd96933881c75ca8f8",
     "url": "/book-interactive/index.html"
   },
   {
-    "revision": "925e776dbd7712008056",
+    "revision": "278b0058c1c0b786569f",
     "url": "/book-interactive/static/css/2.b565b473.chunk.css"
   },
   {
-    "revision": "4009f0ed1ca7a47eacfe",
-    "url": "/book-interactive/static/css/main.0ff32c43.chunk.css"
+    "revision": "a8062b6112cf8cf645ba",
+    "url": "/book-interactive/static/css/main.41c26606.chunk.css"
   },
   {
-    "revision": "925e776dbd7712008056",
-    "url": "/book-interactive/static/js/2.228775d1.chunk.js"
+    "revision": "278b0058c1c0b786569f",
+    "url": "/book-interactive/static/js/2.39820028.chunk.js"
   },
   {
     "revision": "a41506294c22016896304dee19257fed",
-    "url": "/book-interactive/static/js/2.228775d1.chunk.js.LICENSE.txt"
+    "url": "/book-interactive/static/js/2.39820028.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4009f0ed1ca7a47eacfe",
-    "url": "/book-interactive/static/js/main.5c55476b.chunk.js"
+    "revision": "a8062b6112cf8cf645ba",
+    "url": "/book-interactive/static/js/main.1e7012fb.chunk.js"
   },
   {
     "revision": "5f2d70484b53199a3552",
     "url": "/book-interactive/static/js/runtime-main.88a36cc3.js"
+  },
+  {
+    "revision": "fbbfbbedeaf5e0e0c124a0c9359c9eda",
+    "url": "/book-interactive/static/media/Creativity.fbbfbbed.svg"
   },
   {
     "revision": "ab180487f09eda3ea4462314ceafa979",
@@ -42,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "aedbc5d5cdfd396dc6c68d6989db03d0",
     "url": "/book-interactive/static/media/Team.aedbc5d5.svg"
+  },
+  {
+    "revision": "9fe3816825c9642a95c4a11094f95d4d",
+    "url": "/book-interactive/static/media/Validate deletion.9fe38168.svg"
   },
   {
     "revision": "2d11dac8792ff66829172d958d655756",
@@ -70,5 +78,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "58a69ad31bfd1c6bd54e461ee8acd8a5",
     "url": "/book-interactive/static/media/talkSecond.58a69ad3.svg"
+  },
+  {
+    "revision": "8f426d1e9c053b0d7fd910b914763572",
+    "url": "/book-interactive/static/media/undraw.8f426d1e.svg"
   }
 ]);
