@@ -6,7 +6,7 @@ import {
   useRecoilState, useRecoilValue
 } from 'recoil';
 
-import FirstCategory from "./firsts_categories/first_category";
+import Category from "./categories/Category";
 
 function OneCategory() {
   const [step, setStep] = useRecoilState(currentStep);
@@ -21,7 +21,7 @@ function OneCategory() {
         {
           firsCategoriesData.map((category, i)=>{
             return(
-              <FirstCategory category={category} key={i}/>
+              <Category category={category} key={i}/>
             )
           })
         }

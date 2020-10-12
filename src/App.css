@@ -58,16 +58,11 @@ body{
   background-size: cover;
   background-position: center center;
   height:100%;
-  background-color: #FBFAE8;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: #fc7323;
-}
 
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
-  color: #fc7323;
   font-weight: bold;
 }
 
@@ -83,20 +78,20 @@ body{
   -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
   -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
   box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
-
+  cursor: pointer;
 
 }
 
 .my-card-l{
-  background-color: #780116;
+  background-color: #DB7C26;
 }
 
 .my-card-c{
-  background-color: #F7B538;
+  background-color: #780116;
 }
 
 .my-card-r{
-  background-color: #DB7C26;
+  background-color: #F7B538;
 }
 
 .text-title{
@@ -167,8 +162,8 @@ body{
 
 .card-msg{
   border-radius: 40px 40px 40px 40px;
-  background-color: rgba(255, 255, 255, 0.9);
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -488,6 +483,16 @@ figure.zoom img {
   margin-right: auto;
 }
 
+.play-button-h{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
+
 .text-title-span{
   background-color: #fc7323;
   color: white;
@@ -552,24 +557,51 @@ figure.zoom img {
 
 
 
-
+  .sound-img{
+    margin-right: 300px;
+  }
+  
+  .play-button-h{
+    margin-right: -5px;
+    margin-top: 40px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .play-button{
+    margin-left: 16px;
+    margin-top: 10px;
+  }
+  
+  
 
 
 
 
 }
 
+.color-1{
+  color:#FF873D !important;
+}
+
+.color-2{
+  color: #780116 !important;
+}
+
+.color-3{
+  color: #F7B539 !important;
+}
+
+
 .background-nav{
-  background-color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(237, 243, 245, 0.9);
+  background: rgba(237, 243, 245, 0.9);
   -webkit-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
   -moz-box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
   box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.23);
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-  color: #fc7323;
-}
+
 
 .img-category{
   width: 300px;
@@ -624,10 +656,12 @@ figure.zoom img {
 }
 
 
-
 .show-no{
   visibility: hidden;
 }
 
+.pointer{
+  cursor: pointer;
+}
 
 /* THEME */

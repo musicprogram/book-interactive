@@ -1,7 +1,7 @@
 const Links = [
   {
     "category": 0,
-    "background":"https://svgshare.com/i/QTx.svg",
+    "background":"https://svgshare.com/i/QUd.svg",
     "btn1":"https://svgshare.com/i/QV4.svg",
     "btn2":"https://svgshare.com/i/QTa.svg",
     "btn3":"https://svgshare.com/i/QVF.svg",
@@ -12,12 +12,12 @@ const Links = [
   },
   {
     "category": 1,
-    "background":"https://svgshare.com/i/QUa.svg",
+    "background":"https://svgshare.com/i/QU_.svg",
     "photoDetail": "https://img.techpowerup.org/201012/banner-1.png"
   },
   {
     "category": 2,
-    "background":"https://svgshare.com/i/QU_.svg",
+    "background":"https://svgshare.com/i/QUa.svg",
   },
   {
     "category": 3,

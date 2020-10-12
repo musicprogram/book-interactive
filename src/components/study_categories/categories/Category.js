@@ -12,7 +12,7 @@ import {
 import talkOne from '../../../assets/img/firts_category/talkOne.svg'
 import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
 
-function FirstCategory(props) {
+function Category(props) {
 
   const [imgTalk, setImgTalk] = useState(talkOne);
   const [imgPlayFirst, setImgPlayFirst] = useState(false);
@@ -92,7 +92,7 @@ function FirstCategory(props) {
                   />
                 </Zoom>
               </div>
-              <Image className="img-banner-1 img-fluid" src={links[1].photoDetail}/>
+
               <Row className="rounded">
                 <div className="col-2">
                   <div className="div-button ">
@@ -103,7 +103,7 @@ function FirstCategory(props) {
                     </object>
                   </div>
                   {
-                    animatedSound && <span> <img src={links[0].sound} className="play-button" /></span>
+                    animatedSound && <span> <img src={links[0].sound} className="play-button-h" /></span>
                   }
 
                 </div>
@@ -127,6 +127,7 @@ function FirstCategory(props) {
                 </div>
 
               </Row>
+              <Image className="img-banner-1 img-fluid" src={links[1].photoDetail}/>
               <h2 className="color-main text-center mt-3">
               <span className="font-weight-bold text-classic ">
                -- CLASIFICACIÓN --
@@ -279,4 +280,4 @@ function FirstCategory(props) {
   );
 }
 
-export default FirstCategory;
+export default Category;

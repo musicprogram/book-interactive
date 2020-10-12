@@ -46,3 +46,8 @@ export const linksSvg = atom({
   default: dataLinks, // default value
 });
 
+export const color = atom({
+  key: 'color', // unique ID
+  default: '#ffffff', // default value
+});
+

@@ -1,12 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
-import teacher from '../../assets/img/Notes.png'
 
 import {
   useRecoilState, useRecoilValue
 } from 'recoil';
 
-import {categoryNavigation, currentStep, firstCategory, synthGlobal} from '../../GlobalState';
+import {categoryNavigation,
+  currentStep,
+  firstCategory,
+  synthGlobal,
+  color
+
+} from '../../GlobalState';
 
 function NavMain() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -15,9 +20,19 @@ function NavMain() {
   const firsCategoriesData = useRecoilValue(firstCategory);
   const [menu, setMenu] = useState([]);
   const [step, setStep] = useRecoilState(currentStep);
+  const [colorMain, setColorMain] = useRecoilState(color);
+  const [colorText, setColorText] = useState('');
+
 
 
   useEffect(()=>{
+    if(category === 1){
+      setColorText('color-1')
+    }else if(category === 2) {
+      setColorText('color-2')
+    }else if(category === 3) {
+      setColorText('color-3')
+    }
 
     let men = [];
 
@@ -31,7 +46,7 @@ function NavMain() {
 
     })
     setMenu(men);
-  },[])
+  },[category])
 
   const stopSynth = () =>{
     if(synth.speaking){ /* stop narration */
@@ -50,11 +65,12 @@ function NavMain() {
       onToggle={()=> setIsExpanded(!isExpanded)}
     >
 
-      <Navbar.Brand  className="brand-text color-main" onClick={()=> {
+      <Navbar.Brand  className={`brand-text ${colorText}`}
+       onClick={()=> {
         setCategory(0);
         stopSynth()
       }}>
-        <img src={teacher} className="img-logo"/>
+        Book Interactive
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -62,13 +78,13 @@ function NavMain() {
           <NavDropdown
             title="One category"
             id="basic-nav-dropdown"
-            className={`my-nav-kink ${category === 1 ? 'font-weight-bold color-main text-uppercase text-dark' : ''}`}>
+            className={`my-nav-kink  ${category === 1 ? 'font-weight-bold text-uppercase text-dark' : ''}`}>
             {
               menu.map((category, i)=>{
                return(
                  <NavDropdown.Item
                    href="#"
-                   className={step === category.id ? 'color-main font-weight-bold' : ''}
+                   className={`${step === category.id ? 'font-weight-bold' : ''}`}
                    onClick={()=>{
                      setStep(category.id);
                      localStorage.setItem("stepFormOne", `${category.id}`)
@@ -87,11 +103,11 @@ function NavMain() {
           </NavDropdown>
 
 
-          <Nav.Link href="#" className={`my-nav-kink ${category === 2 ? 'font-weight-bold color-main text-uppercase text-dark' : ''}`}  onClick={()=> {
+          <Nav.Link href="#" className={`my-nav-kink ${category === 2 ? 'font-weight-bold text-uppercase text-dark' : ''}`}  onClick={()=> {
             setCategory(2);
             stopSynth();
           }}>Second</Nav.Link>
-          <Nav.Link href="#" className={`my-nav-kink ${category === 3 ? 'font-weight-bold color-main text-uppercase text-dark' : ''}`}  onClick={()=> {
+          <Nav.Link href="#" className={`my-nav-kink ${category === 3 ? 'font-weight-bold text-uppercase text-dark' : ''}`}  onClick={()=> {
             setCategory(3);
             stopSynth();
           }}>Third</Nav.Link>

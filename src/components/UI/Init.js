@@ -66,6 +66,7 @@ function Init() {
             onClick={()=> setCategory(1)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-l my-card " ref={scene}>
               <img
+                className="pointer"
                 src={links[0].btn1}
                 data-depth="0.5"/>
             </div>
@@ -75,8 +76,8 @@ function Init() {
             onClick={()=> setCategory(2)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-c my-card"  ref={scenec}>
               <img
-                src={links[0].btn2}
-                data-depth="0.7"/>
+                src={links[0].btn3}
+                data-depth="0.9"/>
             </div>
           </div>
           <div
@@ -84,8 +85,8 @@ function Init() {
             onClick={()=> setCategory(3)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-r my-card" ref={scener}>
               <img
-                src={links[0].btn3}
-                data-depth="0.9"/>
+                src={links[0].btn2}
+                data-depth="0.7"/>
             </div>
           </div>
         </div>
