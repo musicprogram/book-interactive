@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6fb1bb4733930cbd96933881c75ca8f8",
+    "revision": "91a4cf78d6ab52fc975ff18556293522",
     "url": "/book-interactive/index.html"
   },
   {
-    "revision": "278b0058c1c0b786569f",
-    "url": "/book-interactive/static/css/2.b565b473.chunk.css"
+    "revision": "c72a43c630a824ef8bd8",
+    "url": "/book-interactive/static/css/2.e87418d1.chunk.css"
   },
   {
-    "revision": "a8062b6112cf8cf645ba",
-    "url": "/book-interactive/static/css/main.41c26606.chunk.css"
+    "revision": "ba33c1dc015df72f6ca1",
+    "url": "/book-interactive/static/css/main.59ee6a65.chunk.css"
   },
   {
-    "revision": "278b0058c1c0b786569f",
-    "url": "/book-interactive/static/js/2.39820028.chunk.js"
+    "revision": "c72a43c630a824ef8bd8",
+    "url": "/book-interactive/static/js/2.07560903.chunk.js"
   },
   {
-    "revision": "a41506294c22016896304dee19257fed",
-    "url": "/book-interactive/static/js/2.39820028.chunk.js.LICENSE.txt"
+    "revision": "6011263a90b26373a59af5ab8e03d105",
+    "url": "/book-interactive/static/js/2.07560903.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a8062b6112cf8cf645ba",
-    "url": "/book-interactive/static/js/main.1e7012fb.chunk.js"
+    "revision": "ba33c1dc015df72f6ca1",
+    "url": "/book-interactive/static/js/main.3844b482.chunk.js"
   },
   {
     "revision": "5f2d70484b53199a3552",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/book-interactive/static/media/Drawing.d29dd310.svg"
   },
   {
-    "revision": "f9252a3b3ce292a211f00721b1b5cfc6",
-    "url": "/book-interactive/static/media/Support team.f9252a3b.svg"
+    "revision": "e3300baa01938337c8ef42e1792a6ec3",
+    "url": "/book-interactive/static/media/Hitch Hiking.e3300baa.svg"
   },
   {
     "revision": "aedbc5d5cdfd396dc6c68d6989db03d0",
@@ -50,6 +50,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9fe3816825c9642a95c4a11094f95d4d",
     "url": "/book-interactive/static/media/Validate deletion.9fe38168.svg"
+  },
+  {
+    "revision": "20425cef8dad1135fc70bf74059ab60e",
+    "url": "/book-interactive/static/media/Work  abroad.20425cef.svg"
+  },
+  {
+    "revision": "b8e066a488d7279cce252f1ac3c3200a",
+    "url": "/book-interactive/static/media/background-2.b8e066a4.svg"
   },
   {
     "revision": "2d11dac8792ff66829172d958d655756",
@@ -82,5 +90,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8f426d1e9c053b0d7fd910b914763572",
     "url": "/book-interactive/static/media/undraw.8f426d1e.svg"
+  },
+  {
+    "revision": "ebb30b9ec9cf1661fd5939da30b5a69e",
+    "url": "/book-interactive/static/media/undraw_web_shopping_dd4l.ebb30b9e.svg"
   }
 ]);
