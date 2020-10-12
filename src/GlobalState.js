@@ -1,4 +1,7 @@
 import React from 'react'
+
+import dataLinks from './data/data_links'
+
 import {
   atom
 } from 'recoil';
@@ -10,7 +13,7 @@ export const speechText = (textValue, selectedVoiceName, synth) =>{
   let voiCesChange = speechSynthesis.getVoices();
   //console.log(voiCesChange)
   voiCesChange.forEach((voice)=>{
-    if(voice.name === selectedVoiceName){
+    if(voice.lang === 'en-US'){
       toSpeak.voice = voice;
     }
   });
@@ -36,5 +39,10 @@ export const synthGlobal = atom({
 export const firstCategory = atom({
   key: 'firstCategory', // unique ID
   default: [], // default value
+});
+
+export const linksSvg = atom({
+  key: 'linksSvg', // unique ID
+  default: dataLinks, // default value
 });
 

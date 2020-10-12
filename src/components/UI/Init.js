@@ -2,19 +2,11 @@ import React, {useEffect, useRef, useState} from 'react';
 import Parallax from 'parallax-js'
 import {Modal, Image, ListGroup} from 'react-bootstrap'
 
-import undraw from '../../assets/img/Validate deletion.svg'
-
 import {
-  useRecoilState
+  useRecoilState, useRecoilValue
 } from 'recoil';
 
-import {categoryNavigation} from '../../GlobalState'
-
-import imgFirst from '../../assets/img/Drawing.svg'
-import imgSecond from '../../assets/img/Creativity.svg'
-import imgThird from '../../assets/img/Design.svg'
-import team from '../../assets/img/Team.svg'
-import leftBanner from "../../assets/img/girl.svg";
+import {categoryNavigation, linksSvg} from '../../GlobalState'
 
 function Init() {
   const scene = useRef();
@@ -28,6 +20,7 @@ function Init() {
 
   const [category, setCategory] = useRecoilState(categoryNavigation);
 
+  const links = useRecoilValue(linksSvg);
 
   useEffect(()=>{
     const modalExist = localStorage.getItem("modalExist");
@@ -73,7 +66,7 @@ function Init() {
             onClick={()=> setCategory(1)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-l my-card " ref={scene}>
               <img
-                src={undraw}
+                src={links[0].btn1}
                 data-depth="0.5"/>
             </div>
           </div>
@@ -82,7 +75,7 @@ function Init() {
             onClick={()=> setCategory(2)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-c my-card"  ref={scenec}>
               <img
-                src={imgSecond}
+                src={links[0].btn2}
                 data-depth="0.7"/>
             </div>
           </div>
@@ -91,7 +84,7 @@ function Init() {
             onClick={()=> setCategory(3)}>
             <div className="mt-2 mb-2 mr-2 ml-2 my-card-r my-card" ref={scener}>
               <img
-                src={imgThird}
+                src={links[0].btn3}
                 data-depth="0.9"/>
             </div>
           </div>
@@ -116,10 +109,8 @@ function Init() {
         <Modal.Header closeButton>
         </Modal.Header>
         <div ref={sceneImgModal}>
-          <Image src={team} roundedCircle data-depth="0.5"/>
+          <Image src={links[0].modal} roundedCircle data-depth="0.5"/>
         </div>
-
-
 
         <Modal.Body>
           <h1 className="color-main text-center font-weight-bold">

@@ -7,39 +7,32 @@ import {
   useRecoilValue, useRecoilState
 } from 'recoil';
 
-import {categoryNavigation, firstCategory } from '../GlobalState'
-
-
-import undraw from '../assets/img/undraw.svg';
-
+import {categoryNavigation, firstCategory, linksSvg } from '../GlobalState'
 
 
 import Init from "./UI/Init";
 import NavMain from "./UI/NavMain";
 import OneCategory from "./study_categories/OneCategory";
 
-import loading from '../assets/img/loading.svg'
-import leftBanner from "../assets/img/background-2.svg";
-import backTwo from "../assets/img/undraw_web_shopping_dd4l.svg";
-import backThree from "../assets/img/Work  abroad.svg";
 
 function Dashboard() {
   const category = useRecoilValue(categoryNavigation);
-  const [imageBody, setImageBody] = useState(leftBanner);
+  const [imageBody, setImageBody] = useState(null);
   const [firsCategoriesData, setFirsCategoriesData] = useRecoilState(firstCategory);
+  const links = useRecoilValue(linksSvg);
 
   useEffect(()=>{
     setFirsCategoriesData(firstCategoryData);
     if(category === 0){
-      setImageBody(leftBanner);
+      setImageBody(links[0].background);
     }else if(category === 1){
-      setImageBody(undraw);
+      setImageBody(links[1].background);
     }else if(category === -1){
       setImageBody('');
     }else if(category === 2){
-      setImageBody(backTwo);
+      setImageBody(links[2].background);
     }else if(category === 3){
-      setImageBody(backThree);
+      setImageBody(links[3].background);
     }
   },[category])
 
@@ -65,7 +58,7 @@ function Dashboard() {
           category === -1 && (
             <div>
               <div className="d-flex justify-content-center" >
-                <Image src={loading} roundedCircle className="loading-img"/>
+                <Image src={links[0].loading} roundedCircle className="loading-img"/>
               </div>
               <div className="d-flex justify-content-center" >
                 <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>

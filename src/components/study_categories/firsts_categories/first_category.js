@@ -3,22 +3,11 @@ import {Container, Card, Row, Image} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-import {speechText, currentStep, synthGlobal} from '../../../GlobalState'
+import {speechText, currentStep, synthGlobal, linksSvg} from '../../../GlobalState'
 import {
-  useRecoilState
+  useRecoilState, useRecoilValue
 } from 'recoil';
 
-import img from '../../../assets/degradacion.jpg';
-
-import logoPlay from '../../../assets/img/logo-play.png'
-
-import sound from '../../../assets/img/sound.gif'
-
-import banner from '../../../assets/img/banner-1.png'
-
-import click from '../../../assets/img/click.gif'
-
-import down from '../../../assets/img/Hitch Hiking.svg'
 
 import talkOne from '../../../assets/img/firts_category/talkOne.svg'
 import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
@@ -27,11 +16,10 @@ function FirstCategory(props) {
 
   const [imgTalk, setImgTalk] = useState(talkOne);
   const [imgPlayFirst, setImgPlayFirst] = useState(false);
-  const [imgPlaySecond, setImgPlaySecond] = useState(logoPlay);
   const [animatedSound, setAnimatedSound] = useState(false);
-  const [voices, setVoices] = useState(null);
   const [synth, setSynth] = useRecoilState(synthGlobal);
   const [step, setStep] = useRecoilState(currentStep);
+  const links = useRecoilValue(linksSvg);
 
 
   useEffect(()=>{
@@ -104,7 +92,7 @@ function FirstCategory(props) {
                   />
                 </Zoom>
               </div>
-              <Image className="img-banner-1 img-fluid" src={banner}/>
+              <Image className="img-banner-1 img-fluid" src={links[1].photoDetail}/>
               <Row className="rounded">
                 <div className="col-2">
                   <div className="div-button ">
@@ -115,7 +103,7 @@ function FirstCategory(props) {
                     </object>
                   </div>
                   {
-                    animatedSound && <span> <img src={sound} className="play-button" /></span>
+                    animatedSound && <span> <img src={links[0].sound} className="play-button" /></span>
                   }
 
                 </div>
@@ -133,7 +121,7 @@ function FirstCategory(props) {
                         <span>{props.category.descriptionIn}</span>
                       </p>
                     </div>
-                    <img src={click} className="click-animated"/>
+                    <img src={links[0].click} className="click-animated"/>
                   </div>
 
                 </div>
@@ -185,7 +173,7 @@ function FirstCategory(props) {
                     <div className="col-5">
                       <div className="bg-bubble hvr-bubble-right hvr-grow-shadow" onClick={handlePlayFirst}>
                         <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
-                          {props.category.firstIn} <span> <img src={click} className="click-animated"/></span>
+                          {props.category.firstIn} <span> <img src={links[0].click} className="click-animated"/></span>
                         </Card.Text>
                       </div>
 
@@ -196,14 +184,14 @@ function FirstCategory(props) {
                         type="image/svg+xml"
                         data={talkSecond}>
                       </object>
-                      <span className={`${imgPlayFirst ? '' : 'show-no'}`}> <img src={sound} className="play-button mt-1" /></span>
+                      <span className={`${imgPlayFirst ? '' : 'show-no'}`}> <img src={links[0].sound} className="play-button mt-1" /></span>
 
                     </div>
 
                     <div className="col-5">
                       <div className="bg-bubble hvr-bubble-left hvr-grow-shadow" onClick={handlePlaySecond}>
                         <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
-                          {props.category.secondIn} <span> <img src={click} className="click-animated"/></span>
+                          {props.category.secondIn} <span> <img src={links[0].click} className="click-animated"/></span>
                         </Card.Text>
                       </div>
 
