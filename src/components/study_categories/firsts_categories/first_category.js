@@ -85,14 +85,15 @@ function FirstCategory(props) {
       <>
 
 
+        <h1 className="color-main text-center text-capitalize mt-2">
+          <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
+          <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
+        </h1>
 
+        <div className="card-custom card-msg mr-1 ml-1">
 
-        <div className="card-custom card-msg mt-2 mr-1 ml-1">
-          <div className="container mt-3">
-            <h1 className="color-main text-center text-capitalize mt-3">
-              <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
-              <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
-            </h1>
+          <div className="container">
+
             <Card.Body>
               <div className="d-flex justify-content-center">
                 <Zoom>

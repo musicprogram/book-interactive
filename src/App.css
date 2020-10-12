@@ -80,7 +80,6 @@ body{
 }
 .my-card{
   border-radius: 50%;
-  border: 10px solid white;
   -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
   -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
   box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.24);
