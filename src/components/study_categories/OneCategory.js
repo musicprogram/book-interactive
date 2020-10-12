@@ -7,7 +7,7 @@ import {
 } from 'recoil';
 
 import FirstCategory from "./firsts_categories/first_category";
-import leftBanner from "../../assets/img/Creativity.svg";
+
 function OneCategory() {
   const [step, setStep] = useRecoilState(currentStep);
   const firsCategoriesData = useRecoilValue(firstCategory);
@@ -16,15 +16,7 @@ function OneCategory() {
   },[step])
 
   return (
-    <div style={{
-      "backgroundImage": `url("${leftBanner}")`,
-      "backgroundColor": "white",
-      "backgroundAttachment": "fixed",
-      "backgroundRepeat": "no-repeat",
-      "backgroundSize": "cover",
-      "backgroundPosition": "center center"
-
-    }}>
+    <div>
       <StepWizard initialStep={step}>
         {
           firsCategoriesData.map((category, i)=>{

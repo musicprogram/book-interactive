@@ -6,14 +6,13 @@ import {
   RecoilRoot
 } from 'recoil';
 
-
 import Dashboard from "./components/Dashboard";
 
 function App() {
 
   return (
     <RecoilRoot>
-        <Dashboard/>
+      <Dashboard/>
     </RecoilRoot>
   );
 }

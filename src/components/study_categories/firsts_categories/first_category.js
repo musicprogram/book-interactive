@@ -18,6 +18,8 @@ import banner from '../../../assets/img/banner-1.png'
 
 import click from '../../../assets/img/click.gif'
 
+import down from '../../../assets/img/Hitch Hiking.svg'
+
 import talkOne from '../../../assets/img/firts_category/talkOne.svg'
 import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
 
@@ -82,14 +84,15 @@ function FirstCategory(props) {
     <Fragment>
       <>
 
-        <h1 className="color-main text-center text-capitalize">
-          <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
-          <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
-        </h1>
+
 
 
         <div className="card-custom card-msg mt-2 mr-1 ml-1">
-          <div className="container">
+          <div className="container mt-3">
+            <h1 className="color-main text-center text-capitalize mt-3">
+              <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
+              <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
+            </h1>
             <Card.Body>
               <div className="d-flex justify-content-center">
                 <Zoom>
@@ -101,7 +104,7 @@ function FirstCategory(props) {
                 </Zoom>
               </div>
               <Image className="img-banner-1 img-fluid" src={banner}/>
-              <Row className="bg-transparent-black rounded">
+              <Row className="rounded">
                 <div className="col-2">
                   <div className="div-button ">
                     <object

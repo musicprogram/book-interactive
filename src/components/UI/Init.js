@@ -11,7 +11,7 @@ import {
 import {categoryNavigation} from '../../GlobalState'
 
 import imgFirst from '../../assets/img/Drawing.svg'
-import imgSecond from '../../assets/img/Support team.svg'
+import imgSecond from '../../assets/img/Creativity.svg'
 import imgThird from '../../assets/img/Design.svg'
 import team from '../../assets/img/Team.svg'
 import leftBanner from "../../assets/img/girl.svg";
