@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/book-interactive/static/css/main.dd1a82fa.chunk.css",
+    "main.css": "/book-interactive/static/css/main.45c52301.chunk.css",
     "main.js": "/book-interactive/static/js/main.068d6800.chunk.js",
     "main.js.map": "/book-interactive/static/js/main.068d6800.chunk.js.map",
     "runtime-main.js": "/book-interactive/static/js/runtime-main.88a36cc3.js",
@@ -9,10 +9,10 @@
     "static/js/2.099583f3.chunk.js": "/book-interactive/static/js/2.099583f3.chunk.js",
     "static/js/2.099583f3.chunk.js.map": "/book-interactive/static/js/2.099583f3.chunk.js.map",
     "index.html": "/book-interactive/index.html",
-    "precache-manifest.a267f6395e4cc8a7cdaa706927465b5c.js": "/book-interactive/precache-manifest.a267f6395e4cc8a7cdaa706927465b5c.js",
+    "precache-manifest.a9b93fd85bb8133c6dacf0c27129e37f.js": "/book-interactive/precache-manifest.a9b93fd85bb8133c6dacf0c27129e37f.js",
     "service-worker.js": "/book-interactive/service-worker.js",
     "static/css/2.e87418d1.chunk.css.map": "/book-interactive/static/css/2.e87418d1.chunk.css.map",
-    "static/css/main.dd1a82fa.chunk.css.map": "/book-interactive/static/css/main.dd1a82fa.chunk.css.map",
+    "static/css/main.45c52301.chunk.css.map": "/book-interactive/static/css/main.45c52301.chunk.css.map",
     "static/js/2.099583f3.chunk.js.LICENSE.txt": "/book-interactive/static/js/2.099583f3.chunk.js.LICENSE.txt",
     "static/media/talkOne.svg": "/book-interactive/static/media/talkOne.d1bbc7d5.svg",
     "static/media/talkSecond.svg": "/book-interactive/static/media/talkSecond.58a69ad3.svg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.88a36cc3.js",
     "static/css/2.e87418d1.chunk.css",
     "static/js/2.099583f3.chunk.js",
-    "static/css/main.dd1a82fa.chunk.css",
+    "static/css/main.45c52301.chunk.css",
     "static/js/main.068d6800.chunk.js"
   ]
 }
