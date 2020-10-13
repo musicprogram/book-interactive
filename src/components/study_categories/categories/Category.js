@@ -9,12 +9,10 @@ import {
 } from 'recoil';
 
 
-import talkOne from '../../../assets/img/firts_category/talkOne.svg'
-import talkSecond from '../../../assets/img/firts_category/talkSecond.svg'
-
 function Category(props) {
 
-  const [imgTalk, setImgTalk] = useState(talkOne);
+  const [imgTalk, setImgTalk] = useState('');
+  const [imgTalkSecond, setImgTalkSecond] = useState('');
   const [imgPlayFirst, setImgPlayFirst] = useState(false);
   const [animatedSound, setAnimatedSound] = useState(false);
   const [synth, setSynth] = useRecoilState(synthGlobal);
@@ -23,20 +21,20 @@ function Category(props) {
 
 
   useEffect(()=>{
+    setImgTalk(links[0].talkOne);
+    setImgTalkSecond(links[0].talkOne);
     //console.log(props.category)
-  })
+  },[])
 
   const handleMessage =()=>{
-
+    setImgTalk(links[0].talkTwo);
+    //console.log(links[0].talkTwo)
     //console.log(speechSynthesis.getVoices())
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.descriptionIn, selectedVoiceName, synth);
-    setAnimatedSound(true);
-    setImgTalk(talkSecond);
     setTimeout(()=>{
-      setImgTalk(talkOne);
-      setAnimatedSound(false);
+      setImgTalk(links[0].talkOne);
     },5000)
   }
 
@@ -47,24 +45,24 @@ function Category(props) {
   }
 
   const handlePlayFirst =() =>{
-    setImgPlayFirst(true)
+    setImgTalkSecond(links[0].talkTwo);
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.firstIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
-      setImgPlayFirst(false);
+      setImgTalkSecond(links[0].talkOne);
     }, 5000)
   }
 
   const handlePlaySecond =() =>{
-    setImgPlayFirst(true)
+    setImgTalkSecond(links[0].talkTwo);
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.secondIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
-      setImgPlayFirst(false);
+      setImgTalkSecond(links[0].talkOne);
     }, 5000)
   }
 
@@ -78,9 +76,9 @@ function Category(props) {
           <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
         </h1>
 
-        <div className="card-custom card-msg mr-1 ml-1">
+        <div className="card-custom  mr-1 ml-1">
 
-          <div className="container">
+          <div className="container card-msg">
 
             <Card.Body>
               <div className="d-flex justify-content-center">
@@ -95,17 +93,7 @@ function Category(props) {
 
               <Row className="rounded">
                 <div className="col-2">
-                  <div className="div-button ">
-                    <object
-                      className="svg-talk"
-                      type="image/svg+xml"
-                      data={imgTalk}>
-                    </object>
-                  </div>
-                  {
-                    animatedSound && <span> <img src={links[0].sound} className="play-button-h" /></span>
-                  }
-
+                    <img src={imgTalk} className="img-talk-l"/>
                 </div>
                 <div className="col-10">
 
@@ -179,14 +167,8 @@ function Category(props) {
                       </div>
 
                     </div>
-                    <div className="col-2">
-                      <object
-                        className="face-talk"
-                        type="image/svg+xml"
-                        data={talkSecond}>
-                      </object>
-                      <span className={`${imgPlayFirst ? '' : 'show-no'}`}> <img src={links[0].sound} className="play-button mt-1" /></span>
-
+                    <div className="col-2 d-flex justify-content-center">
+                      <img src={imgTalkSecond} className="img-talk-center"/>
                     </div>
 
                     <div className="col-5">

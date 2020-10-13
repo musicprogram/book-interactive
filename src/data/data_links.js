@@ -8,7 +8,9 @@ const Links = [
     "modal": "https://svgshare.com/i/QTh.svg",
     "loading" : "https://svgshare.com/i/QVS.svg",
     "sound": "https://img.techpowerup.org/201012/sound.gif",
-    "click": "https://img.techpowerup.org/201012/click.gif"
+    "click": "https://img.techpowerup.org/201012/click.gif",
+    "talkOne": "https://img.techpowerup.org/201012/talkgift1.gif",
+    "talkTwo" : "https://img.techpowerup.org/201012/talkgift897.gif"
   },
   {
     "category": 1,

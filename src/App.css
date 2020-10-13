@@ -571,13 +571,30 @@ figure.zoom img {
     margin-left: 16px;
     margin-top: 10px;
   }
-  
-  
+
+
+  .img-talk-l{
+    margin-top: 50px;
+    width: 80px;
+  }
+
+  .img-talk-center{
+    width: 58px !important;
+    height: 70px !important;
+  }
+
 
 
 
 
 }
+
+
+.img-talk-center{
+  width: 120px;
+  height: 143px;
+}
+
 
 .color-1{
   color:#FF873D !important;
@@ -662,5 +679,6 @@ figure.zoom img {
 .pointer{
   cursor: pointer;
 }
+
 
 /* THEME */
