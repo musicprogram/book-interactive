@@ -17,7 +17,7 @@ const Links = [
   {
     "category": 1,
     "background":"https://svgshare.com/i/QU_.svg",
-    "photoDetail": "https://img.techpowerup.org/201012/banner-1.png",
+    "photoDetail": "https://img.techpowerup.org/201013/confeccion1.gif",
     "photoBottom": "https://img.techpowerup.org/201013/tijeras.gif"
   },
   {
@@ -27,7 +27,8 @@ const Links = [
   },
   {
     "category": 3,
-    "background": "https://svgshare.com/i/QSp.svg"
+    "background": "https://svgshare.com/i/QSp.svg",
+    "photoDetail": "https://img.techpowerup.org/201012/banner-1.png"
   }
 ];
 

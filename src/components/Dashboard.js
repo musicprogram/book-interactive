@@ -84,14 +84,14 @@ function Dashboard() {
           category === -1 && (
             <div>
               <div className="d-flex justify-content-center mt-5 mb-2 mr-4 ml-4" >
-                <div className="loading-img mt-5">
+                <div className="loading-img">
                   <Image src={links[0].loading} className="img-fluid"/>
+                  <div className="d-flex justify-content-center mt-1" >
+                    <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
+                    <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
+                    <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
+                  </div>
                 </div>
-              </div>
-              <div className="d-flex justify-content-center mt-5" >
-                <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
-                <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
-                <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
               </div>
             </div>
 

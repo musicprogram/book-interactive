@@ -159,9 +159,9 @@ function Category(props) {
                   </div>
 
                 </div>
+                <Image className={ `img-banner-1 img-fluid ${category === 1 && 'img-banner-3'} ${category === 2 && 'img-banner-2'} `} src={links[category].photoDetail}/>
 
               </Row>
-              <Image className={ `img-banner-1 img-fluid ${category === 2 && 'img-banner-2'} `} src={links[category].photoDetail}/>
               <h2 className={`text-center mt-3
                 ${'color-' + category}
               `}>
@@ -250,7 +250,7 @@ function Category(props) {
                 </div>
               </Row>
 
-              <img src={links[1].photoBottom} alt=""/>
+              <img src={links[1].photoBottom} className="scissors-bottom"/>
 
 
               <div className="d-flex justify-content-center">

@@ -109,7 +109,6 @@ function NavMain() {
                      setStep(cat.id);
                      localStorage.setItem("stepFormOne", `${cat.id}`)
                       setCategory(-1);
-
                       setTimeout(()=>{
                         setCategory(1);
                       },1500);
