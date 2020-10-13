@@ -1,9 +1,10 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import {Container, Card, Row, Image} from 'react-bootstrap'
+import {Card, Row, Image} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-import {speechText, currentStep, synthGlobal, linksSvg} from '../../../GlobalState'
+import {speechText, currentStep, synthGlobal, linksSvg, categoryNavigation, currentStep1} from '../../../GlobalState'
+
 import {
   useRecoilState, useRecoilValue
 } from 'recoil';
@@ -13,28 +14,48 @@ function Category(props) {
 
   const [imgTalk, setImgTalk] = useState('');
   const [imgTalkSecond, setImgTalkSecond] = useState('');
-  const [imgPlayFirst, setImgPlayFirst] = useState(false);
-  const [animatedSound, setAnimatedSound] = useState(false);
+
+  const [talkOne, setTalkOne] = useState('');
+  const [talkTwo, setTalkTwo] = useState('');
+
+  const [isTalk, setIsTalk] = useState(false);
+
   const [synth, setSynth] = useRecoilState(synthGlobal);
   const [step, setStep] = useRecoilState(currentStep);
+  const [step1, setStep1] = useRecoilState(currentStep1);
+
   const links = useRecoilValue(linksSvg);
+  const category = useRecoilValue(categoryNavigation);
 
 
   useEffect(()=>{
-    setImgTalk(links[0].talkOne);
-    setImgTalkSecond(links[0].talkOne);
+
+    if(category === 1){
+      setTalkOne(links[0].talkOne);
+      setTalkTwo(links[0].talkTwo);
+
+      setImgTalk(links[0].talkOne);
+      setImgTalkSecond(links[0].talkOne);
+    }else if(category === 2){
+      setTalkOne(links[0].talkThree);
+      setTalkTwo(links[0].talkFour);
+
+      setImgTalk(links[0].talkThree);
+      setImgTalkSecond(links[0].talkThree);
+    }
+
     //console.log(props.category)
-  },[])
+  },[]);
 
   const handleMessage =()=>{
-    setImgTalk(links[0].talkTwo);
+    setImgTalk(talkTwo);
     //console.log(links[0].talkTwo)
     //console.log(speechSynthesis.getVoices())
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.descriptionIn, selectedVoiceName, synth);
     setTimeout(()=>{
-      setImgTalk(links[0].talkOne);
+      setImgTalk(talkOne);
     },5000)
   }
 
@@ -45,35 +66,57 @@ function Category(props) {
   }
 
   const handlePlayFirst =() =>{
-    setImgTalkSecond(links[0].talkTwo);
+    setIsTalk(true);
+    setImgTalkSecond(talkTwo);
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.firstIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
-      setImgTalkSecond(links[0].talkOne);
+      setIsTalk(false);
+      setImgTalkSecond(talkOne);
     }, 5000)
   }
 
   const handlePlaySecond =() =>{
-    setImgTalkSecond(links[0].talkTwo);
+    setIsTalk(true);
+    setImgTalkSecond(talkTwo);
     stopSynth();
     let selectedVoiceName = "Samantha";
     speechText(props.category.secondIn, selectedVoiceName, synth);
 
     setTimeout(()=>{
-      setImgTalkSecond(links[0].talkOne);
+      setIsTalk(false);
+      setImgTalkSecond(talkOne);
     }, 5000)
+  }
+
+
+  const stepsGlobal = (stp) =>{
+    if(category === 1){
+      setStep(stp);
+      localStorage.setItem("stepFormOne", `${stp}`);
+    }else if(category === 2){
+      setStep1(stp);
+      localStorage.setItem("stepFormSecond", stp);
+    }
   }
 
   return (
     <Fragment>
       <>
 
-
-        <h1 className="color-main text-center text-capitalize mt-2">
-          <span className="font-weight-bold text-title-span-title mr-2 ">{props.category.titleEs} </span>
-          <span className="font-weight-light text-title-span">{props.category.titleIn}</span>
+        <h1 className="text-center text-capitalize mt-2">
+          <span className={`font-weight-bold text-title-span-title mr-2 
+            ${'color-' + category}
+          `}>
+            {props.category.titleEs}
+          </span>
+          <span className={`font-weight-light text-title-span-title mr-2 text-light
+            ${'color-back-' + category}
+          `}>
+            {props.category.titleIn}
+          </span>
         </h1>
 
         <div className="card-custom  mr-1 ml-1">
@@ -97,7 +140,9 @@ function Category(props) {
                 </div>
                 <div className="col-10">
 
-                  <div className="talk-bubble tri-right left-in wave hvr-grow letter-hover" onClick={handleMessage}>
+                  <div className={`talk-bubble tri-right left-in wave hvr-grow 
+                    ${'letter-hover-' + category}
+                 `} onClick={handleMessage}>
                     <div className="talktext text-center">
                       <p className="lead">
 
@@ -115,8 +160,10 @@ function Category(props) {
                 </div>
 
               </Row>
-              <Image className="img-banner-1 img-fluid" src={links[1].photoDetail}/>
-              <h2 className="color-main text-center mt-3">
+              <Image className={ `img-banner-1 img-fluid ${category === 2 && 'img-banner-2'} `} src={links[category].photoDetail}/>
+              <h2 className={`text-center mt-3
+                ${'color-' + category}
+              `}>
               <span className="font-weight-bold text-classic ">
                -- CLASIFICACIÓN --
               </span>
@@ -168,7 +215,7 @@ function Category(props) {
 
                     </div>
                     <div className="col-2 d-flex justify-content-center">
-                      <img src={imgTalkSecond} className="img-talk-center"/>
+                      <img src={imgTalkSecond} className={`img-talk-center ${!isTalk && 'img-turn'}` }/>
                     </div>
 
                     <div className="col-5">
@@ -202,6 +249,9 @@ function Category(props) {
                 </div>
               </Row>
 
+              <img src={links[1].photoBottom} alt=""/>
+
+
               <div className="d-flex justify-content-center">
                 <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
                   <div className="btn-group mr-2" role="group" aria-label="First group">
@@ -210,9 +260,8 @@ function Category(props) {
                       className="btn btn-secondary"
                       disabled={props.currentStep === 1}
                       onClick={()=>{
-                        props.firstStep()
-                        setStep( 1)
-                        localStorage.setItem("stepFormOne", `${1}`);
+                        props.firstStep();
+                        stepsGlobal(1)
                         stopSynth();
                       }}> {'<<'} </button>
                     <button
@@ -220,9 +269,8 @@ function Category(props) {
                       className="btn btn-secondary"
                       disabled={props.currentStep === 1}
                       onClick={()=>{
-                        props.previousStep()
-                        setStep(props.currentStep - 1);
-                        localStorage.setItem("stepFormOne", `${props.currentStep - 1}`);
+                        props.previousStep();
+                        stepsGlobal(props.currentStep - 1);
                         stopSynth();
                       }}> {'<'}</button>
                     <button
@@ -231,8 +279,8 @@ function Category(props) {
                       disabled={props.currentStep === props.totalSteps}
                       onClick={()=>{
                         props.nextStep()
-                        setStep(props.currentStep + 1)
-                        localStorage.setItem("stepFormOne", `${props.currentStep + 1}`);
+                        stepsGlobal(props.currentStep + 1)
+
                         stopSynth();
                       }}> {'>'}</button>
                     <button
@@ -241,9 +289,7 @@ function Category(props) {
                       disabled={props.currentStep === props.totalSteps}
                       onClick={()=>{
                         props.lastStep();
-                        setStep(parseInt(props.totalSteps));
-                        //console.log(parseInt(props.totalSteps))
-                        localStorage.setItem("stepFormOne", `${props.totalSteps}`);
+                        stepsGlobal(parseInt(props.totalSteps));
                         stopSynth();
                       }}>{'>>'}</button>
                   </div>

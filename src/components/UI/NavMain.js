@@ -5,11 +5,14 @@ import {
   useRecoilState, useRecoilValue
 } from 'recoil';
 
-import {categoryNavigation,
+import {
+  categoryNavigation,
   currentStep,
   firstCategory,
   synthGlobal,
-  color
+  color,
+  secondCategory,
+  currentStep1
 
 } from '../../GlobalState';
 
@@ -19,9 +22,13 @@ function NavMain() {
   const synth = useRecoilValue(synthGlobal);
   const firsCategoriesData = useRecoilValue(firstCategory);
   const [menu, setMenu] = useState([]);
+  const secondCategoriesData = useRecoilValue(secondCategory);
+  const [menu1, setMenu1] = useState([]);
   const [step, setStep] = useRecoilState(currentStep);
   const [colorMain, setColorMain] = useRecoilState(color);
   const [colorText, setColorText] = useState('');
+  const [step1, setStep1] = useRecoilState(currentStep1);
+
 
 
 
@@ -35,6 +42,7 @@ function NavMain() {
     }
 
     let men = [];
+    let men1 = [];
 
     firsCategoriesData.map((category, i)=>{
       let obj = {
@@ -45,6 +53,18 @@ function NavMain() {
       men.push(obj)
 
     })
+
+    secondCategoriesData.map((category, i)=>{
+      let obj = {
+        id: category.id,
+        title: category.titleEs
+      }
+
+      men1.push(obj)
+
+    })
+
+    setMenu1(men1);
     setMenu(men);
   },[category])
 
@@ -80,33 +100,54 @@ function NavMain() {
             id="basic-nav-dropdown"
             className={`my-nav-kink  ${category === 1 ? 'font-weight-bold text-uppercase text-dark' : ''}`}>
             {
-              menu.map((category, i)=>{
+              menu.map((cat, i)=>{
                return(
                  <NavDropdown.Item
                    href="#"
-                   className={`${step === category.id ? 'font-weight-bold' : ''}`}
+                   className={`color-1 ${step === cat.id ? ' font-weight-bold' : ''}`}
                    onClick={()=>{
-                     setStep(category.id);
-                     localStorage.setItem("stepFormOne", `${category.id}`)
-                     setCategory(1);
+                     setStep(cat.id);
+                     localStorage.setItem("stepFormOne", `${cat.id}`)
                       setCategory(-1);
+
                       setTimeout(()=>{
                         setCategory(1);
                       },1500);
                      stopSynth();
                    }}>
-                   {category.title}
+                   {cat.title}
                  </NavDropdown.Item>
                )
               })
             }
           </NavDropdown>
 
+          <NavDropdown
+            title="Second category"
+            id="basic-nav-dropdown"
+            className={`my-nav-kink  ${category === 2 ? 'font-weight-bold text-uppercase text-dark' : ''}`}>
+            {
+              menu1.map((cat, i)=>{
+                return(
+                  <NavDropdown.Item
+                    href="#"
+                    className={`color-2 ${step1 === cat.id ? 'font-weight-bold' : ''}`}
+                    onClick={()=>{
+                      setStep1(cat.id);
+                      localStorage.setItem("stepFormSecond", `${cat.id}`)
+                      setCategory(-1);
+                      setTimeout(()=>{
+                        setCategory(2);
+                      },1500);
+                      stopSynth();
+                    }}>
+                    {cat.title}
+                  </NavDropdown.Item>
+                )
+              })
+            }
+          </NavDropdown>
 
-          <Nav.Link href="#" className={`my-nav-kink ${category === 2 ? 'font-weight-bold text-uppercase text-dark' : ''}`}  onClick={()=> {
-            setCategory(2);
-            stopSynth();
-          }}>Second</Nav.Link>
           <Nav.Link href="#" className={`my-nav-kink ${category === 3 ? 'font-weight-bold text-uppercase text-dark' : ''}`}  onClick={()=> {
             setCategory(3);
             stopSynth();
