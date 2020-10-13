@@ -112,7 +112,8 @@ function Category(props) {
           `}>
             {props.category.titleEs}
           </span>
-          <span className={`font-weight-light text-title-span-title mr-2 text-light
+          <br/>
+          <span className={`font-weight-light text-title-span-title mr-2 text-light mt-1
             ${'color-back-' + category}
           `}>
             {props.category.titleIn}
