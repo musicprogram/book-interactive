@@ -1,7 +1,7 @@
 export const secondCategoryData = [
   { "id": 1,
     "titleEs":"ALMOHADILLA SIN CONTENIDO\n",
-    "titleIn":"ALMOHADILLA SIN CONTENIDO",
+    "titleIn":"PAD WITHOUT CONTENT",
     "img": "https://www.tintoreriaylavanderia.com/images/stories/tintolav/tintoreria/degradacion.jpg",
     "descriptionEs":"Almohadilla que pierde el contenido.\n",
     "descriptionIn": "...",
@@ -15,7 +15,7 @@ export const secondCategoryData = [
   {
     "id": 2,
     "titleEs":"APARIENCIA AL LAVADO NO CONFORME\n",
-    "titleIn":"APARIENCIA",
+    "titleIn":"NON-CONFORMING WASHING APPEARANCE",
     "img": "https://userscontent2.emaze.com/images/d5a38b11-64be-4d12-916c-b68585463acd/dd9c38fd-427f-4178-889a-469f269cbb00.jpg\n",
     "descriptionEs":"Característica no conforme que se observa en la prenda al efectuarse la operación de lavandería (apariencia de uso, arrugas, pilling, afelpamiento, manchas).",
     "descriptionIn": ".....",

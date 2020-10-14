@@ -16,7 +16,7 @@ export const firstCategoryData = [
   {
     "id": 2,
     "titleEs":"BARRADO",
-    "titleIn":"BARRÉ",
+    "titleIn":"BARRE",
     "img": "https://userscontent2.emaze.com/images/d5a38b11-64be-4d12-916c-b68585463acd/dd9c38fd-427f-4178-889a-469f269cbb00.jpg\n",
     "descriptionEs":"Rayas de diferente textura o apariencia que se presenta en la tela  observadas a igual distancia entre ellas. Puede producirse por el teñido del hilo, y se presenta en tejidos planos y de punto.\n",
     "descriptionIn": "Stripes of different texture or appearance that are presented in fabrics observed at equal distance from each other. It can happen by yarn dyeing, and it is present in flat and knitted fabric",

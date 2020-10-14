@@ -47,7 +47,7 @@ function NavMain() {
     firsCategoriesData.map((category, i)=>{
       let obj = {
         id: category.id,
-        title: category.titleEs
+        title: category.titleIn
       }
 
       men.push(obj)
@@ -57,7 +57,7 @@ function NavMain() {
     secondCategoriesData.map((category, i)=>{
       let obj = {
         id: category.id,
-        title: category.titleEs
+        title: category.titleIn
       }
 
       men1.push(obj)

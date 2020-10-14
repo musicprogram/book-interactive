@@ -100,6 +100,7 @@ function Category(props) {
       setStep1(stp);
       localStorage.setItem("stepFormSecond", stp);
     }
+    stopSynth();
   }
 
   return (
@@ -125,6 +126,48 @@ function Category(props) {
           <div className="container card-msg">
 
             <Card.Body>
+
+
+              <div className="d-flex justify-content-center mb-2">
+                <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                  <div className="btn-group mr-2" role="group" aria-label="First group">
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === 1}
+                      onClick={()=>{
+                        props.firstStep();
+                        stepsGlobal(1)
+                      }}> {'<<'} </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === 1}
+                      onClick={()=>{
+                        props.previousStep();
+                        stepsGlobal(props.currentStep - 1);
+                      }}> {'<'}</button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === props.totalSteps}
+                      onClick={()=>{
+                        props.nextStep()
+                        stepsGlobal(props.currentStep + 1)
+                      }}> {'>'}</button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      disabled={props.currentStep === props.totalSteps}
+                      onClick={()=>{
+                        props.lastStep();
+                        stepsGlobal(parseInt(props.totalSteps));
+                      }}>{'>>'}</button>
+                  </div>
+                </div>
+              </div>
+
+
               <div className="d-flex justify-content-center">
                 <Zoom>
                   <img
@@ -179,7 +222,7 @@ function Category(props) {
                     <div className="col-6">
 
                       <Card border="light" style={{ borderRadius: '20px' }}>
-                        <Card.Header className="text-classic h3">Primera</Card.Header>
+                        <Card.Header className={`text-classic h3 ${'color-' + category}`}>Primera</Card.Header>
                         <Card.Body>
                           <Card.Title>
                             {props.category.firstEs}
@@ -193,7 +236,7 @@ function Category(props) {
                     <div className="col-6">
 
                       <Card border="light" style={{ borderRadius: '20px' }}>
-                        <Card.Header className="text-classic h3">Segundo</Card.Header>
+                        <Card.Header className={`text-classic h3 ${'color-' + category}`}>Segundo</Card.Header>
                         <Card.Body>
                           <Card.Title>
                             {props.category.secondEs}
@@ -209,7 +252,7 @@ function Category(props) {
                   <Row className="mt-3 mr-2 ml-2 mb-3">
                     <div className="col-5">
                       <div className="bg-bubble hvr-bubble-right hvr-grow-shadow" onClick={handlePlayFirst}>
-                        <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
+                        <Card.Text className={`mt-1 mr-1 ml-1 text-center ${'letter-hover-' + category}`}>
                           {props.category.firstIn} <span> <img src={links[0].click} className="click-animated"/></span>
                         </Card.Text>
                       </div>
@@ -221,7 +264,7 @@ function Category(props) {
 
                     <div className="col-5">
                       <div className="bg-bubble hvr-bubble-left hvr-grow-shadow" onClick={handlePlaySecond}>
-                        <Card.Text className="letter-hover mt-1 mr-1 ml-1 text-center">
+                        <Card.Text className={`mt-1 mr-1 ml-1 text-center ${'letter-hover-' + category}`}>
                           {props.category.secondIn} <span> <img src={links[0].click} className="click-animated"/></span>
                         </Card.Text>
                       </div>
@@ -263,7 +306,6 @@ function Category(props) {
                       onClick={()=>{
                         props.firstStep();
                         stepsGlobal(1)
-                        stopSynth();
                       }}> {'<<'} </button>
                     <button
                       type="button"
@@ -272,7 +314,6 @@ function Category(props) {
                       onClick={()=>{
                         props.previousStep();
                         stepsGlobal(props.currentStep - 1);
-                        stopSynth();
                       }}> {'<'}</button>
                     <button
                       type="button"
@@ -281,8 +322,6 @@ function Category(props) {
                       onClick={()=>{
                         props.nextStep()
                         stepsGlobal(props.currentStep + 1)
-
-                        stopSynth();
                       }}> {'>'}</button>
                     <button
                       type="button"
@@ -291,7 +330,6 @@ function Category(props) {
                       onClick={()=>{
                         props.lastStep();
                         stepsGlobal(parseInt(props.totalSteps));
-                        stopSynth();
                       }}>{'>>'}</button>
                   </div>
                 </div>
