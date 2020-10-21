@@ -40,5 +40,47 @@ export const firstCategoryData = [
     "secondEs" : "Cualquier contaminación con intensidad fuerte mayor a 2mm por el derecho o revés de la prenda.\n",
     "secondIn" : "Any contamination with a strong intensity greater than 2mm from the right or back of the garment.\n",
     "classified": false
+  },
+  {
+    "id": 4,
+    "titleEs":"CONTAMINACIÓN",
+    "titleIn":"CONTAMINATION",
+    "img": "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-t\n" +
+      "ela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",
+    "descriptionEs":"Presencia de otro material en el tejido como: fibras cortas, color diferente, hollín, partículas de polvo o suciedad en las fibras.\n",
+    "descriptionIn": "Presence of other material in the fabric such as: short fibers, different color, soot, dust particles or dirt in the fibers.",
+    "firstEs":"Hasta tres contaminaciones no consecutivas, hasta 5 mm con visualización leve o media por el derecho o revés.\n",
+    "firstIn": "Up to three non-consecutive contaminations. Up to 5 mm with light or medium visibility on the right side out /finished side or backwards.",
+    "secondEs" : "Cualquier contaminación con intensidad fuerte mayor a 2mm por el derecho o revés de la prenda.\n",
+    "secondIn" : "Any contamination with a strong intensity greater than 2mm from the right or back of the garment.\n",
+    "classified": false
+  },
+  {
+    "id": 5,
+    "titleEs":"CONTAMINACIÓN",
+    "titleIn":"CONTAMINATION",
+    "img": "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-t\n" +
+      "ela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",
+    "descriptionEs":"Presencia de otro material en el tejido como: fibras cortas, color diferente, hollín, partículas de polvo o suciedad en las fibras.\n",
+    "descriptionIn": "Presence of other material in the fabric such as: short fibers, different color, soot, dust particles or dirt in the fibers.",
+    "firstEs":"Hasta tres contaminaciones no consecutivas, hasta 5 mm con visualización leve o media por el derecho o revés.\n",
+    "firstIn": "Up to three non-consecutive contaminations. Up to 5 mm with light or medium visibility on the right side out /finished side or backwards.",
+    "secondEs" : "Cualquier contaminación con intensidad fuerte mayor a 2mm por el derecho o revés de la prenda.\n",
+    "secondIn" : "Any contamination with a strong intensity greater than 2mm from the right or back of the garment.\n",
+    "classified": false
+  },
+  {
+    "id": 6,
+    "titleEs":"CONTAMINACIÓN",
+    "titleIn":"CONTAMINATION",
+    "img": "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-t\n" +
+      "ela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",
+    "descriptionEs":"Presencia de otro material en el tejido como: fibras cortas, color diferente, hollín, partículas de polvo o suciedad en las fibras.\n",
+    "descriptionIn": "Presence of other material in the fabric such as: short fibers, different color, soot, dust particles or dirt in the fibers.",
+    "firstEs":"Hasta tres contaminaciones no consecutivas, hasta 5 mm con visualización leve o media por el derecho o revés.\n",
+    "firstIn": "Up to three non-consecutive contaminations. Up to 5 mm with light or medium visibility on the right side out /finished side or backwards.",
+    "secondEs" : "Cualquier contaminación con intensidad fuerte mayor a 2mm por el derecho o revés de la prenda.\n",
+    "secondIn" : "Any contamination with a strong intensity greater than 2mm from the right or back of the garment.\n",
+    "classified": false
   }
 ]

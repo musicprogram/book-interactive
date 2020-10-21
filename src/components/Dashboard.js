@@ -10,13 +10,15 @@ import {
 
 import {categoryNavigation, firstCategory, linksSvg, color, secondCategory } from '../GlobalState'
 
-import img from '../assets/img/fondo4.png'
+import img from '../assets/img/fondo4.png';
 import Init from "./UI/Init";
 import NavMain from "./UI/NavMain";
 import OneCategory from "./study_categories/OneCategory";
 import SecondCategory from "./study_categories/SecondCategory";
 
-import QuestionMultipleAnswer from './games/question/QuestionMultipleAnswer'
+import QuestionMultipleAnswer from './games/question/QuestionMultipleAnswer';
+
+import Memoryboard from "./games/memory_game/MemoryBoard";
 
 
 function Dashboard() {
@@ -48,6 +50,9 @@ function Dashboard() {
       setImageBody(links[3].background);
     }else if(category === 4){
       setImageBody(img);
+      setColorMain("#F7B539");
+    }else if(category === 5){
+      setImageBody(links[5].background);
       setColorMain("#ff873d");
     }
   },[category])
@@ -105,6 +110,9 @@ function Dashboard() {
 
         {
           category === 4 && <QuestionMultipleAnswer/>
+        }
+        {
+          category === 5 && <Memoryboard/>
         }
       </Fragment>
   );

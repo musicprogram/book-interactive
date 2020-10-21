@@ -33,12 +33,12 @@ function NavMain() {
 
 
   useEffect(()=>{
-    if(category === 1 || category === 4){
+    if(category === 1 || category === 5){
       setColorText('color-1')
     }else if(category === 2) {
       setColorText('color-2')
-    }else if(category === 3) {
-      setColorText('color-3')
+    }else if(category === 3 || category === 4) {
+      setColorText('color-3' )
     }
 
     let men = [];
@@ -157,7 +157,15 @@ function NavMain() {
               setCategory(4);
             },1500);
             stopSynth();
-          }}>Cuestionario 1</Nav.Link>
+          }}>Selección múltiple</Nav.Link>
+
+          <Nav.Link href="#" className={`my-nav-kink ${category === 5 ? 'font-weight-bold text-uppercase text-dark' : ''}`}  onClick={()=> {
+            setCategory(-1);
+            setTimeout(()=>{
+              setCategory(5);
+            },1500);
+            stopSynth();
+          }}>Concéntrese</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

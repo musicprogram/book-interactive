@@ -1,16 +1,16 @@
 import React, {useEffect, useRef} from 'react';
 import {Image, Modal} from "react-bootstrap";
-import {useRecoilValue} from "recoil";
+import {useRecoilState, useRecoilValue} from "recoil";
 import Parallax from 'parallax-js'
-import {linksSvg} from "../../../GlobalState";
+import {categoryNavigation, linksSvg} from "../../../GlobalState";
 
 
 function ModalFinish(props) {
   const sceneImgModal = useRef();
   const links = useRecoilValue(linksSvg);
-
+  const category = useRecoilValue(categoryNavigation);
   useEffect(()=>{
-    const parallaxu = new Parallax(sceneImgModal.current);
+    const scene = new Parallax(sceneImgModal.current);
   },[])
 
   return (
@@ -27,7 +27,7 @@ function ModalFinish(props) {
       </div>
 
       <Modal.Body>
-        <h1 className="color-main text-center font-weight-bold">
+        <h1 className={`color-${category} text-center font-weight-bold `}>
           Felicitaciones
           <br/>
           <span className="text-modal-how"> LO HICISTE EN {

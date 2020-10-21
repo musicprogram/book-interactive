@@ -6,7 +6,7 @@ const Links = [
     "btn2":"https://svgshare.com/i/Qjs.svg",
     "btn3":"https://svgshare.com/i/Qka.svg",
     "modal": "https://svgshare.com/i/QTh.svg",
-    "modalCongratulations":"https://svgshare.com/i/Qih.svg",
+    "modalCongratulations":"https://svgshare.com/i/Qmw.svg",
     "loading" : "https://img.techpowerup.org/201013/loading.png",
     "sound": "https://img.techpowerup.org/201012/sound.gif",
     "click": "https://img.techpowerup.org/201012/click.gif",
@@ -14,7 +14,7 @@ const Links = [
     "talkTwo" : "https://img.techpowerup.org/201012/talkgift897.gif",
     "talkThree": "https://img.techpowerup.org/201013/talkgift2.gif",
     "talkFour": "https://img.techpowerup.org/201013/talkgift3.gif",
-    "bannerQuestion": "https://img.techpowerup.org/201020/banner-question433.gif"
+    "bannerQuestion": "https://img.techpowerup.org/201021/banner-question049.gif"
   },
   {
     "category": 1,
@@ -31,6 +31,14 @@ const Links = [
     "category": 3,
     "background": "https://svgshare.com/i/QSp.svg",
     "photoDetail": "https://img.techpowerup.org/201012/banner-1.png"
+  },
+  {
+    "category": 4,
+    "background": "https://svgshare.com/i/QSp.svg"
+  },
+  {
+    "category": 5,
+    "background": "https://svgshare.com/i/QmS.svg"
   }
 ];
 

@@ -5,7 +5,7 @@ function Question(props) {
   return (
     <Card className="mt-1 mr-1 ml-1 mb-1 card-shadow">
       <Card.Header>
-        <h2 className={`${'color-' + props.category}`}>{props.quiz.question}</h2>
+        <h2 className={`color-3`}>{props.quiz.question}</h2>
       </Card.Header>
       <Card.Body>
         { Object.keys(props.quiz.answers).map((answer, i) => (

@@ -107,11 +107,18 @@ function AlphabetSoupComponent() {
   }
 
   return (
-    <div className="container  card-msg">
-      <div className="mt-4 mb-4 pb-4 pt-4 pl-4" ref={list}>
-        <div className="mb-3">
-          <img src={links[0].bannerQuestion} className="center-img-modal"/>
-        </div>
+    <div className="container">
+      <h1 className="text-center text-capitalize mt-2">
+          <span className={`font-weight-bold text-title-span-title mr-2 
+         color-3
+          `}>
+            Cuestionario Tercero
+          </span>
+      </h1>
+      <div>
+        <img src={links[0].bannerQuestion} className="center-img-modal bg-light rounded"/>
+      </div>
+      <div className=" mb-4 pb-4 pt-4 pl-4" ref={list}>
         <ResponsiveMasonry
           columnsCountBreakPoints={{350: 1, 600: 2, 900: 3}}
         >

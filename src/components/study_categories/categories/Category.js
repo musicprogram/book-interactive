@@ -173,7 +173,7 @@ function Category(props) {
                   <img
                     alt="that wanaka tree"
                     src={props.category.img}
-                    className="img-category rounded"
+                    className="img-category rounded hvr-shadow-radial"
                   />
                 </Zoom>
               </div>
