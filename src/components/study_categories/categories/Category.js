@@ -168,8 +168,6 @@ function Category(props) {
                   </div>
                 </div>
               </div>
-
-
               <div className="d-flex justify-content-center">
                 <Zoom >
                   <img
@@ -179,7 +177,6 @@ function Category(props) {
                   />
                 </Zoom>
               </div>
-
               <Row className="rounded">
                 <div className="col-2">
                     <img src={imgTalk} className="img-talk-l"/>
