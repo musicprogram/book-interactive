@@ -2,17 +2,19 @@ const Links = [
   {
     "category": 0,
     "background":"https://svgshare.com/i/QUd.svg",
-    "btn1":"https://svgshare.com/i/QV4.svg",
-    "btn2":"https://svgshare.com/i/QTa.svg",
-    "btn3":"https://svgshare.com/i/QVF.svg",
+    "btn1":"https://svgshare.com/i/Qii.svg",
+    "btn2":"https://svgshare.com/i/Qjs.svg",
+    "btn3":"https://svgshare.com/i/Qka.svg",
     "modal": "https://svgshare.com/i/QTh.svg",
+    "modalCongratulations":"https://svgshare.com/i/Qih.svg",
     "loading" : "https://img.techpowerup.org/201013/loading.png",
     "sound": "https://img.techpowerup.org/201012/sound.gif",
     "click": "https://img.techpowerup.org/201012/click.gif",
     "talkOne": "https://img.techpowerup.org/201012/talkgift1.gif",
     "talkTwo" : "https://img.techpowerup.org/201012/talkgift897.gif",
     "talkThree": "https://img.techpowerup.org/201013/talkgift2.gif",
-    "talkFour": "https://img.techpowerup.org/201013/talkgift3.gif"
+    "talkFour": "https://img.techpowerup.org/201013/talkgift3.gif",
+    "bannerQuestion": "https://img.techpowerup.org/201020/banner-question433.gif"
   },
   {
     "category": 1,

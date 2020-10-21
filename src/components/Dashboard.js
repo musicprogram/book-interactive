@@ -10,11 +10,13 @@ import {
 
 import {categoryNavigation, firstCategory, linksSvg, color, secondCategory } from '../GlobalState'
 
-
+import img from '../assets/img/fondo4.png'
 import Init from "./UI/Init";
 import NavMain from "./UI/NavMain";
 import OneCategory from "./study_categories/OneCategory";
 import SecondCategory from "./study_categories/SecondCategory";
+
+import QuestionMultipleAnswer from './games/question/QuestionMultipleAnswer'
 
 
 function Dashboard() {
@@ -44,6 +46,9 @@ function Dashboard() {
     }else if(category === 3){
       setColorMain("#F7B539");
       setImageBody(links[3].background);
+    }else if(category === 4){
+      setImageBody(img);
+      setColorMain("#ff873d");
     }
   },[category])
 
@@ -86,7 +91,7 @@ function Dashboard() {
               <div className="d-flex justify-content-center mt-5 mb-2 mr-4 ml-4" >
                 <div className="loading-img">
                   <Image src={links[0].loading} className="img-fluid"/>
-                  <div className="d-flex justify-content-center mt-1" >
+                  <div className="d-flex justify-content-center mt-3" >
                     <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
                     <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
                     <Spinner animation="grow" variant="dark" size="sm" className="mr-2"/>
@@ -96,6 +101,10 @@ function Dashboard() {
             </div>
 
           )
+        }
+
+        {
+          category === 4 && <QuestionMultipleAnswer/>
         }
       </Fragment>
   );

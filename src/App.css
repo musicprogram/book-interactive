@@ -95,9 +95,21 @@ body{
 }
 
 .text-title{
-  font-family: 'Lobster', cursive;
   border-color: #61dafb;
-  font-size:7vw;
+  font-size:4vw;
+
+}
+
+.text-title-mar{
+  margin-bottom: -15px;
+}
+
+.text-lobster{
+  font-family: 'Lobster', cursive;
+}
+
+.text-slogan{
+  font-size: 60%
 }
 
 .brand-text{
@@ -166,7 +178,18 @@ body{
   background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+.card-question{
+  border-radius: 40px 40px 40px 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.5);
+  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.07'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
 
+.card-shadow{
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.09);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.09);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.09);
+}
 
 .first-name::first-letter {
   font-size: 200%;
@@ -511,6 +534,15 @@ figure.zoom img {
 
 
 @media screen and (max-width: 800px) {
+  .text-slogan{
+    font-size: 18px;
+  }
+
+  .text-title-mar {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
   .svg-talk {
     margin-top: 15px;
     margin-bottom: -38px;
@@ -545,7 +577,7 @@ figure.zoom img {
   }
 
   .text-title{
-    font-size: 60px;
+    font-size: 25px;
   }
 
   .text-hand{
@@ -628,6 +660,10 @@ figure.zoom img {
   color: #F7B539 !important;
 }
 
+.color-4{
+  color: #FF873D !important;
+}
+
 .color-back-1{
   background-color:#FF873D !important;
 }
@@ -640,6 +676,9 @@ figure.zoom img {
   background-color: #F7B539 !important;
 }
 
+.color-back-4{
+  background-color:#FF873D !important;
+}
 
 
 
@@ -730,5 +769,91 @@ figure.zoom img {
 .scissors-bottom{
   width: 62px;
 }
+
+
+
+.check-question{
+  margin-right: 9px;
+}
+
+
+
+.check-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.check-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.check-label input:checked ~ .checkmark {
+  background-color: #FF873D;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.check-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.check-label .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.text-modal-how{
+  font-size: 25px;
+}
+
+.text-title-family{
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.center-img-modal{
+  display:block;
+  margin:auto;
+  width: 300px;
+}
+
 
 /* THEME */

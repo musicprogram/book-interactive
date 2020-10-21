@@ -3,6 +3,7 @@ import {Card, Row, Image} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
+
 import {speechText, currentStep, synthGlobal, linksSvg, categoryNavigation, currentStep1} from '../../../GlobalState'
 
 import {
@@ -43,6 +44,7 @@ function Category(props) {
       setImgTalk(links[0].talkThree);
       setImgTalkSecond(links[0].talkThree);
     }
+
 
     //console.log(props.category)
   },[]);
@@ -169,7 +171,7 @@ function Category(props) {
 
 
               <div className="d-flex justify-content-center">
-                <Zoom>
+                <Zoom >
                   <img
                     alt="that wanaka tree"
                     src={props.category.img}

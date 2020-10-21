@@ -33,7 +33,7 @@ function NavMain() {
 
 
   useEffect(()=>{
-    if(category === 1){
+    if(category === 1 || category === 4){
       setColorText('color-1')
     }else if(category === 2) {
       setColorText('color-2')
@@ -151,6 +151,13 @@ function NavMain() {
             setCategory(3);
             stopSynth();
           }}>Third</Nav.Link>
+          <Nav.Link href="#" className={`my-nav-kink ${category === 4 ? 'font-weight-bold text-uppercase text-dark' : ''}`}  onClick={()=> {
+            setCategory(-1);
+            setTimeout(()=>{
+              setCategory(4);
+            },1500);
+            stopSynth();
+          }}>Cuestionario 1</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
