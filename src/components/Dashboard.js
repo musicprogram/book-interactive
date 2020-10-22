@@ -53,7 +53,7 @@ function Dashboard() {
       setColorMain("#F7B539");
     }else if(category === 5){
       setImageBody(links[5].background);
-      setColorMain("#ff873d");
+      setColorMain("");
     }
   },[category])
 

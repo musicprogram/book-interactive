@@ -38,7 +38,13 @@
   position: absolute;
   border-radius: 5px;
   backface-visibility: hidden;
-  background-color: #ffffff;
+}
+
+.back-face{
+  border: 7px solid #FF873D;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .front-face {
@@ -47,4 +53,12 @@
 
 .inactive-card{
  pointer-events: none;
+}
+
+.text-special{
+  font-size: 18px;
+}
+
+.inactive-card span{
+  color: #FF873D;
 }
