@@ -2,32 +2,32 @@ export const imagesGame = [
   {
     img: 'https://marina-ferreira.github.io/memory-game/img/react.svg',
     dataKey: 1,
-    word: ''
+    word: 'MATERIAL ACARTONADO'
   },
   {
     img: 'https://marina-ferreira.github.io/memory-game/img/angular.svg',
     dataKey: 2,
-    word: ''
+    word: 'MARRAS'
   },
   {
     img: 'https://marina-ferreira.github.io/memory-game/img/ember.svg',
     dataKey: 3,
-    word: ''
+    word: 'MOTA'
   },
   {
     img: 'https://marina-ferreira.github.io/memory-game/img/backbone.svg',
     dataKey: 4,
-    word: ''
+    word: 'NUDOS'
   },
   {
     img: 'https://marina-ferreira.github.io/memory-game/img/vue.svg',
     dataKey: 5,
-    word: ''
+    word: 'LYCRA ROTA'
   },
   {
     img: 'https://marina-ferreira.github.io/memory-game/img/aurelia.svg',
     dataKey: 6,
-    word: ''
+    word: 'CAÍDA'
   },
   {
     img: '',

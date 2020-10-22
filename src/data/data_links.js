@@ -38,7 +38,8 @@ const Links = [
   },
   {
     "category": 5,
-    "background": "https://svgshare.com/i/Qnb.svg"
+    "background": "https://svgshare.com/i/Qmo.svg",
+    "bannerMemory": "https://img.techpowerup.org/201022/banner-concentrese624.gif"
   }
 ];
 

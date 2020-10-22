@@ -38,10 +38,13 @@
   position: absolute;
   border-radius: 5px;
   backface-visibility: hidden;
+  border-radius: 10%;
+  background-color: rgba(215, 104, 44, 0.9);
+  background: rgba(215, 104, 44, 0.9);
 }
 
 .back-face{
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: rgba(255, 255, 255, 0.7);
   background: rgba(255, 255, 255, 0.7);
 }
@@ -55,9 +58,36 @@
 }
 
 .text-special{
-  font-size: 18px;
+  font-size: 13px;
 }
 
 .inactive-card span{
-  color: #FF873D;
+  color: white !important;
+}
+
+.inactive-card .chulo-correcto{
+  display: inline !important;
+}
+
+.inactive-card .text-img-front{
+  display: inline !important;
+}
+
+.chulo-correcto{
+  background: white;
+  border-radius: 50%;
+  font-size: 9px;
+  padding: 5px 7px 5px 5px;
+  margin-left: 5px;
+}
+
+.text-img-front{
+  font-size: 15px;
+}
+
+.center-img-memory{
+  display: block;
+  margin: auto;
+  width: 88px;
+  padding: 6px 6px 6px 6px;
 }

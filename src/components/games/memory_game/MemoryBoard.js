@@ -86,7 +86,7 @@ function Memoryboard() {
           </span>
       </h1>
       <div>
-        <img src={links[0].bannerQuestion} className="center-img-modal bg-light rounded"/>
+        <img src={links[5].bannerMemory} className="center-img-memory rounded"/>
       </div>
       <div className="body-memory mt-4">
         <section className="memory-game">
