@@ -169,7 +169,6 @@ function Category(props) {
                 </div>
               </div>
               <div className="d-flex justify-content-center">
-                <div className="hvr-grow">
                   <Zoom>
                     <img
                       alt="that wanaka tree"
@@ -177,7 +176,6 @@ function Category(props) {
                       className="img-category rounded"
                     />
                   </Zoom>
-                </div>
               </div>
               <Row className="rounded">
                 <div className="col-2">

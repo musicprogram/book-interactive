@@ -1,6 +1,15 @@
-import React, {Fragment} from 'react';
+import React, {useEffect, useRef} from 'react';
+import Parallax from 'parallax-js'
 
 function GameBoard(props) {
+  const cardImg = useRef();
+
+  useEffect(()=>{
+      if(cardImg.current){
+        const parallax = new Parallax(cardImg.current);
+      }
+  },[])
+
 
   return (
     <div
@@ -11,7 +20,14 @@ function GameBoard(props) {
       {
         props.memory.img ? (
           <div className="front-face text-center">
-              <img src={props.memory.img} alt={props.memory.dataKey} className="hvr-bounce-in"/>
+            <div ref={cardImg}>
+              <img
+                data-depth="0.8"
+                src={props.memory.img}
+                alt={props.memory.dataKey}
+               />
+            </div>
+
             <p className={`mt-2 text-img-front text-white font-weight-bold ${props.memory.dataKey === 1 ? 'text-special' : ''}`} hidden>{props.memory.word}</p>
           </div>
         ) : (

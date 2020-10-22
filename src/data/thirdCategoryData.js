@@ -1,6 +1,6 @@
-export const secondCategoryData = [
+export const thirdCategoryData = [
   { "id": 1,
-    "titleEs":"2ALMOHADILLA SIN CONTENIDO\n",
+    "titleEs":"3ALMOHADILLA SIN CONTENIDO\n",
     "titleIn":"PAD WITHOUT CONTENT",
     "img": "https://www.tintoreriaylavanderia.com/images/stories/tintolav/tintoreria/degradacion.jpg",
     "descriptionEs":"Almohadilla que pierde el contenido.\n",
@@ -14,7 +14,7 @@ export const secondCategoryData = [
   },
   {
     "id": 2,
-    "titleEs":"2APARIENCIA AL LAVADO NO CONFORME\n",
+    "titleEs":"3APARIENCIA AL LAVADO NO CONFORME\n",
     "titleIn":"NON-CONFORMING WASHING APPEARANCE",
     "img": "https://userscontent2.emaze.com/images/d5a38b11-64be-4d12-916c-b68585463acd/dd9c38fd-427f-4178-889a-469f269cbb00.jpg\n",
     "descriptionEs":"Característica no conforme que se observa en la prenda al efectuarse la operación de lavandería (apariencia de uso, arrugas, pilling, afelpamiento, manchas).",
@@ -27,7 +27,7 @@ export const secondCategoryData = [
   },
   {
     "id": 3,
-    "titleEs":"2BASTA",
+    "titleEs":"3BASTA",
     "titleIn":"BASTA",
     "img": "https://mimundodemoda.com/wp-content/uploads/2018/12/porque-saltan-las-puntadas.jpg",
     "descriptionEs":"Interrupción en la formación de una puntada, en entrelazamiento de los hilos, viéndose diferencia en la longitud o forma de la puntada con respecto al resto de la costura.\n",

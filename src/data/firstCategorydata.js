@@ -57,7 +57,7 @@ export const firstCategoryData = [
   },
   {
     "id": 5,
-    "titleEs":"CONTAMINACIÓN",
+    "titleEs":"1CONTAMINACIÓN",
     "titleIn":"CONTAMINATION",
     "img": "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-t\n" +
       "ela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",
@@ -71,7 +71,7 @@ export const firstCategoryData = [
   },
   {
     "id": 6,
-    "titleEs":"CONTAMINACIÓN",
+    "titleEs":"1CONTAMINACIÓN",
     "titleIn":"CONTAMINATION",
     "img": "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-t\n" +
       "ela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",

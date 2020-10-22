@@ -36,6 +36,11 @@ export const currentStep1 = atom({
   default: parseInt(localStorage.getItem("stepFormSecond")) ? parseInt(localStorage.getItem("stepFormSecond")) : 1, // default value
 });
 
+export const currentStep3 = atom({
+  key: 'currentStep3', // unique ID
+  default: parseInt(localStorage.getItem("stepFormThird")) ? parseInt(localStorage.getItem("stepFormThird")) : 1, // default value
+});
+
 export const synthGlobal = atom({
   key: 'synthGlobal', // unique ID
   default: window.speechSynthesis, // default value
@@ -48,6 +53,11 @@ export const firstCategory = atom({
 
 export const secondCategory = atom({
   key: 'secondCategory', // unique ID
+  default: [], // default value
+});
+
+export const thirdCategory = atom({
+  key: 'thirdCategory', // unique ID
   default: [], // default value
 });
 

@@ -1,6 +1,8 @@
 import React, {Fragment, useEffect, useState} from 'react';
 import {firstCategoryData} from '../data/firstCategorydata';
 import {secondCategoryData} from '../data/secondCategoryData';
+import {thirdCategoryData} from '../data/thirdCategoryData';
+
 import {Image, Spinner} from 'react-bootstrap';
 import Helmet from 'react-helmet';
 
@@ -8,14 +10,14 @@ import {
   useRecoilValue, useRecoilState
 } from 'recoil';
 
-import {categoryNavigation, firstCategory, linksSvg, color, secondCategory } from '../GlobalState'
+import {categoryNavigation, firstCategory, linksSvg, color, secondCategory, thirdCategory } from '../GlobalState'
 
 import img from '../assets/img/fondo4.png';
 import Init from "./UI/Init";
-import NavMain from "./UI/NavMain";
+import NavMain from "./UI/navbar/NavMain";
 import OneCategory from "./study_categories/OneCategory";
 import SecondCategory from "./study_categories/SecondCategory";
-
+import ThirdCategory from "./study_categories/ThirdCategory";
 import QuestionMultipleAnswer from './games/question/QuestionMultipleAnswer';
 
 import Memoryboard from "./games/memory_game/MemoryBoard";
@@ -28,11 +30,14 @@ function Dashboard() {
 
   const [firsCategoriesData, setFirsCategoriesData] = useRecoilState(firstCategory);
   const [secondCategoriesData, setSecondCategoriesData] = useRecoilState(secondCategory);
+  const [thirdCategoriesData, setThirdCategoriesData] = useRecoilState(thirdCategory);
+
   const links = useRecoilValue(linksSvg);
 
   useEffect(()=>{
     setFirsCategoriesData(firstCategoryData);
     setSecondCategoriesData(secondCategoryData);
+    setThirdCategoriesData(thirdCategoryData)
     if(category === 0){
       setImageBody(links[0].background);
       setColorMain("#fff7ed");
@@ -91,6 +96,9 @@ function Dashboard() {
           category === 2 && <SecondCategory/>
         }
         {
+          category === 3 && <ThirdCategory/>
+        }
+        {
           category === -1 && (
             <div>
               <div className="d-flex justify-content-center mt-5 mb-2 mr-4 ml-4" >
@@ -107,7 +115,6 @@ function Dashboard() {
 
           )
         }
-
         {
           category === 4 && <QuestionMultipleAnswer/>
         }

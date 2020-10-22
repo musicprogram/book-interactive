@@ -1,10 +1,12 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import '../../../assets/css/memory-style.css';
 import { imagesGame, imageFront } from '../../../data/memoryGameData';
 
 import ModalFinish from "../question/ModalFinish";
 import {useRecoilValue} from "recoil";
 import {linksSvg} from "../../../GlobalState";
+
+import Parallax from 'parallax-js'
 
 import GameBoard from './GameBoard';
 
@@ -23,11 +25,15 @@ function Memoryboard() {
   const [show, setShow] = useState(true);
   const links = useRecoilValue(linksSvg);
 
+  const cardImg = useRef();
 
   useEffect(()=>{
   },[countFinish])
 
   useEffect(()=>{
+    if(cardImg.current){
+      const parallax = new Parallax(cardImg.current);
+    }
     setImage(imageFront);
     let shuffle = imagesGame.sort(() => Math.random() - 0.5)
     setImagesMemory(shuffle);
@@ -86,7 +92,13 @@ function Memoryboard() {
           </span>
       </h1>
       <div>
-        <img src={links[5].bannerMemory} className="center-img-memory rounded"/>
+        <div ref={cardImg}>
+          <img
+            data-depth="0.1"
+            src={links[5].bannerMemory}
+            className="center-img-memory rounded"/>
+        </div>
+
       </div>
       <div className="body-memory mt-4">
         <section className="memory-game">
@@ -98,6 +110,7 @@ function Memoryboard() {
                   flipCard={flipCard}
                   memory={memory}
                   image={image}
+                  key={i}
                   i={i}/>
               )
             })
