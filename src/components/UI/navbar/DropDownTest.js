@@ -16,7 +16,7 @@ function DropDownTest(props) {
   return(
     <NavDropdown.Item
       href="#"
-      className={`color-${props.cat.color}`}
+      className={`color-${props.cat.color} ${props.cat.id === props.category ? 'font-weight-bold': ''}`}
       onClick={()=>{
         changeCategory(props.setCategory, props.cat.id);
         props.stopSynth()

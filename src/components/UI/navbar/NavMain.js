@@ -32,7 +32,7 @@ const menuTestArray = [
     id: 4, title: 'Selección múltiple', color: 3
   },
   {
-    id: 6, title: 'Búsqueda', color: 2
+    id: 6, title: 'Complete', color: 2
   }
 ]
 

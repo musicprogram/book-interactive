@@ -57,8 +57,7 @@ function AlphabetSoupComponent() {
 
 
     const arr = validateArr.find(question => question.correct === false);
-    console.log(arr);
-    debugger
+    //console.log(arr);
     if(arr){
       setIsComplete(false);
     }else{

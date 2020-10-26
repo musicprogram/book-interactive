@@ -29,7 +29,7 @@ const Links = [
   },
   {
     "category": 3,
-    "background": "https://svgshare.com/i/QSp.svg",
+    "background": "https://svgshare.com/i/QvH.svg",
     "photoDetail": "https://img.techpowerup.org/201012/banner-1.png"
   },
   {

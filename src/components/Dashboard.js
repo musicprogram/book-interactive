@@ -20,6 +20,8 @@ import SecondCategory from "./study_categories/SecondCategory";
 import ThirdCategory from "./study_categories/ThirdCategory";
 import QuestionMultipleAnswer from './games/question/QuestionMultipleAnswer';
 
+import CompleteBoard from "./games/complete_information/CompleteBoard";
+
 import Memoryboard from "./games/memory_game/MemoryBoard";
 
 
@@ -59,6 +61,8 @@ function Dashboard() {
     }else if(category === 5){
       setImageBody(links[5].background);
       setColorMain("");
+    }else if(category === 6){
+      setColorMain("#780116");
     }
   },[category])
 
@@ -120,6 +124,9 @@ function Dashboard() {
         }
         {
           category === 5 && <Memoryboard/>
+        }
+        {
+          category === 6 && <CompleteBoard/>
         }
       </Fragment>
   );

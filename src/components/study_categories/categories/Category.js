@@ -3,8 +3,9 @@ import {Card, Row, Image} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
+import ButtonCatNextPrev from "./ButtonCatNextPrev";
 
-import {speechText, currentStep, synthGlobal, linksSvg, categoryNavigation, currentStep1} from '../../../GlobalState'
+import {speechText, currentStep, synthGlobal, linksSvg, categoryNavigation, currentStep1, currentStep3} from '../../../GlobalState'
 
 import {
   useRecoilState, useRecoilValue
@@ -24,6 +25,7 @@ function Category(props) {
   const [synth, setSynth] = useRecoilState(synthGlobal);
   const [step, setStep] = useRecoilState(currentStep);
   const [step1, setStep1] = useRecoilState(currentStep1);
+  const [step3, setStep3] = useRecoilState(currentStep3);
 
   const links = useRecoilValue(linksSvg);
   const category = useRecoilValue(categoryNavigation);
@@ -37,7 +39,7 @@ function Category(props) {
 
       setImgTalk(links[0].talkOne);
       setImgTalkSecond(links[0].talkOne);
-    }else if(category === 2){
+    }else if(category === 2 || category === 3){
       setTalkOne(links[0].talkThree);
       setTalkTwo(links[0].talkFour);
 
@@ -101,6 +103,9 @@ function Category(props) {
     }else if(category === 2){
       setStep1(stp);
       localStorage.setItem("stepFormSecond", stp);
+    }else if(category === 3){
+      setStep3(stp);
+      localStorage.setItem("stepFormThird", stp);
     }
     stopSynth();
   }
@@ -129,45 +134,16 @@ function Category(props) {
 
             <Card.Body>
 
+              <ButtonCatNextPrev
+                id={props.category.id}
+                stepsGlobal={stepsGlobal}
+                category={category}
+                firstCategoriesLength={props.firstCategoriesLength}
+                step={step}
+                step1={step1}
+                step3={step3}
+              />
 
-              <div className="d-flex justify-content-center mb-2">
-                <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                  <div className="btn-group mr-2" role="group" aria-label="First group">
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === 1}
-                      onClick={()=>{
-                        props.firstStep();
-                        stepsGlobal(1)
-                      }}> {'<<'} </button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === 1}
-                      onClick={()=>{
-                        props.previousStep();
-                        stepsGlobal(props.currentStep - 1);
-                      }}> {'<'}</button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === props.totalSteps}
-                      onClick={()=>{
-                        props.nextStep()
-                        stepsGlobal(props.currentStep + 1)
-                      }}> {'>'}</button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === props.totalSteps}
-                      onClick={()=>{
-                        props.lastStep();
-                        stepsGlobal(parseInt(props.totalSteps));
-                      }}>{'>>'}</button>
-                  </div>
-                </div>
-              </div>
               <div className="d-flex justify-content-center">
                   <Zoom>
                     <img
@@ -281,13 +257,10 @@ function Category(props) {
               <Row>
                 <div className="col-md-12">
 
-
                   <p className="ml-2 mt-3 text-classic ">
                     NO CLASIFICA/
                     NOT CLASSIFIED
                   </p>
-
-
 
                 </div>
               </Row>
@@ -295,44 +268,16 @@ function Category(props) {
               <img src={links[1].photoBottom} className="scissors-bottom"/>
 
 
-              <div className="d-flex justify-content-center">
-                <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                  <div className="btn-group mr-2" role="group" aria-label="First group">
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === 1}
-                      onClick={()=>{
-                        props.firstStep();
-                        stepsGlobal(1)
-                      }}> {'<<'} </button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === 1}
-                      onClick={()=>{
-                        props.previousStep();
-                        stepsGlobal(props.currentStep - 1);
-                      }}> {'<'}</button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === props.totalSteps}
-                      onClick={()=>{
-                        props.nextStep()
-                        stepsGlobal(props.currentStep + 1)
-                      }}> {'>'}</button>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      disabled={props.currentStep === props.totalSteps}
-                      onClick={()=>{
-                        props.lastStep();
-                        stepsGlobal(parseInt(props.totalSteps));
-                      }}>{'>>'}</button>
-                  </div>
-                </div>
-              </div>
+              <ButtonCatNextPrev
+                id={props.category.id}
+                stepsGlobal={stepsGlobal}
+                category={category}
+                firstCategoriesLength={props.firstCategoriesLength}
+                step={step}
+                step1={step1}
+                step3={step3}
+              />
+
             </Card.Body>
           </div>
         </div>

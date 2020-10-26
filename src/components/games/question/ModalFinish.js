@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {Fragment, useEffect, useRef} from 'react';
 import {Image, Modal} from "react-bootstrap";
 import {useRecoilState, useRecoilValue} from "recoil";
 import Parallax from 'parallax-js'
@@ -29,13 +29,19 @@ function ModalFinish(props) {
       <Modal.Body>
         <h1 className={`color-${category} text-center font-weight-bold `}>
           Felicitaciones
-          <br/>
-          <span className="text-modal-how"> LO HICISTE EN {
-            props.howManyTimes > 1 ?
-              `${props.howManyTimes} VECES !!!` :
-              `UNA SOLA VEZ !!!`
+          {
+            !props.howManyTimes === 0 && (
+                <Fragment>
+                  <br/>
+                      <span className="text-modal-how"> LO HICISTE EN {
+                        props.howManyTimes > 1 ?
+                          `${props.howManyTimes} VECES !!!` :
+                          `UNA SOLA VEZ !!!`
+                      }
+                  </span>
+                </Fragment>
+            )
           }
-          </span>
         </h1>
         <p>
           Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
