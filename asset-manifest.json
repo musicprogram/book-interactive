@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/book-interactive/static/css/main.22d4d777.chunk.css",
-    "main.js": "/book-interactive/static/js/main.6f876d05.chunk.js",
-    "main.js.map": "/book-interactive/static/js/main.6f876d05.chunk.js.map",
+    "main.css": "/book-interactive/static/css/main.2220e6f7.chunk.css",
+    "main.js": "/book-interactive/static/js/main.8a646e7f.chunk.js",
+    "main.js.map": "/book-interactive/static/js/main.8a646e7f.chunk.js.map",
     "runtime-main.js": "/book-interactive/static/js/runtime-main.88a36cc3.js",
     "runtime-main.js.map": "/book-interactive/static/js/runtime-main.88a36cc3.js.map",
     "static/css/2.b565b473.chunk.css": "/book-interactive/static/css/2.b565b473.chunk.css",
-    "static/js/2.e2d9abab.chunk.js": "/book-interactive/static/js/2.e2d9abab.chunk.js",
-    "static/js/2.e2d9abab.chunk.js.map": "/book-interactive/static/js/2.e2d9abab.chunk.js.map",
+    "static/js/2.9f27a786.chunk.js": "/book-interactive/static/js/2.9f27a786.chunk.js",
+    "static/js/2.9f27a786.chunk.js.map": "/book-interactive/static/js/2.9f27a786.chunk.js.map",
     "index.html": "/book-interactive/index.html",
-    "precache-manifest.f52693f384d01974d676d47c1c17aaa8.js": "/book-interactive/precache-manifest.f52693f384d01974d676d47c1c17aaa8.js",
+    "precache-manifest.295f0c28eaba522d187a15f027dd30fa.js": "/book-interactive/precache-manifest.295f0c28eaba522d187a15f027dd30fa.js",
     "service-worker.js": "/book-interactive/service-worker.js",
     "static/css/2.b565b473.chunk.css.map": "/book-interactive/static/css/2.b565b473.chunk.css.map",
-    "static/css/main.22d4d777.chunk.css.map": "/book-interactive/static/css/main.22d4d777.chunk.css.map",
-    "static/js/2.e2d9abab.chunk.js.LICENSE.txt": "/book-interactive/static/js/2.e2d9abab.chunk.js.LICENSE.txt",
+    "static/css/main.2220e6f7.chunk.css.map": "/book-interactive/static/css/main.2220e6f7.chunk.css.map",
+    "static/js/2.9f27a786.chunk.js.LICENSE.txt": "/book-interactive/static/js/2.9f27a786.chunk.js.LICENSE.txt",
     "static/media/fondo4.png": "/book-interactive/static/media/fondo4.ca59b9a4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.88a36cc3.js",
     "static/css/2.b565b473.chunk.css",
-    "static/js/2.e2d9abab.chunk.js",
-    "static/css/main.22d4d777.chunk.css",
-    "static/js/main.6f876d05.chunk.js"
+    "static/js/2.9f27a786.chunk.js",
+    "static/css/main.2220e6f7.chunk.css",
+    "static/js/main.8a646e7f.chunk.js"
   ]
 }
