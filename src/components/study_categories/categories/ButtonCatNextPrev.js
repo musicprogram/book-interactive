@@ -1,7 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
+import ModalNext from "../ModalNext";
 
 function ButtonCatNextPrev(props) {
+  const [show, setShow] = useState(false);
+  const [finish, setFinish] = useState(false);
+
+  useEffect(()=>{
+
+  },[]);
+
+
+  const ModalNextTest = ()=>{
+    setShow(true);
+  }
 
   return (
     <div className="d-flex justify-content-center mb-2">
@@ -12,6 +24,7 @@ function ButtonCatNextPrev(props) {
             className="btn btn-secondary"
             disabled={props.id === 1}
             onClick={()=>{
+              setFinish(false);
               props.stepsGlobal(1)
             }}> {'<<'} </button>
           <button
@@ -19,37 +32,54 @@ function ButtonCatNextPrev(props) {
             className="btn btn-secondary"
             disabled={props.id === 1}
             onClick={()=>{
-              if(props.category === 1){
-                props.stepsGlobal(props.step - 1);
-              }else if(props.category === 2){
-                props.stepsGlobal(props.step1 - 1);
-              }else if(props.category === 3){
-                props.stepsGlobal(props.step3 - 1);
-              }
+                setFinish(false);
+                if(props.category === 1){
+                  props.stepsGlobal(props.step - 1);
+                }else if(props.category === 2){
+                  props.stepsGlobal(props.step1 - 1);
+                }else if(props.category === 3){
+                  props.stepsGlobal(props.step3 - 1);
+                }
+
             }}> {'<'}</button>
           <button
             type="button"
             className="btn btn-secondary"
-            disabled={props.id === props.firstCategoriesLength}
             onClick={()=>{
-              if(props.category === 1){
-                props.stepsGlobal(props.step + 1);
-              }else if(props.category === 2){
-                props.stepsGlobal(props.step1 + 1);
-                debugger
-              }else if(props.category === 3){
-                props.stepsGlobal(props.step3 + 1);
+              const finishObj = props.id === props.firstCategoriesLength
+              if(finishObj){
+                ModalNextTest();
+              }else{
+                if(props.category === 1){
+                  props.stepsGlobal(props.step + 1);
+                }else if(props.category === 2){
+                  props.stepsGlobal(props.step1 + 1);
+                  debugger
+                }else if(props.category === 3){
+                  props.stepsGlobal(props.step3 + 1);
+                }
               }
+
             }}> {'>'}</button>
           <button
             type="button"
             className="btn btn-secondary"
-            disabled={props.id === props.firstCategoriesLength}
             onClick={()=>{
-              props.stepsGlobal(props.firstCategoriesLength);
+              const finishObj = props.id === props.firstCategoriesLength
+              if(finishObj){
+                ModalNextTest();
+              }else{
+                props.stepsGlobal(props.firstCategoriesLength);
+              }
+
             }}>{'>>'}</button>
         </div>
       </div>
+
+      <ModalNext
+        show={show}
+        setShow={setShow}
+      />
     </div>
   );
 }

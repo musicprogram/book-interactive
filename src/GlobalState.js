@@ -92,3 +92,8 @@ export const color = atom({
   key: 'color', // unique ID
   default: '#ffffff', // default value
 });
+
+export const resultTest = atom({
+  key: 'resultTest', // unique ID
+  default: [], // default value
+});

@@ -1,11 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import Helmet from 'react-helmet';
-import {currentStep, firstCategory, randomImg} from '../../GlobalState'
+import {currentStep, firstCategory, categoryNavigation} from '../../GlobalState';
+import ModalNext from "./ModalNext";
 
 import {changeBackground} from './functionsCategory';
 
 import {
-  useRecoilValue
+  useRecoilValue,
+  useRecoilState
 } from 'recoil';
 
 import Category from "./categories/Category";
@@ -13,14 +15,19 @@ import Category from "./categories/Category";
 function OneCategory() {
   const step = useRecoilValue(currentStep);
   const firsCategoriesData = useRecoilValue(firstCategory);
+  const [category, setCategory] = useRecoilState(categoryNavigation);
+
   const [objCategory, setObjCategory] = useState([]);
   const [imgBackground, setImgBackground] = useState('');
+  const [show, setShow] = useState(true);
+  const [finish, setFinish] = useState(false);
 
 
   useEffect(()=>{
     const category = firsCategoriesData.filter((category)=> category.id === step);
-    //console.log(category)
+
     setObjCategory(category);
+
     changeBackground(step, setImgBackground);
   },[step])
 
@@ -40,8 +47,6 @@ function OneCategory() {
         </style>
       </Helmet>
 
-
-
       {
         objCategory.map((category, i)=>{
           return(
@@ -53,6 +58,8 @@ function OneCategory() {
           )
         })
       }
+
+
     </div>
   );
 }
