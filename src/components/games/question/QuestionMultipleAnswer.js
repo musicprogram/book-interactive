@@ -15,6 +15,7 @@ function AlphabetSoupComponent() {
   const [missingInfo, setMissingInfo] = useState(true);
   const [isComplete, setIsComplete] = useState(false);
   const [show, setShow] = useState(true);
+  const [clicks, setClicks] = useState(0);
   const links = useRecoilValue(linksSvg);
 
 
@@ -29,7 +30,8 @@ function AlphabetSoupComponent() {
   },[]);
 
   const handleSubmit = ()=>{
-
+    let quantityClicks = clicks + 1;
+    setClicks(quantityClicks);
     let validateArr = []
     let obj = {}
 
@@ -146,6 +148,7 @@ function AlphabetSoupComponent() {
           isComplete && (
             <ModalFinish
               howManyTimes={howManyTimes}
+              clicks={clicks}
               show={show}
               setShow={setShow}/>
           )

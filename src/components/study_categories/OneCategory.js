@@ -1,34 +1,35 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import Helmet from 'react-helmet';
-import {currentStep, firstCategory, categoryNavigation} from '../../GlobalState';
-import ModalNext from "./ModalNext";
+import {categoryNavigation, currentStep, firstCategory} from '../../GlobalState';
+import {Button} from "react-bootstrap";
 
 import {changeBackground} from './functionsCategory';
 
 import {
+  useRecoilState,
   useRecoilValue,
-  useRecoilState
 } from 'recoil';
 
 import Category from "./categories/Category";
 
+import ButtonNextDown from "./categories/ButtonNextDown";
+
 function OneCategory() {
   const step = useRecoilValue(currentStep);
   const firsCategoriesData = useRecoilValue(firstCategory);
-  const [category, setCategory] = useRecoilState(categoryNavigation);
 
   const [objCategory, setObjCategory] = useState([]);
   const [imgBackground, setImgBackground] = useState('');
-  const [show, setShow] = useState(true);
   const [finish, setFinish] = useState(false);
-
 
   useEffect(()=>{
     const category = firsCategoriesData.filter((category)=> category.id === step);
-
     setObjCategory(category);
-
     changeBackground(step, setImgBackground);
+
+    let isFinish = category[0].id === firsCategoriesData.length
+    setFinish(isFinish);
+
   },[step])
 
   return (
@@ -59,6 +60,11 @@ function OneCategory() {
         })
       }
 
+      {
+        finish && (
+          <ButtonNextDown/>
+        )
+      }
 
     </div>
   );

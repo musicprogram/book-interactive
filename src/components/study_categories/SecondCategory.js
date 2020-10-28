@@ -7,18 +7,23 @@ import {
 } from 'recoil';
 
 import Category from "./categories/Category";
+import ButtonNextDown from "./categories/ButtonNextDown";
 
 function SecondCategory() {
   const step1 = useRecoilValue(currentStep1);
   const [objCategory, setObjCategory] = useState([]);
   const dataCategories = useRecoilValue(secondCategory);
   const [imgBackground, setImgBackground] = useState('');
+  const [finish, setFinish] = useState(false);
 
   useEffect(()=>{
     const category = dataCategories.filter((category)=> category.id === step1);
-    console.log(step1)
+    //console.log(step1)
     setObjCategory(category);
     changeBackground(step1, setImgBackground);
+
+    let isFinish = category[0].id === dataCategories.length
+    setFinish(isFinish);
 
   },[step1])
 
@@ -49,6 +54,12 @@ function SecondCategory() {
             )
           })
         }
+
+      {
+        finish && (
+          <ButtonNextDown/>
+        )
+      }
     </div>
   );
 }

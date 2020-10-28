@@ -33,7 +33,13 @@ function ModalNext(props) {
 
       </Modal.Header>
       <Modal.Body>
-        <h2 className={`color-${firsCategoriesData} text-center text-lubster`}>¿Quieres presentar la prueba?</h2>
+        <h2 className={`color-${firsCategoriesData} text-center text-lubster`}>
+          ¿Ya terminaste, <br/>
+          <span className="font-weight-bold">
+            Quieres presentar la prueba?
+          </span>
+
+        </h2>
         <div className="row mt-4">
           <div className="col-6">
             <h1

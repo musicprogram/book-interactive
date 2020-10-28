@@ -54,7 +54,6 @@ function ButtonCatNextPrev(props) {
                   props.stepsGlobal(props.step + 1);
                 }else if(props.category === 2){
                   props.stepsGlobal(props.step1 + 1);
-                  debugger
                 }else if(props.category === 3){
                   props.stepsGlobal(props.step3 + 1);
                 }

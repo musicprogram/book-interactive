@@ -8,6 +8,7 @@ import {
 
 import Category from "./categories/Category";
 import {changeBackground} from './functionsCategory';
+import ButtonNextDown from "./categories/ButtonNextDown";
 
 function SecondCategory() {
 
@@ -15,12 +16,16 @@ function SecondCategory() {
   const dataCategories = useRecoilValue(thirdCategory);
   const [objCategory, setObjCategory] = useState([]);
   const [imgBackground, setImgBackground] = useState('');
+  const [finish, setFinish] = useState(false);
 
   useEffect(()=>{
     const category = dataCategories.filter((category)=> category.id === step3);
     //console.log(category)
     setObjCategory(category);
     changeBackground(step3, setImgBackground);
+
+    let isFinish = category[0].id === dataCategories.length
+    setFinish(isFinish);
   },[step3])
 
   return (
@@ -50,6 +55,12 @@ function SecondCategory() {
             />
           )
         })
+      }
+
+      {
+        finish && (
+          <ButtonNextDown/>
+        )
       }
     </div>
   );

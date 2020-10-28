@@ -1,11 +1,19 @@
-import React, {Fragment, useEffect, useState} from 'react';
+import React, {Fragment, useEffect, useState, useRef} from 'react';
 import {Card, Row, Image} from 'react-bootstrap'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
 import ButtonCatNextPrev from "./ButtonCatNextPrev";
 
-import {speechText, currentStep, synthGlobal, linksSvg, categoryNavigation, currentStep1, currentStep3} from '../../../GlobalState'
+import {
+  speechText,
+  currentStep,
+  synthGlobal,
+  linksSvg,
+  categoryNavigation,
+  currentStep1,
+  currentStep3
+} from '../../../GlobalState'
 
 import {
   useRecoilState, useRecoilValue
@@ -13,6 +21,9 @@ import {
 
 
 function Category(props) {
+
+
+  const [changePage, setChangePage] = useState(true);
 
   const [imgTalk, setImgTalk] = useState('');
   const [imgTalkSecond, setImgTalkSecond] = useState('');
@@ -47,7 +58,9 @@ function Category(props) {
       setImgTalkSecond(links[0].talkThree);
     }
 
-
+    setTimeout(()=>{
+      setChangePage(false)
+    }, 1000)
     //console.log(props.category)
   },[]);
 
@@ -112,7 +125,7 @@ function Category(props) {
 
   return (
     <Fragment>
-      <>
+      <div className={`${changePage ? 'animate__animated animate__fadeIn  animate__duration-3s' : ''}`}>
 
         <h1 className="text-center text-capitalize mt-2">
           <span className={`font-weight-bold text-title-span-title mr-2 
@@ -282,7 +295,7 @@ function Category(props) {
           </div>
         </div>
 
-      </>
+      </div>
 
 
 

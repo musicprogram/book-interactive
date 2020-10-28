@@ -23,6 +23,7 @@ function CompleteBoard() {
   const { transcript, resetTranscript } = useSpeechRecognition();
 
   const [show, setShow] = useState(true);
+  const [clicks, setClicks] = useState(0);
 
   useEffect(()=>{
     setBody(completeInformationData[0].imgCss);
@@ -34,9 +35,11 @@ function CompleteBoard() {
       alert('No hay soporte')
     }
 
+  if(transcript){
     //console.log(transcript);
     setWord(transcript);
     compareWord(transcript);
+  }
 
   },[transcript]);
 
@@ -136,9 +139,10 @@ function CompleteBoard() {
        {
          isOver && (
            <ModalFinish
-             howManyTimes={0}
              show={show}
-             setShow={setShow}/>
+             setShow={setShow}
+             clicks={clicks}
+           />
          )
        }
      </div>

@@ -93,7 +93,11 @@ export const color = atom({
   default: '#ffffff', // default value
 });
 
+
+const resultArr = localStorage.getItem('result');
 export const resultTest = atom({
   key: 'resultTest', // unique ID
-  default: [], // default value
+  default: resultArr ? JSON.parse(resultArr) : [], // default value
 });
+
+
