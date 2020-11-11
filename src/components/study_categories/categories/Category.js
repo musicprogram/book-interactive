@@ -22,7 +22,6 @@ import {
 
 function Category(props) {
 
-
   const [changePage, setChangePage] = useState(true);
 
   const [imgTalk, setImgTalk] = useState('');
@@ -125,7 +124,7 @@ function Category(props) {
 
   return (
     <Fragment>
-      <div className={`${changePage ? 'animate__animated animate__fadeIn  animate__duration-3s' : ''}`}>
+      <div className={`${changePage ? 'animate__animated animate__fadeIn  animate__duration-1s' : ''}`}>
 
         <h1 className="text-center text-capitalize mt-2">
           <span className={`font-weight-bold text-title-span-title mr-2 
@@ -155,6 +154,7 @@ function Category(props) {
                 step={step}
                 step1={step1}
                 step3={step3}
+                setChangePage={setChangePage}
               />
 
               <div className="d-flex justify-content-center">
@@ -289,6 +289,8 @@ function Category(props) {
                 step={step}
                 step1={step1}
                 step3={step3}
+                changePage={changePage}
+                setChangePage={setChangePage}
               />
 
             </Card.Body>

@@ -19,25 +19,28 @@ function GameBoard(props) {
       onClick={(e) => props.flipCard(e)}>
       {
         props.memory.img ? (
-          <div className="front-face text-center">
-            <div ref={cardImg}>
+          <div className="front-face">
+            <div className="mx-auto">
               <img
-                data-depth="0.8"
+                className="img-memory"
                 src={props.memory.img}
                 alt={props.memory.dataKey}
                />
             </div>
 
-            <p className={`mt-2 text-img-front text-white font-weight-bold ${props.memory.dataKey === 1 ? 'text-special' : ''}`} hidden>{props.memory.word}</p>
+            <p className={`mt-2 text-white font-weight-bold text-center ${(props.memory.dataKey === 2 || props.memory.dataKey === 6) ? 'text-special' : 'text-special-small'}`} hidden>{props.memory.word}</p>
           </div>
         ) : (
           <div className="front-face">
-            <p className={`text-box-memory mt-5 font-weight-bold ${props.memory.dataKey === 1 ? 'text-special' : ''}`}>
+            <p className={`mt-5 font-weight-bold text-center ${(props.memory.dataKey === 2 || props.memory.dataKey === 6) ? 'text-special' : 'text-special-small'}`}>
                 <span className="align-middle text-memory text-capitalize">
                   {props.memory.word}
-                </span> <br/>
-              <span className="text-center chulo-correcto" hidden>✔</span>
+                </span>
             </p>
+            <p className="text-center">
+              <span className="mt-2 chulo-correcto" hidden>✔</span>
+            </p>
+
 
           </div>
         )

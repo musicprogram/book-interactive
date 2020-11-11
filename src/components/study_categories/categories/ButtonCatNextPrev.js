@@ -15,6 +15,13 @@ function ButtonCatNextPrev(props) {
     setShow(true);
   }
 
+  const animatePage = () =>{
+    props.setChangePage(true);
+    setTimeout(()=>{
+      props.setChangePage(false);
+    },1000)
+  }
+
   return (
     <div className="d-flex justify-content-center mb-2">
       <div className="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
@@ -24,6 +31,7 @@ function ButtonCatNextPrev(props) {
             className="btn btn-secondary"
             disabled={props.id === 1}
             onClick={()=>{
+              animatePage();
               setFinish(false);
               props.stepsGlobal(1)
             }}> {'<<'} </button>
@@ -32,6 +40,7 @@ function ButtonCatNextPrev(props) {
             className="btn btn-secondary"
             disabled={props.id === 1}
             onClick={()=>{
+              animatePage();
                 setFinish(false);
                 if(props.category === 1){
                   props.stepsGlobal(props.step - 1);
@@ -46,6 +55,7 @@ function ButtonCatNextPrev(props) {
             type="button"
             className="btn btn-secondary"
             onClick={()=>{
+              animatePage();
               const finishObj = props.id === props.firstCategoriesLength
               if(finishObj){
                 ModalNextTest();
@@ -64,6 +74,7 @@ function ButtonCatNextPrev(props) {
             type="button"
             className="btn btn-secondary"
             onClick={()=>{
+              animatePage()
               const finishObj = props.id === props.firstCategoriesLength
               if(finishObj){
                 ModalNextTest();

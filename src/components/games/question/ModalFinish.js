@@ -3,35 +3,22 @@ import {Image, Modal} from "react-bootstrap";
 import {useRecoilState, useRecoilValue} from "recoil";
 import Parallax from 'parallax-js'
 import {categoryNavigation, linksSvg, resultTest} from "../../../GlobalState";
-import {thirdCategoryData} from "../../../data/thirdCategoryData";
+import ButtonsModalFinish from "./ButtonsModalFinish";
+import ButtonsModalCategories from "./ButtonsModalCategories";
 
 
 function ModalFinish(props) {
   const sceneImgModal = useRef();
   const links = useRecoilValue(linksSvg);
-  const category = useRecoilValue(categoryNavigation);
+  const [category, setCategory] = useRecoilState(categoryNavigation);
   const [result, setResult] = useRecoilState(resultTest);
   useEffect(()=>{
-
-    let categoryName = '';
-    if(category === 5){
-      categoryName = 'Concéntrese'
-    }else if(category === 4){
-      categoryName = 'Selección múltiple'
-    }else if(category === 6){
-      categoryName = 'Complete'
-    }
-
-    const data = {
-      name: categoryName,
-      category: category
-    }
-    const resultArr = result
-    resultArr.push(data);
-    setResult(resultArr)
-    localStorage.setItem('result', JSON.stringify(resultArr));
     const scene = new Parallax(sceneImgModal.current);
-  },[])
+  },[]);
+
+  const handleClick = (cat) =>{
+    setCategory(cat);
+  }
 
   return (
     <Modal
@@ -55,6 +42,16 @@ function ModalFinish(props) {
           commodi aspernatur enim, consectetur. Cumque deleniti temporibus
           ipsam atque.
         </p>
+
+        <ButtonsModalFinish
+          handleClick={handleClick}
+        />
+        <hr/>
+        <p className="text-center">
+          ¿Quieres seguir estudiando los defectos?
+        </p>
+        <ButtonsModalCategories/>
+
       </Modal.Body>
     </Modal>
   );

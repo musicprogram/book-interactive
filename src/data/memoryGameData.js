@@ -1,43 +1,43 @@
 export const imagesGame = [
   {
-    img: 'https://marina-ferreira.github.io/memory-game/img/react.svg',
+    img: 'https://img.techpowerup.org/201029/marras.jpg',
     dataKey: 1,
-    word: 'MATERIAL ACARTONADO'
-  },
-  {
-    img: 'https://marina-ferreira.github.io/memory-game/img/angular.svg',
-    dataKey: 2,
     word: 'MARRAS'
   },
   {
-    img: 'https://marina-ferreira.github.io/memory-game/img/ember.svg',
+    img: 'https://img.techpowerup.org/201023/amarillamiento.jpg',
+    dataKey: 2,
+    word: 'AMARILLAMIENTO'
+  },
+  {
+    img: 'https://img.techpowerup.org/201029/mota.jpg',
     dataKey: 3,
     word: 'MOTA'
   },
   {
-    img: 'https://marina-ferreira.github.io/memory-game/img/backbone.svg',
+    img: 'https://img.techpowerup.org/201023/nudos.jpg',
     dataKey: 4,
     word: 'NUDOS'
   },
   {
-    img: 'https://marina-ferreira.github.io/memory-game/img/vue.svg',
+    img: 'https://img.techpowerup.org/201023/barrado.png',
     dataKey: 5,
-    word: 'LYCRA ROTA'
+    word: 'BARRADO'
   },
   {
-    img: 'https://marina-ferreira.github.io/memory-game/img/aurelia.svg',
+    img: 'https://img.techpowerup.org/201027/columna-abierta2.jpg',
     dataKey: 6,
-    word: 'CAÍDA'
+    word: 'COLUMNA ABIERTA'
   },
   {
     img: '',
     dataKey: 1,
-    word: 'MATERIAL ACARTONADO'
+    word: 'MARRAS'
   },
   {
     img: '',
     dataKey: 2,
-    word: 'MARRAS'
+    word: 'AMARILLAMIENTO'
   },
   {
     img: '',
@@ -52,13 +52,77 @@ export const imagesGame = [
   {
     img: '',
     dataKey: 5,
-    word: 'LYCRA ROTA'
+    word: 'BARRADO'
   },
   {
     img: '',
     dataKey: 6,
-    word: 'CAÍDA'
+    word: 'COLUMNA ABIERTA'
   }
 ];
 
 export const imageFront = 'https://svgshare.com/i/QnR.svg';
+
+
+export const imagesGameEnglish = [
+  {
+    img: 'https://img.techpowerup.org/201029/marras.jpg',
+    dataKey: 1,
+    word: 'SLUB YARN'
+  },
+  {
+    img: 'https://img.techpowerup.org/201023/amarillamiento.jpg',
+    dataKey: 2,
+    word: 'YELLOWING'
+  },
+  {
+    img: 'https://img.techpowerup.org/201029/mota.jpg',
+    dataKey: 3,
+    word: 'PILLING'
+  },
+  {
+    img: 'https://img.techpowerup.org/201023/nudos.jpg',
+    dataKey: 4,
+    word: 'KNOTS'
+  },
+  {
+    img: 'https://img.techpowerup.org/201023/barrado.png',
+    dataKey: 5,
+    word: 'BARRÉ'
+  },
+  {
+    img: 'https://img.techpowerup.org/201027/columna-abierta2.jpg',
+    dataKey: 6,
+    word: 'LADDERING'
+  },
+  {
+    img: '',
+    dataKey: 1,
+    word: 'SLUB YARN'
+  },
+  {
+    img: '',
+    dataKey: 2,
+    word: 'YELLOWING'
+  },
+  {
+    img: '',
+    dataKey: 3,
+    word: 'PILLING'
+  },
+  {
+    img: '',
+    dataKey: 4,
+    word: 'KNOTS'
+  },
+  {
+    img: '',
+    dataKey: 5,
+    word: 'BARRÉ'
+  },
+  {
+    img: '',
+    dataKey: 6,
+    word: 'LADDERING'
+  }
+];

@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import '../../../assets/css/memory-style.css';
-import { imagesGame, imageFront } from '../../../data/memoryGameData';
+import { imagesGame, imageFront, imagesGameEnglish } from '../../../data/memoryGameData';
 
 import ModalFinish from "../question/ModalFinish";
 import {useRecoilValue} from "recoil";
@@ -25,6 +25,9 @@ function Memoryboard() {
   const [show, setShow] = useState(true);
   const links = useRecoilValue(linksSvg);
 
+  const [english, setEnglish] = useState(false);
+  const [showMemory, setShowMemory] = useState(true);
+
   const cardImg = useRef();
 
   useEffect(()=>{
@@ -35,9 +38,14 @@ function Memoryboard() {
       const parallax = new Parallax(cardImg.current);
     }
     setImage(imageFront);
-    let shuffle = imagesGame.sort(() => Math.random() - 0.5)
+    let shuffle;
+    if(english){
+      shuffle = imagesGameEnglish.sort(() => Math.random() - 0.5)
+    }else{
+      shuffle = imagesGame.sort(() => Math.random() - 0.5)
+    }
     setImagesMemory(shuffle);
-  },[])
+  },[english])
 
   const flipCard = (e) =>{
     e.currentTarget.classList.add('flip');
@@ -69,7 +77,13 @@ function Memoryboard() {
 
   const disabledCards = (firstEventCard, e) =>{
     // hay coincidencia
-    setCountFinish( countFinish - 1);
+    if((countFinish - 1) === 0){
+      setTimeout(()=>{
+        setCountFinish( countFinish - 1);
+      }, 1500)
+    }else {
+      setCountFinish( countFinish - 1);
+    }
     firstEventCard.classList.add('inactive-card');
     e.currentTarget.classList.add('inactive-card');
   };
@@ -83,14 +97,35 @@ function Memoryboard() {
 
   return (
 
-    <div>
-      <h1 className="text-center text-capitalize mt-2">
+    <div className="animate__animated animate__fadeIn  animate__duration-3s">
+      <h1 className="text-center text-capitalize mt-2 ">
           <span className={`font-weight-bold text-title-span-title mr-2 
          color-5
           `}>
             Concéntrese
           </span>
       </h1>
+      <div className="d-flex justify-content-center">
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="radio"
+            checked={english}
+            onClick={()=> {
+              setEnglish(!english);
+              setShowMemory(false);
+              setTimeout(()=>{
+                setShowMemory(true);
+              },200)
+            }}
+          />
+            <label className="form-check-label" htmlFor="exampleRadios1">
+              {
+                english? 'Change language' : 'Cambiar lenguage'
+              }
+            </label>
+        </div>
+      </div>
       <div>
         <div ref={cardImg}>
           <img
@@ -101,21 +136,26 @@ function Memoryboard() {
 
       </div>
       <div className="body-memory mt-4">
-        <section className="memory-game">
-          {
-            imagesMemory.map((memory, i)=>{
-              return(
+        {
+          showMemory && (
+            <section className="memory-game">
+              {
+                imagesMemory.map((memory, i)=>{
+                  return(
 
-                <GameBoard
-                  flipCard={flipCard}
-                  memory={memory}
-                  image={image}
-                  key={i}
-                  i={i}/>
-              )
-            })
-          }
-        </section>
+                    <GameBoard
+                      flipCard={flipCard}
+                      memory={memory}
+                      image={image}
+                      key={i}
+                      i={i}/>
+                  )
+                })
+              }
+            </section>
+
+          )
+        }
 
         {
           countFinish === 0 && (

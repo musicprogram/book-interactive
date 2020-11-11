@@ -84,7 +84,7 @@ function CompleteBoard() {
   }
 
   return (
-     <div className="background-complete">
+     <div className="background-complete animate__animated animate__fadeIn  animate__duration-3s">
        <div className="container ">
          <Helmet>
            {/* Define inline CSS for body tag */}

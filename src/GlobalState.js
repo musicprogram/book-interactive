@@ -94,10 +94,31 @@ export const color = atom({
 });
 
 
-const resultArr = localStorage.getItem('result');
+const resultData = [
+  {
+    "category":4,
+    "solve": false,
+    "title": 'Selección múltiple',
+    "color": 1
+  },
+  {
+    "category":6,
+    "solve": false,
+    "title": 'Complete',
+    "color": 3
+  },
+  {
+    "category":5,
+    "solve": false,
+    "title": 'Concéntrese',
+    "color": 2
+  }
+];
+
+
 export const resultTest = atom({
   key: 'resultTest', // unique ID
-  default: resultArr ? JSON.parse(resultArr) : [], // default value
+  default: resultData, // default value
 });
 
 

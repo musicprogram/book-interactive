@@ -108,7 +108,7 @@ function AlphabetSoupComponent() {
   }
 
   return (
-    <div className="container">
+    <div className="container animate__animated animate__fadeIn  animate__duration-3s">
       <h1 className="text-center text-capitalize mt-2">
           <span className={`font-weight-bold text-title-span-title mr-2 
          color-3

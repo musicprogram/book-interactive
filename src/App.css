@@ -627,13 +627,29 @@ figure.zoom img {
   }
 
 
+  .img-memory{
+    width: 90px !important;
+  }
+
+  .text-special-small{
+    font-size: 13px;
+  }
+
+
+
+  .text-special{
+    font-size: 9px !important;
+    text-align: center;
+    margin-bottom: 5px;
+  }
 
 
 
 
+}
 
-
-
+.text-special{
+  font-size: 13px;
 }
 
 .img-talk-l{
@@ -996,6 +1012,7 @@ figure.zoom img {
     max-width: 100%;
     padding: 0 1em 1em;
   }
+
 }
 .movie-card__header {
   margin-bottom: 2em;
@@ -1032,6 +1049,14 @@ figure.zoom img {
 
 .gif-complete{
   width: 59px
+}
+
+
+.img-memory{
+  width: 125px;
+  height: 150px;
+  border-radius: 9px;
+
 }
 
 
