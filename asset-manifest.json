@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/book-interactive/static/css/main.56324358.chunk.css",
-    "main.js": "/book-interactive/static/js/main.1eda7e55.chunk.js",
-    "main.js.map": "/book-interactive/static/js/main.1eda7e55.chunk.js.map",
+    "main.js": "/book-interactive/static/js/main.4cff007c.chunk.js",
+    "main.js.map": "/book-interactive/static/js/main.4cff007c.chunk.js.map",
     "runtime-main.js": "/book-interactive/static/js/runtime-main.88a36cc3.js",
     "runtime-main.js.map": "/book-interactive/static/js/runtime-main.88a36cc3.js.map",
     "static/css/2.b565b473.chunk.css": "/book-interactive/static/css/2.b565b473.chunk.css",
     "static/js/2.16bbade4.chunk.js": "/book-interactive/static/js/2.16bbade4.chunk.js",
     "static/js/2.16bbade4.chunk.js.map": "/book-interactive/static/js/2.16bbade4.chunk.js.map",
     "index.html": "/book-interactive/index.html",
-    "precache-manifest.cc99a22a0bf3ff078828e90d22e1b46b.js": "/book-interactive/precache-manifest.cc99a22a0bf3ff078828e90d22e1b46b.js",
+    "precache-manifest.b0b9e12d98f8063cdaf7a9abfdc2934e.js": "/book-interactive/precache-manifest.b0b9e12d98f8063cdaf7a9abfdc2934e.js",
     "service-worker.js": "/book-interactive/service-worker.js",
     "static/css/2.b565b473.chunk.css.map": "/book-interactive/static/css/2.b565b473.chunk.css.map",
     "static/css/main.56324358.chunk.css.map": "/book-interactive/static/css/main.56324358.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.b565b473.chunk.css",
     "static/js/2.16bbade4.chunk.js",
     "static/css/main.56324358.chunk.css",
-    "static/js/main.1eda7e55.chunk.js"
+    "static/js/main.4cff007c.chunk.js"
   ]
 }
