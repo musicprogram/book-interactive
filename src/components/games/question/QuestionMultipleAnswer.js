@@ -9,6 +9,7 @@ import {myQuestions, myQuestionsEnglish} from '../../../data/question_data'
 import {useRecoilState, useRecoilValue} from "recoil";
 import {categoryNavigation, linksSvg} from "../../../GlobalState";
 import CheckBoxLanguage from "../CheckBoxLanguage";
+import {imagesGameEnglish} from "../../../data/memoryGameData";
 
 
 function AlphabetSoupComponent() {
@@ -31,6 +32,11 @@ function AlphabetSoupComponent() {
 
 
   const list = useRef()
+
+  useEffect(()=>{
+    let shuffle = myQuestions.sort(() => Math.random() - 0.6);
+    setQuestions(shuffle);
+  },[])
 
   useEffect(()=>{
     if(english){
