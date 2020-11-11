@@ -10,6 +10,8 @@ import Parallax from 'parallax-js'
 
 import GameBoard from './GameBoard';
 
+import CheckBoxLanguage from "../CheckBoxLanguage";
+
 function Memoryboard() {
   const [imagesMemory, setImagesMemory] = useState([]);
   const [image, setImage] = useState('');
@@ -102,30 +104,21 @@ function Memoryboard() {
           <span className={`font-weight-bold text-title-span-title mr-2 
          color-5
           `}>
-            Concéntrese
+            {
+              english ? 'Focus': 'Concéntrese'
+            }
+
           </span>
       </h1>
-      <div className="d-flex justify-content-center">
-        <div className="form-check">
-          <input
-            className="form-check-input"
-            type="radio"
-            checked={english}
-            onClick={()=> {
-              setEnglish(!english);
-              setShowMemory(false);
-              setTimeout(()=>{
-                setShowMemory(true);
-              },200)
-            }}
-          />
-            <label className="form-check-label" htmlFor="exampleRadios1">
-              {
-                english? 'Change language' : 'Cambiar lenguage'
-              }
-            </label>
-        </div>
-      </div>
+
+     <CheckBoxLanguage
+       setEnglish={setEnglish}
+       english={english}
+       setShowMemory={setShowMemory}
+
+     />
+
+
       <div>
         <div ref={cardImg}>
           <img
@@ -138,7 +131,7 @@ function Memoryboard() {
       <div className="body-memory mt-4">
         {
           showMemory && (
-            <section className="memory-game">
+            <section className="memory-game animate__animated animate__fadeIn  animate__duration-3s">
               {
                 imagesMemory.map((memory, i)=>{
                   return(

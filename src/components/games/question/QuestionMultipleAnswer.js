@@ -5,9 +5,11 @@ import Question from "./Question";
 
 import ModalFinish from "./ModalFinish";
 
-import {myQuestions} from '../../../data/question_data'
+import {myQuestions, myQuestionsEnglish} from '../../../data/question_data'
 import {useRecoilState, useRecoilValue} from "recoil";
 import {categoryNavigation, linksSvg} from "../../../GlobalState";
+import CheckBoxLanguage from "../CheckBoxLanguage";
+
 
 function AlphabetSoupComponent() {
   const [questions,setQuestions] = useState(myQuestions);
@@ -24,10 +26,19 @@ function AlphabetSoupComponent() {
 
   const [howManyTimes, setHowManyTimes] = useState(0);
 
+  const [english, setEnglish] = useState(false);
+  const [showMemory, setShowMemory] = useState(true);
+
+
   const list = useRef()
 
   useEffect(()=>{
-  },[]);
+    if(english){
+      setQuestions(myQuestionsEnglish);
+    }else{
+      setQuestions(myQuestions);
+    }
+  },[english]);
 
   const handleSubmit = ()=>{
     let quantityClicks = clicks + 1;
@@ -109,52 +120,71 @@ function AlphabetSoupComponent() {
 
   return (
     <div className="container animate__animated animate__fadeIn  animate__duration-3s">
-      <h1 className="text-center text-capitalize mt-2">
-          <span className={`font-weight-bold text-title-span-title mr-2 
+      <h1 className="text-center text-capitalize mt-2 mb-3">
+          <span className={`font-weight-bold text-title-span-title mr-2
          color-3
           `}>
-            Cuestionario Tercero
+            {
+              english ? 'Multiple choice\n': 'Selección Multiple'
+            }
+
           </span>
       </h1>
-      <div>
-        <img src={links[0].bannerQuestion} className="center-img-modal bg-light rounded"/>
-      </div>
-      <div className=" mb-4 pb-4 pt-4 pl-4" ref={list}>
-        <ResponsiveMasonry
-          columnsCountBreakPoints={{350: 1, 600: 2, 900: 3}}
-        >
-          <Masonry>
-            {
-              questions.map((quiz, i)=>{
-                return(
-                  <Question
-                    howManyTimes={howManyTimes}
-                    handleChange={handleChange}
-                    category={category}
-                    quiz={quiz}/>
-                )
-              })
-            }
-          </Masonry>
-        </ResponsiveMasonry>
-        <button
-          onClick={handleSubmit}
-          type="button"
-          disabled={missingInfo}
-          className={`btn btn-lg btn-block text-white mt-2 btn-dark`}>
-          {isComplete ? 'Muy Bien' : 'Enviar'}
-        </button>
-        {
-          isComplete && (
-            <ModalFinish
-              howManyTimes={howManyTimes}
-              clicks={clicks}
-              show={show}
-              setShow={setShow}/>
-          )
-        }
 
-      </div>
+      <CheckBoxLanguage
+        setEnglish={setEnglish}
+        english={english}
+        setShowMemory={setShowMemory}
+      />
+
+
+      {
+        showMemory && (
+
+          <div className=" mb-4 pb-4 pt-4 pl-4 animate__animated animate__fadeIn  animate__duration-3s" ref={list}>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{350: 1, 600: 2, 900: 3}}
+            >
+              <Masonry>
+                {
+                  questions.map((quiz, i)=>{
+                    return(
+                      <Question
+                        howManyTimes={howManyTimes}
+                        handleChange={handleChange}
+                        category={category}
+                        quiz={quiz}/>
+                    )
+                  })
+                }
+              </Masonry>
+            </ResponsiveMasonry>
+            <div>
+              <img src={links[0].bannerQuestion} className="center-img-modal bg-light rounded"/>
+            </div>
+            <button
+              onClick={handleSubmit}
+              type="button"
+              disabled={missingInfo}
+              className={`btn btn-lg btn-block text-white mt-2 btn-dark`}>
+              {isComplete ? 'Muy Bien' : 'Enviar'}
+            </button>
+            {
+              isComplete && (
+                <ModalFinish
+                  howManyTimes={howManyTimes}
+                  clicks={clicks}
+                  show={show}
+                  setShow={setShow}/>
+              )
+            }
+
+          </div>
+
+        )
+      }
+
+
     </div>
   );
 }
