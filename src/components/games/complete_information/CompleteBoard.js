@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef} from 'react';
-import {completeInformationData, talkAnimation} from '../../../data/CompleteInformationData';
+import {completeInformationData, talkAnimation, completeInformationDataEnglish} from '../../../data/CompleteInformationData';
 import Helmet from 'react-helmet';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import ModalFinish from "../question/ModalFinish";
@@ -8,6 +8,11 @@ import Complete from "./Complete";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import {useRecoilValue} from "recoil";
 import {linksSvg} from "../../../GlobalState";
+
+import CheckBoxSpeech from './CheckBoxSpeech';
+
+import CheckBoxLanguage from "../CheckBoxLanguage";
+import {imagesGame, imagesGameEnglish} from "../../../data/memoryGameData";
 
 function CompleteBoard() {
   const [completeInformations, setCompleteInformations] = useState(completeInformationData);
@@ -25,9 +30,29 @@ function CompleteBoard() {
   const [show, setShow] = useState(true);
   const [clicks, setClicks] = useState(0);
 
+  const [workingSpeech, setWorkingSpeech] = useState(true);
+  const [inputText, setInputText] = useState({
+    text : '',
+    infoId : '',
+    word: ''
+  });
+  const [english, setEnglish] = useState(false);
+  const [showMemory, setShowMemory] = useState(true);
+
   useEffect(()=>{
     setBody(completeInformationData[0].imgCss);
   },[])
+
+
+  useEffect(()=>{
+    let shuffle;
+    if(english){
+      shuffle = completeInformationDataEnglish.sort(() => Math.random() - 0.3)
+    }else{
+      shuffle = completeInformationData.sort(() => Math.random() - 0.3)
+    }
+    setCompleteInformations(shuffle);
+  },[english])
 
   useEffect(()=>{
 
@@ -41,7 +66,32 @@ function CompleteBoard() {
     compareWord(transcript);
   }
 
-  },[transcript]);
+  if(
+    inputText.text &&
+    inputText.text === inputText.word &&
+    inputText.word){
+      compareText()
+  }
+
+  },[transcript, inputText]);
+
+  const compareText = () =>{
+
+    const updateCompleteInformations = []
+
+    completeInformations.map((info)=>{
+      if(inputText.infoId === info.id){
+        info.solve = true;
+      }
+      updateCompleteInformations.push(info)
+    })
+
+    const result = updateCompleteInformations.filter(info => info.solve === true);
+    setIsOver(result.length === completeInformations.length);
+
+    setCompleteInformations(updateCompleteInformations);
+
+  };
 
   const compareWord = (word) =>{
     let updateCompleteInformations = [];
@@ -108,29 +158,46 @@ function CompleteBoard() {
             Complete
           </span>
          </h1>
+          <CheckBoxSpeech
+            setWorkingSpeech={setWorkingSpeech}
+            workingSpeech={workingSpeech}
+            setInputText={setInputText}
+          />
 
+         <CheckBoxLanguage
+           setEnglish={setEnglish}
+           english={english}
+           setShowMemory={setShowMemory}
+
+         />
 
           <div>
-            <ResponsiveMasonry
-              columnsCountBreakPoints={{350: 1, 600: 2}}
-            >
-              <Masonry>
-                {
-                  completeInformations.map((info, i)=>{
-                    return(
+            {
+              showMemory && (
+                <ResponsiveMasonry
+                  columnsCountBreakPoints={{350: 1, 600: 2}}
+                >
+                  <Masonry>
+                    {
+                      completeInformations.map((info, i)=>{
+                        return(
+                          <Complete
+                            info={info}
+                            key={i}
+                            setBody={setBody}
+                            setWordState={setWordState}
+                            speechRecognition={speech}
+                            workingSpeech={workingSpeech}
+                            setInputText={setInputText}
+                          />
+                        )
+                      })
+                    }
+                  </Masonry>
+                </ResponsiveMasonry>
+              )
+            }
 
-                        <Complete
-                          info={info}
-                          key={i}
-                          setBody={setBody}
-                          setWordState={setWordState}
-                          speechRecognition={speech}
-                        />
-                    )
-                  })
-                }
-              </Masonry>
-            </ResponsiveMasonry>
 
           </div>
 

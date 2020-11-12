@@ -76,7 +76,7 @@ function NavMain() {
     categories.map((category, i)=>{
       let obj = {
         id: category.id,
-        title: category.titleIn
+        title: category.titleEs
       }
       menu.push(obj)
     });

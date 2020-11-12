@@ -33,17 +33,18 @@ function AlphabetSoupComponent() {
 
   const list = useRef()
 
-  useEffect(()=>{
-    let shuffle = myQuestions.sort(() => Math.random() - 0.6);
-    setQuestions(shuffle);
-  },[])
 
   useEffect(()=>{
+    let shuffle;
     if(english){
-      setQuestions(myQuestionsEnglish);
+      shuffle = myQuestionsEnglish.sort(() => Math.random() - 0.6);
+      setQuestions(shuffle);
     }else{
-      setQuestions(myQuestions);
+      shuffle = myQuestions.sort(() => Math.random() - 0.6);
+      setQuestions(shuffle);
     }
+
+    setQuestions(shuffle);
   },[english]);
 
   const handleSubmit = ()=>{

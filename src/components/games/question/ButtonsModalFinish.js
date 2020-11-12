@@ -34,7 +34,6 @@ function ButtonsModalFinish(props) {
     let over = items.filter(x => x.solve === false);
     setFinish(over.length === 0)
     //console.log(over)
-    debugger
 
   },[])
 

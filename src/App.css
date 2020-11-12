@@ -1060,6 +1060,14 @@ figure.zoom img {
 }
 
 
+.labelRead{
+  color: white;
+  font-weight: bold;
+}
 
+.labelRea{
+  color: black;
+  font-weight: bold;
+}
 
 /* THEME */
