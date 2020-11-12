@@ -34,7 +34,8 @@ function CompleteBoard() {
   const [inputText, setInputText] = useState({
     text : '',
     infoId : '',
-    word: ''
+    word: '',
+    body: ''
   });
   const [english, setEnglish] = useState(false);
   const [showMemory, setShowMemory] = useState(true);
@@ -76,7 +77,7 @@ function CompleteBoard() {
   },[transcript, inputText]);
 
   const compareText = () =>{
-
+    setBody(inputText.body)
     const updateCompleteInformations = []
 
     completeInformations.map((info)=>{
@@ -162,6 +163,7 @@ function CompleteBoard() {
             setWorkingSpeech={setWorkingSpeech}
             workingSpeech={workingSpeech}
             setInputText={setInputText}
+            english={english}
           />
 
          <CheckBoxLanguage
@@ -175,6 +177,7 @@ function CompleteBoard() {
             {
               showMemory && (
                 <ResponsiveMasonry
+                  className='animate__animated animate__fadeIn  animate__duration-3s'
                   columnsCountBreakPoints={{350: 1, 600: 2}}
                 >
                   <Masonry>

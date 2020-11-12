@@ -7,7 +7,8 @@ function Complete(props) {
      const dataChange = {
        text : e.target.value,
        infoId : props.info.id,
-       word: props.info.word
+       word: props.info.word,
+       body: props.info.imgCss
      };
      props.setInputText(dataChange);
   }

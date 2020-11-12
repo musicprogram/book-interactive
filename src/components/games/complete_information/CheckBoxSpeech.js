@@ -1,8 +1,12 @@
 
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 function CheckBoxSpeech(props) {
+
+  useEffect(()=>{
+
+  },[])
 
   return (
     <div className="d-flex justify-content-center">
@@ -24,7 +28,16 @@ function CheckBoxSpeech(props) {
         />
         <label className="form-check-label labelRead" htmlFor="exampleRadios1">
           {
-            props.workingSpeech? 'Cambiar a escribir' : 'Cambiar para hablar'
+            props.workingSpeech && !props.english && 'Cambiar a escribir'
+          }
+          {
+            !props.workingSpeech && !props.english && 'Cambiar para hablar'
+          }
+          {
+            props.workingSpeech && props.english && 'Change to write'
+          }
+          {
+            !props.workingSpeech && props.english && 'Change to talk'
           }
         </label>
       </div>
