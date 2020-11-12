@@ -155,7 +155,7 @@ function CompleteBoard() {
           <span className={`font-weight-bold text-title-span-title mr-2 
          color-2
           `}>
-            Complete
+            {english ? 'Complete' : 'Completar'}
           </span>
          </h1>
           <CheckBoxSpeech
@@ -189,6 +189,7 @@ function CompleteBoard() {
                             speechRecognition={speech}
                             workingSpeech={workingSpeech}
                             setInputText={setInputText}
+                            english={english}
                           />
                         )
                       })

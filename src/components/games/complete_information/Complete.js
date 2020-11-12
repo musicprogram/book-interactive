@@ -45,7 +45,7 @@ function Complete(props) {
                 type="text"
                 className="form-control"
                 onChange={handleChangeText}
-                placeholder="Escribe la palabra"
+                placeholder={props.english ? "Write word" : "Escribe la palabra"}
               />
             </div>
           )
