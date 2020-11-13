@@ -18,15 +18,15 @@ function Introduction() {
 
             <ul className="list-group mb-2">
               <li className="list-group-item">
-                <span className="font-weight-bold color-main"> 1)</span>
+                <span className="font-weight-bold color-main"> 1) </span>
                 Defectos por proceso textil:desarrollo textil, tejeduría, tintorería y acabados.
               </li>
               <li className="list-group-item">
-                <span className="font-weight-bold color-main"> 2)</span>
+                <span className="font-weight-bold color-main"> 2) </span>
                 Defectos por proceso de corte, almacenamiento, empaque, acabados, insumos y diseño.
               </li>
               <li className="list-group-item">
-                <span className="font-weight-bold color-main"> 3)</span>
+                <span className="font-weight-bold color-main"> 3) </span>
                 Defectos por procesos de confección.
               </li>
             </ul>
