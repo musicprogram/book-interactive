@@ -38,7 +38,13 @@ function Introduction() {
               segunda o si no clasifica según el grado de afectación de la prenda.
             </p>
             <p>
-              Este manual se encuentra albergado en <a target="_blank" href="https://musicprogram.github.io/book-interactive/">Aquí</a> ,
+              Este manual se encuentra albergado en {' '}
+              <a
+                className="color-main font-weight-bold"
+                target="_blank"
+                href="https://musicprogram.github.io/book-interactive/">
+                https://musicprogram.github.io/book-interactive/
+              </a>,
               el usuario encontrará varios enlaces que le permitirán navegar por las tres categorías. 
               Al terminar de visualizar todos los defectos de cada categoría, se propone una serie de ejercicios para 
               fortalecer su comprensión y dominio en el tema.
