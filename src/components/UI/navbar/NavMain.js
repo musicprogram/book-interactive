@@ -167,6 +167,15 @@ function NavMain() {
             }
           </NavDropdown>
 
+          <Nav.Item>
+            <Nav.Link
+              onClick={()=> {
+                setCategory(7);
+                stopSynth()
+              }}
+            >Introducción</Nav.Link>
+          </Nav.Item>
+
         </Nav>
       </Navbar.Collapse>
     </Navbar>

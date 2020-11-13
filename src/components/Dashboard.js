@@ -24,9 +24,10 @@ import CompleteBoard from "./games/complete_information/CompleteBoard";
 
 import Memoryboard from "./games/memory_game/MemoryBoard";
 
+import Introduction from "./help_introduction/Introduction";
 
 function Dashboard() {
-  const category = useRecoilValue(categoryNavigation);
+  const [category, setCategory] = useRecoilState(categoryNavigation);
   const [imageBody, setImageBody] = useState(null);
   const [colorMain, setColorMain] = useRecoilState(color);
 
@@ -63,6 +64,9 @@ function Dashboard() {
       setColorMain("");
     }else if(category === 6){
       setColorMain("#780116");
+    }else if(category === 7){
+      setColorMain("#ff873d");
+      setImageBody(links[3].background);
     }
   },[category])
 
@@ -128,6 +132,11 @@ function Dashboard() {
         {
           category === 6 && <CompleteBoard/>
         }
+
+        {
+          category === 7 && <Introduction/>
+        }
+
       </Fragment>
   );
 }
