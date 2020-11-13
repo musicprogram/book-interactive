@@ -13,6 +13,7 @@ import CheckBoxSpeech from './CheckBoxSpeech';
 
 import CheckBoxLanguage from "../CheckBoxLanguage";
 import {imagesGame, imagesGameEnglish} from "../../../data/memoryGameData";
+import Help from "../../help_introduction/Help";
 
 function CompleteBoard() {
   const [completeInformations, setCompleteInformations] = useState(completeInformationData);
@@ -39,6 +40,7 @@ function CompleteBoard() {
   });
   const [english, setEnglish] = useState(false);
   const [showMemory, setShowMemory] = useState(true);
+  const [showHelp, setShowHelp] = useState(false);
 
   useEffect(()=>{
     setBody(completeInformationData[0].imgCss);
@@ -159,6 +161,7 @@ function CompleteBoard() {
             {english ? 'Complete' : 'Completar'}
           </span>
          </h1>
+
           <CheckBoxSpeech
             setWorkingSpeech={setWorkingSpeech}
             workingSpeech={workingSpeech}
@@ -172,6 +175,20 @@ function CompleteBoard() {
            setShowMemory={setShowMemory}
 
          />
+
+         <h3
+           onClick={()=> {
+             setShowHelp(true);
+           }}
+           className="text-capitalize mt-2 pointer">
+          <span className={`font-weight-bold text-title-span-title mr-2 
+         color-2
+          `}>
+            Necesitas ayuda?
+          </span>
+         </h3>
+
+
 
           <div>
             {
@@ -215,6 +232,16 @@ function CompleteBoard() {
              clicks={clicks}
            />
          )
+       }
+
+       {
+         showHelp && (
+           <Help
+              setShowHelp={setShowHelp}
+              showHelp={showHelp}
+           />
+         )
+
        }
      </div>
   );
