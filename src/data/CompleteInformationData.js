@@ -1,7 +1,7 @@
 export const completeInformationData = [
   {
     id: 1,
-    word :"contaminación",
+    word :"cortesesgado",
     img : "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-tela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",
     description:"es una tensión o reviente horizontal  (de lycra)",
     imgCss: 'https://svgshare.com/i/QsC.svg',
@@ -43,7 +43,7 @@ export const talkAnimation = [
 export const completeInformationDataEnglish = [
   {
     id: 1,
-    word :"contamination",
+    word :"skewing",
     img : "https://image.slidesharecdn.com/defectosentejeduria-lfigueroa-eureka-190731015422/95/defectos-en-tela-provenientes-de-la-tejedura-3-638.jpg?cb=1564538320",
     description:"es una tensión o reviente horizontal  (de lycra) INGLES",
     imgCss: 'https://svgshare.com/i/QsC.svg',
