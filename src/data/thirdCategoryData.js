@@ -823,7 +823,6 @@ export const thirdCategoryData = [
   "classified": false,
   "code": "NTC 5893 Apoyo con norma ASTM 1683 NTC 4275"
 },
-
 {
   "id": 56,
   "titleEs":"ZAFADO",
