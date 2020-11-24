@@ -53,10 +53,40 @@ function Complete(props) {
         }
 
         {
-          props.info.solve && (
-            <h2 className="color-2">
-              {props.info.word}
-            </h2>
+          props.info.solve ? (
+            <div>
+              {
+                props.info.id === 1 ? (
+                  <h2 className="color-2">
+                   <span className="text-capitalize">
+                     {props.info.wordDesc}
+                   </span> {props.info.word}
+                  </h2>
+                ):(
+                  <h2 className="color-2">
+                    <span className="text-capitalize">
+                     {props.info.word}
+                   </span> {props.info.wordDesc}
+                  </h2>
+                )
+              }
+            </div>
+          ) :(
+            <div>
+              {
+                props.info.id === 1 ? (
+                  <h2 className="color-2">
+                    <span className="text-capitalize">
+                     {props.info.wordDesc}
+                   </span> {'________'}
+                  </h2>
+                ):(
+                  <h2 className="color-2">
+                    {'________'} {props.info.wordDesc}
+                  </h2>
+                )
+              }
+            </div>
           )
         }
         <p className={`card-text ${props.info.solve === false ? 'color-2 font-weight-bold': ''}` }>
