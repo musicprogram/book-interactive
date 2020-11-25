@@ -150,45 +150,97 @@ export const myQuestionsEnglish = [
   },
   {
     id: 3,
-    question: "Which tool can you use to ensure code quality EN?",
+    img: '',
+    question: "¿The best definition of “Needle cut by machine” is?",
     answers: {
-      1: "por el fabricante de tipografía Letraset",
-      2: "fabricante de tipografía Letraset",
-      3: "por el  de tipografía",
-      4: "ESLint"
-    },
-    correctAnswer: 3
-  },
-  {
-    id: 4,
-    question: "Sed rerum esse sit nesciunt sint quo quia adipisci ut exercitationem  eveniet EN?",
-    answers: {
-      1: "deserunt",
-      2: "quo",
-      3: "vuiy",
-      4: "rerum"
+      1: "Bursting of one or more filaments in the fabric, caused by an improper needle.",
+      2: "When in the manufacturing process the materials are cut beyond what is defined in the spec-sheet.",
+      3: "Seam mismatch at joint: Difference that occurs in the joint of two parts or a part with an accessory, where their ends must coincide.",
+      4: "Filament that protrudes from the surface of the fabric caused by snags or burrs."
     },
     correctAnswer: 1
   },
   {
-    id: 5,
-    question: "Adipisci ut exercitationem doloremque quo aspernatur EN?",
+    id: 4,
+    img: '',
+    question: "¿The interruption in the joint of 2 or more materials, not being secured by the seam, is known as?",
     answers: {
-      1: "deserudnt",
-      2: "quo",
-      3: "vuiy",
-      4: "rerum"
+      1: "seam mismatch at joint",
+      2: "puckering",
+      3: "uneven margin",
+      4: "Loosen parts"
     },
     correctAnswer: 4
   },
   {
-    id: 6,
-    question: "Adipisci uttusoi suu EN?",
+    id: 5,
+    img: '',
+    question: "¿The Twisted leg is a defect due to?",
     answers: {
-      1: "exerci aspernatur",
-      2: "doloremque quo aspernatur",
-      3: "exercitationem doloremque",
-      4: "doloremque exercitationem quo aspernatur"
+      1: "thread breakage or knife cut.",
+      2: "bad handling of the materials, bad graduation of the transport of the machine or slanted fabric in the process of manufacturing.",
+      3: "the cut of materials beyond what is defined in the spec-sheet",
+      4: "the difference in the joint of two parts or a part with an accessory, where their ends must coincide."
+    },
+    correctAnswer: 2
+  },
+  {
+    id: 6,
+    img: '',
+    question: "¿A __________ does not meet the information requirements, such as size, composition, reference, distances, measures, texture or its information is illegible.?",
+    answers: {
+      1: "cracked or missing printing",
+      2: "entanglement",
+      3: "non-conforming label",
+      4: "seam slippage"
+    },
+    correctAnswer: 3
+  },
+  {
+    id: 7,
+    img: '',
+    question: "¿The absence of one or more pieces or parts that form the garment is better known as?",
+    answers: {
+      1: "missing part",
+      2: "right or upside down",
+      3: "omission of seam",
+      4: "wrong size label"
+    },
+    correctAnswer: 1
+  },
+  {
+    id: 8,
+    img: 'https://img.techpowerup.org/201118/hebras-sin-pulir.jpg',
+    question: "¿This picture corresponds to?",
+    answers: {
+      1: "oil marks",
+      2: "untrimmed threads",
+      3: "non-conforming label",
+      4: "wavy seams"
+    },
+    correctAnswer: 4
+  },
+  {
+    id: 9,
+    img: '',
+    question: "¿The needle marks appear when?",
+    answers: {
+      1: "stretching the threads or by retaining the material.",
+      2: "the seam does not maintain an even edge and falls out.",
+      3: "a seam is reprocessed and the needle holes are marked.",
+      4: "the operation is performed, the piece is slightly bent and a part is left undone."
+    },
+    correctAnswer: 3
+  },
+  {
+    id: 10,
+    img: 'https://img.techpowerup.org/201118/material-dentro-de-las-costuras.jpg',
+    question: "¿Select the option with the correct name of the defect in the image?",
+    answers: {
+      1: "Entanglement",
+      2: "Untrimmed threads",
+      3: "Loosen parts",
+      4: "Material inside the seams or lined pieces"
     },
     correctAnswer: 4
   }
