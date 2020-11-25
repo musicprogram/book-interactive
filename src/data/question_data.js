@@ -187,7 +187,7 @@ export const myQuestionsEnglish = [
   {
     id: 6,
     img: '',
-    question: "¿A __________ does not meet the information requirements, such as size, composition, reference, distances, measures, texture or its information is illegible.?",
+    question: "¿Does not meet the information requirements, such as size, composition, reference, distances, measures, texture or its information is illegible.?",
     answers: {
       1: "cracked or missing printing",
       2: "entanglement",
