@@ -100,13 +100,14 @@ function Init() {
      <div className="container">
        <blockquote className="blockquote text-center">
          <p className="lead mb-0 color-main font-weight-bold  lead">
-          <span className="color-main">
+           <span className="color-main">
             Elaborado por: Lina Marcela Bedoya (Instructora de Bilingüismo),
             Maria del Socorro Martinez (Instructora de Confección Industrial),
             Nora Emilse Agudelo Mendoza (Instructora de Confección Industrial),
             Juan Henao (Desarrollador web).
           </span>
          </p>
+         <footer className="blockquote-footer font-weight-bold color-main">SENA Regional Antioquia - Centro de Formación en Diseño, Confección y Moda. <br/><cite title="Source Title">{' '}Enero 2021</cite></footer>
        </blockquote>
      </div>
 
