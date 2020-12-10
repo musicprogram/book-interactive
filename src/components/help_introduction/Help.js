@@ -17,6 +17,9 @@ function Help(props) {
           <h3 className="font-weight-bold text-center color-main">
             Instrucciones
           </h3>
+          <p className="text-center font-weight-bold">
+            Para el óptimo funcionamiento de esta actividad se sugiere que sea realizada en un computador
+          </p>
           <p className="text-center lead">
             Elige entre las opciones que encuentras en la parte superior de esta página,
             ya sea “cambiar para hablar/escribir” o “cambiar lenguaje”. Según tu elección inicial,
