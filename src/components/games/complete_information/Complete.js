@@ -4,13 +4,17 @@ import Zoom from "react-medium-image-zoom";
 function Complete(props) {
 
   const handleChangeText = (e) =>{
-     const dataChange = {
-       text : e.target.value,
-       infoId : props.info.id,
-       word: props.info.word,
-       body: props.info.imgCss
-     };
-     props.setInputText(dataChange);
+    const data = e.target.value;
+    if(data){
+      const dataN = data.toLowerCase()
+      const dataChange = {
+        text : dataN,
+        infoId : props.info.id,
+        word: props.info.word,
+        body: props.info.imgCss
+      };
+      props.setInputText(dataChange);
+    }
   }
 
   return (
