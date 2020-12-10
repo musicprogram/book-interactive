@@ -37,11 +37,6 @@ function ModalFinish(props) {
         <h1 className={`color-${category} text-center font-weight-bold `}>
           Felicitaciones
         </h1>
-        <p>
-          Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde
-          commodi aspernatur enim, consectetur. Cumque deleniti temporibus
-          ipsam atque.
-        </p>
 
         <ButtonsModalFinish
           handleClick={handleClick}
