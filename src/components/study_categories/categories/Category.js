@@ -224,7 +224,7 @@ function Category(props) {
                     <div className="col-6">
 
                       <Card border="light" style={{ borderRadius: '20px' }}>
-                        <Card.Header className={`text-classic h3 ${'color-' + category}`}>Segundo</Card.Header>
+                        <Card.Header className={`text-classic h3 ${'color-' + category}`}>Segunda</Card.Header>
                         <Card.Body>
                           <Card.Title>
                             {props.category.secondEs}
