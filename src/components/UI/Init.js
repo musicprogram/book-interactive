@@ -97,14 +97,18 @@ function Init() {
           </div>
         </div>
       </div>
-      <blockquote className="blockquote text-center">
-        <p className="lead mb-0 color-main font-weight-bold text-hand lead">
+     <div className="container">
+       <blockquote className="blockquote text-center">
+         <p className="lead mb-0 color-main font-weight-bold  lead">
           <span className="color-main">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            Elaborado por: Lina Marcela Bedoya (Instructora de Bilingüismo),
+            Maria del Socorro Martinez (Instructora de Confección Industrial),
+            Nora Emilse Agudelo Mendoza (Instructora de Confección Industrial),
+            Juan Henao (Desarrollador web).
           </span>
-        </p>
-        <footer className="blockquote-footer font-weight-bold color-main">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-      </blockquote>
+         </p>
+       </blockquote>
+     </div>
 
 
       <Modal
