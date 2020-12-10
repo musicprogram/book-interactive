@@ -112,7 +112,14 @@ function NavMain() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-
+          <Nav.Item>
+            <Nav.Link
+              onClick={()=> {
+                setCategory(7);
+                stopSynth()
+              }}
+            >Presentación</Nav.Link>
+          </Nav.Item>
           <DropDownNav
             category={category}
             menu={menuOne}
@@ -167,14 +174,7 @@ function NavMain() {
             }
           </NavDropdown>
 
-          <Nav.Item>
-            <Nav.Link
-              onClick={()=> {
-                setCategory(7);
-                stopSynth()
-              }}
-            >Introducción</Nav.Link>
-          </Nav.Item>
+
 
         </Nav>
       </Navbar.Collapse>
