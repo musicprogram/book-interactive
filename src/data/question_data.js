@@ -2,7 +2,7 @@ export const myQuestions = [
   {
     id: 1,
     img: "https://img.techpowerup.org/201118/basta.jpg",
-    question: "¿Esta imagen corresponde a un/a?",
+    question: "Esta imagen corresponde a un/a",
     answers: {
       1: "costura abierta.",
       2: "basta.",
@@ -14,7 +14,7 @@ export const myQuestions = [
   {
     id: 2,
     img: 'https://img.techpowerup.org/201118/embolillado-sesgado.jpg',
-    question: "¿Según la imagen, este defecto se define como?",
+    question: "Según la imagen, este defecto se define como",
     answers: {
       1: "Empalme o unión de dos costuras o materiales que no cumplen con las especificaciones de la ficha técnica.",
       2: "Arrugas en diagonal presentadas al asentar una costura o hacer dobladillos.",
@@ -26,7 +26,7 @@ export const myQuestions = [
   {
     id: 3,
     img: '',
-    question: "¿La siguiente es la mejor definición de “Pica de aguja por máquina”?",
+    question: "La siguiente es la mejor definición de “Pica de aguja por máquina”",
     answers: {
       1: "Reviente de uno o más filamentos en el tejido, ocasionados por aguja de confección inadecuada.",
       2: "Cuando en el proceso de confección se realiza recorte de los materiales más allá de lo reglamentado en la ficha técnica.",
@@ -38,7 +38,7 @@ export const myQuestions = [
   {
     id: 4,
     img: '',
-    question: "¿A la interrupción en la unión de 2 o más materiales, que no quedan asegurados por la costura, se le conoce como:?",
+    question: "A la interrupción en la unión de 2 o más materiales, que no quedan asegurados por la costura, se le conoce como:",
     answers: {
       1: "escala.",
       2: "entorchamiento.",
@@ -50,7 +50,7 @@ export const myQuestions = [
   {
     id: 5,
     img: '',
-    question: "¿La pierna virada normalmente se da por?",
+    question: "La pierna virada normalmente se da por",
     answers: {
       1: "reviente de hilo o corte de cuchilla.",
       2: "mal manejo de los materiales, mala graduación del transporte de la máquina o tela sesgada en el proceso de confección.",
@@ -62,7 +62,7 @@ export const myQuestions = [
   {
     id: 6,
     img: '',
-    question: "¿Es cuando ésta no cumple con los requerimientos de información, como talla, composición, referencia, distancias, medidas, textura o su información es ilegible?",
+    question: "Es cuando ésta no cumple con los requerimientos de información, como talla, composición, referencia, distancias, medidas, textura o su información es ilegible",
     answers: {
       1: "Estampado quebrao.",
       2: "Enredo.",
@@ -74,7 +74,7 @@ export const myQuestions = [
   {
     id: 7,
     img: '',
-    question: "¿La ausencia  de una o varias piezas o partes que forman la prenda es conocida como?",
+    question: "La ausencia  de una o varias piezas o partes que forman la prenda es conocida como",
     answers: {
       1: "faltante de pieza.",
       2: "derecho o revés invertido.",
@@ -86,7 +86,7 @@ export const myQuestions = [
   {
     id: 8,
     img: 'https://img.techpowerup.org/201118/hebras-sin-pulir.jpg',
-    question: "¿Esta imagen corresponde a?",
+    question: "Esta imagen corresponde a",
     answers: {
       1: "manchas de aceite.",
       2: "hebras sin cortar.",
@@ -98,7 +98,7 @@ export const myQuestions = [
   {
     id: 9,
     img: '',
-    question: "¿Las huellas de costura se presentan cuando?",
+    question: "Las huellas de costura se presentan cuando",
     answers: {
       1: "se tensionan los hilos o al retener el material.",
       2: "la costura no conserva el margen pareja y queda caída.",
@@ -110,7 +110,7 @@ export const myQuestions = [
   {
     id: 10,
     img: 'https://img.techpowerup.org/201118/material-dentro-de-las-costuras.jpg',
-    question: "¿Elige la opción con el defecto de la imagen a continuación?",
+    question: "Elige la opción con el defecto de la imagen a continuación",
     answers: {
       1: "enredos.",
       2: "hebras sin pulir.",
@@ -127,7 +127,7 @@ export const myQuestionsEnglish = [
   {
     id: 1,
     img: 'https://img.techpowerup.org/201118/basta.jpg',
-    question: "¿This image corresponds to a/n?",
+    question: "This image corresponds to a/n",
     answers: {
       1: "open seam",
       2: "skipped stitch",
@@ -139,7 +139,7 @@ export const myQuestionsEnglish = [
   {
     id: 2,
     img: 'https://img.techpowerup.org/201118/embolillado-sesgado.jpg',
-    question: "¿According to the picture, this defect is defined as?",
+    question: "According to the picture, this defect is defined as",
     answers: {
       1: "Splicing or joining of two seams or materials that do not meet the specifications of the spec- sheet.",
       2: "Diagonal wrinkles presented when seaming or hemming.",
@@ -151,7 +151,7 @@ export const myQuestionsEnglish = [
   {
     id: 3,
     img: '',
-    question: "¿The best definition of “Needle cut by machine” is?",
+    question: "The best definition of “Needle cut by machine” is",
     answers: {
       1: "Bursting of one or more filaments in the fabric, caused by an improper needle.",
       2: "When in the manufacturing process the materials are cut beyond what is defined in the spec-sheet.",
@@ -163,7 +163,7 @@ export const myQuestionsEnglish = [
   {
     id: 4,
     img: '',
-    question: "¿The interruption in the joint of 2 or more materials, not being secured by the seam, is known as?",
+    question: "The interruption in the joint of 2 or more materials, not being secured by the seam, is known as",
     answers: {
       1: "seam mismatch at joint",
       2: "puckering",
@@ -175,7 +175,7 @@ export const myQuestionsEnglish = [
   {
     id: 5,
     img: '',
-    question: "¿The Twisted leg is a defect due to?",
+    question: "The Twisted leg is a defect due to",
     answers: {
       1: "thread breakage or knife cut.",
       2: "bad handling of the materials, bad graduation of the transport of the machine or slanted fabric in the process of manufacturing.",
@@ -187,7 +187,7 @@ export const myQuestionsEnglish = [
   {
     id: 6,
     img: '',
-    question: "¿Does not meet the information requirements, such as size, composition, reference, distances, measures, texture or its information is illegible.?",
+    question: "Does not meet the information requirements, such as size, composition, reference, distances, measures, texture or its information is illegible.",
     answers: {
       1: "cracked or missing printing",
       2: "entanglement",
@@ -199,7 +199,7 @@ export const myQuestionsEnglish = [
   {
     id: 7,
     img: '',
-    question: "¿The absence of one or more pieces or parts that form the garment is better known as?",
+    question: "The absence of one or more pieces or parts that form the garment is better known as",
     answers: {
       1: "missing part",
       2: "right or upside down",
@@ -211,7 +211,7 @@ export const myQuestionsEnglish = [
   {
     id: 8,
     img: 'https://img.techpowerup.org/201118/hebras-sin-pulir.jpg',
-    question: "¿This picture corresponds to?",
+    question: "This picture corresponds to",
     answers: {
       1: "oil marks",
       2: "untrimmed threads",
@@ -223,7 +223,7 @@ export const myQuestionsEnglish = [
   {
     id: 9,
     img: '',
-    question: "¿The needle marks appear when?",
+    question: "The needle marks appear when",
     answers: {
       1: "stretching the threads or by retaining the material.",
       2: "the seam does not maintain an even edge and falls out.",
@@ -235,7 +235,7 @@ export const myQuestionsEnglish = [
   {
     id: 10,
     img: 'https://img.techpowerup.org/201118/material-dentro-de-las-costuras.jpg',
-    question: "¿Select the option with the correct name of the defect in the image?",
+    question: "Select the option with the correct name of the defect in the image",
     answers: {
       1: "Entanglement",
       2: "Untrimmed threads",
