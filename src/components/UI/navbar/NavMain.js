@@ -21,6 +21,7 @@ import {thirdCategoryData} from "../../../data/thirdCategoryData";
 
 import DropDownNav from "./DropDownNav";
 import DropDownTest from "./DropDownTest";
+import CreditsSection from "./CreditsSection";
 
 
 
@@ -55,7 +56,8 @@ function NavMain() {
   const [step1, setStep1] = useRecoilState(currentStep1);
   const [step3, setStep3] = useRecoilState(currentStep3);
 
-  const [menuTest, setMenuTest] = useState(menuTestArray)
+  const [menuTest, setMenuTest] = useState(menuTestArray);
+  const [lgShow, setLgShow] = useState(false);
 
 
   useEffect(()=>{
@@ -174,8 +176,26 @@ function NavMain() {
             }
           </NavDropdown>
 
+          <Nav.Item>
+            <Nav.Link
+              onClick={()=> {
+                setLgShow(true)
+              }}
+            >Créditos</Nav.Link>
+          </Nav.Item>
 
+          <Nav.Item>
+            <Nav.Link
+              onClick={()=> {
+                setCategory(8);
+              }}
+            >Referencias</Nav.Link>
+          </Nav.Item>
 
+          <CreditsSection
+            lgShow={lgShow}
+            setLgShow={setLgShow}
+          />
         </Nav>
       </Navbar.Collapse>
     </Navbar>

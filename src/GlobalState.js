@@ -10,6 +10,8 @@ import dataLinks from './data/data_links'
 
 import {completeInformationData} from './data/CompleteInformationData';
 
+import {References} from './data/referencesData'
+
 const arrImgBack = [
   Links[0].background,
   Links[0].modal,
@@ -120,5 +122,11 @@ export const resultTest = atom({
   key: 'resultTest', // unique ID
   default: resultData, // default value
 });
+export const references = atom({
+  key: 'references', // unique ID
+  default: References, // default value
+});
+
+
 
 

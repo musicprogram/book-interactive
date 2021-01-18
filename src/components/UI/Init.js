@@ -52,13 +52,23 @@ function Init() {
 
   return (
     <div className="init">
-      <div className="mb-4">
-        <h1 className="text-title color-main text-center font-weight-bold text-shadow text-lobster text-title-mar">
-          Manual Interactivo y Bilingüe
-        </h1>
-        <h4 className="text-title color-main text-center font-weight-bold">
-          <small className="text-shadow text-slogan">para identificar defectos en los procesos de confecciones</small>
-        </h4>
+      <div className="mb-2">
+        <div className="row">
+          <div className="col-md-10">
+            <h1 className="text-title color-main text-center font-weight-bold text-shadow text-lobster text-title-mar">
+              Manual Interactivo y Bilingüe
+            </h1>
+            <h4 className="text-title color-main text-center font-weight-bold">
+              <small className="text-shadow text-slogan">para identificar defectos en los procesos de confecciones</small>
+            </h4>
+          </div>
+          <div className="col-md-2">
+            <div className="img-sena">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg" alt="" className="img-fluid img-sena-logo"/>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       <div className="container-fluid mb-5 ">
@@ -101,13 +111,18 @@ function Init() {
        <blockquote className="blockquote text-center">
          <p className="lead mb-0 color-main font-weight-bold  lead">
            <span className="color-main">
-            Elaborado por: Lina Marcela Bedoya (Instructora de Bilingüismo),
-            Maria del Socorro Martinez (Instructora de Confección Industrial),
-            Nora Emilse Agudelo Mendoza (Instructora de Confección Industrial),
-            Juan Henao (Desarrollador web).
+            Elaborado por:
+            Lina Marcela Bedoya Rincón - Instructora de Bilingüismo
+            María Martínez Correa y Nora Emilse Agudelo Mendoza
+           <br/>
+             Instructoras de Confección Industrial
+            Centro de Formación en Diseño, Confección y Moda
+            Regional Antioquia
+            Servicio Nacional De Aprendizaje - SENA
+            Enero 2021
+
           </span>
          </p>
-         <footer className="blockquote-footer font-weight-bold color-main">SENA Regional Antioquia - Centro de Formación en Diseño, Confección y Moda. <br/><cite title="Source Title">{' '}Enero 2021</cite></footer>
        </blockquote>
      </div>
 

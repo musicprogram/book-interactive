@@ -25,6 +25,7 @@ import CompleteBoard from "./games/complete_information/CompleteBoard";
 import Memoryboard from "./games/memory_game/MemoryBoard";
 
 import Introduction from "./help_introduction/Introduction";
+import References from "./UI/References";
 
 function Dashboard() {
   const [category, setCategory] = useRecoilState(categoryNavigation);
@@ -135,6 +136,10 @@ function Dashboard() {
 
         {
           category === 7 && <Introduction/>
+        }
+
+        {
+          category === 8 && <References/>
         }
 
       </Fragment>

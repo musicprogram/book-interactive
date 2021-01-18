@@ -23,7 +23,7 @@ function CheckBoxLanguage(props) {
         />
         <label className={`form-check-label ${category === 5 ? 'labelRea': 'labelRead'}`} htmlFor="exampleRadios1">
           {
-            props.english? 'Change language' : 'Cambiar lenguage'
+            props.english? 'Change language' : 'Cambiar lenguaje'
           }
         </label>
       </div>

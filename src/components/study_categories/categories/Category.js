@@ -139,7 +139,11 @@ function Category(props) {
             {props.category.titleIn}
           </span>
         </h1>
-
+        <p className={`text-center font-weight-bold ${'color-' + category}`}>
+         <span className="badge bg-light">
+           {props.category.code}
+         </span>
+        </p>
         <div className="card-custom  mr-1 ml-1">
 
           <div className="container card-msg">

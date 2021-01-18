@@ -78,7 +78,7 @@ function Complete(props) {
           ) :(
             <div>
               {
-                props.info.id === 1 ? (
+                props.info.id === 1 || props.info.wordDesc === 'non-conforming' || props.info.wordDesc === 'adhesive' ? (
                   <h2 className="color-2">
                     <span className="text-capitalize">
                      {props.info.wordDesc}
