@@ -17,7 +17,7 @@ function References() {
                       {reference.name}
                     </h6>
                     <div className="text-indent">
-                      <a href={reference.link}>{reference.link}</a>
+                      <a target="_blank" href={reference.link}>{reference.link}</a>
                     </div>
                   </div>
                 )
