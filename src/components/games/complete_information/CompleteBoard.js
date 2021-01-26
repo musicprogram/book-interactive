@@ -32,6 +32,7 @@ function CompleteBoard() {
   const [clicks, setClicks] = useState(0);
 
   const [workingSpeech, setWorkingSpeech] = useState(false);
+
   const [inputText, setInputText] = useState({
     text : '',
     infoId : '',
@@ -58,12 +59,6 @@ function CompleteBoard() {
   },[english])
 
   useEffect(()=>{
-
-  if(transcript){
-    //console.log(transcript);
-    setWord(transcript);
-    compareWord(transcript);
-  }
 
   if(
     inputText.text &&
@@ -159,13 +154,13 @@ function CompleteBoard() {
          </h1>
 
 
+
          <CheckBoxLanguage
            setEnglish={setEnglish}
            english={english}
            setShowMemory={setShowMemory}
 
          />
-
 
 
           <div>

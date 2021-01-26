@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+=======
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="JSX" />
+  </component>
+>>>>>>> 45c8a744588ee211d222e472a8fcc1f0a06e2426
   <component name="ProjectRootManager" version="2" project-jdk-name="ruby-2.3.7-p456" project-jdk-type="RUBY_SDK" />
 </project>

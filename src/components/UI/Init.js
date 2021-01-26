@@ -111,11 +111,11 @@ function Init() {
        <blockquote className="blockquote text-center">
          <p className="lead mb-0 color-main font-weight-bold  lead">
            <span className="color-main">
+
             Elaborado por: Lina Marcela Bedoya Rincón - Instructora de Bilingüismo
              <br/>
             María Martínez Correa y Nora Emilse Agudelo Mendoza - Instructoras de Confección Industrial
            <br/>
-
             Centro de Formación en Diseño, Confección y Moda
             Regional Antioquia
             Servicio Nacional De Aprendizaje - SENA
